@@ -1,0 +1,132 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+.top {
+	width: 100%;
+	height: 25px;
+	position: absolute: ;
+}
+.top img {
+	width: 400px;
+	max-width: 85%;
+	top: 20px;
+	position: relative;
+}
+.btn_menu {
+	margin: -30px 0 40px;
+	position: relative;
+}
+.phone {
+	font-size: 24px;
+	font-family: Alice;
+	left: 13%;
+	top: 5px;
+	position: absolute;
+}
+.language {
+	text-transform: uppercase;
+	font-size: 20px;
+	font-family: Alice;
+	text-decoration: none;
+	right: 13%;
+	top: 10px;
+	position: absolute;
+}
+.language a {
+	position: relative;
+	padding-left: 10px;
+	z-index: 9999;
+}
+.language a:hover {
+	opacity: 0.7;
+}
+.title {
+	margin-top: -70px;
+    width: 100%;
+}
+@media(max-width: 992px) {
+	.title {
+		margin-top: 40px;
+	}
+	.top img {
+		top: 10px;
+	}
+}
+.my-menu a {
+	margin: 0 15px;
+	color: black;
+	text-decoration: none;
+	font-size: 28px;
+	font-family: 'Oranienbaum', serif;
+	-webkit-transition: 0.3s ease-in-out all;
+	-moz-transition: 0.3s ease-in-out all;
+    -o-transition: 0.3s ease-in-out all;
+    transition: 0.3s ease-in-out all;
+}
+.my-menu a:hover {
+	color: #d32f2f;
+	-webkit-transition: 0.3s ease-in-out all;
+	-moz-transition: 0.3s ease-in-out all;
+    -o-transition: 0.3s ease-in-out all;
+    transition: 0.3s ease-in-out all;
+}
+.my-menu img {
+	position: relative;
+	top: 35px;
+	margin: 0px 20px -50px 20px;
+}
+.my-menu {
+	top: -50px;
+	position: relative;
+}
+h1, h2, h3, h4, h5, h6, p {
+	font-family: 'Alice', serif;
+}
+
+p {
+	padding: 0 10px;
+	font-size: 26px;
+}
+footer {
+	position: relative;
+	bottom: -20px;
+}
+footer img {
+	width: 40px;
+	opacity: 0.8;
+}
+.to-top {
+	position: fixed;
+	bottom: 30px;
+	right: 10%;
+}
+.margin {
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.divider {
+	margin-bottom: 20px;
+	margin-top: 40px;
+}
+.services {
+	width: 50px;
+	height: 50px;
+}
+.name {
+	margin-top: 50px;
+	/*border: solid black 1px;*/
+	height: 130px;
+}
+.description {
+	/*border: solid black 1px;*/
+	height: 100px;
+}
+.price {
+	/*border: solid black 1px;*/
+	height: 70px;
+	margin-bottom: 50px;	
+}
+.side-nav li>a {
+	font-size: 21px;
+}
