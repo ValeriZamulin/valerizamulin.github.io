@@ -1,0 +1,149 @@
+body {
+	padding-bottom: 0;
+	background-image: url("../images/back11.png");
+}
+/*Logo*/
+#logo {
+	width: 250px;	
+}
+/*Menu*/
+.navbar-header {
+	padding-top: 20px;
+	height: 85px;
+}
+
+#menu li a {
+	padding-top: 35px;
+	color: white;
+	font-size: 1.4em;
+	text-transform: uppercase;
+}
+#menu li a:hover {
+	color: red;
+}
+
+#lang a {
+	padding: 3px;
+	float: left;
+}
+#lang a img {
+	width: 40px;
+	padding-bottom: 4px;
+}
+#lang a img:hover {
+	opacity: 0.3;
+}
+/*End Menu*/
+
+/*Carousel*/
+#myCarousel, .carousel .item {
+	height: 750px;
+}
+/*For navigation*/
+.carousel {
+	margin-bottom: -40px;
+}
+
+.carousel-caption {
+	padding-bottom: 130px;
+}
+
+#first_slide, #second_slide, #third_slide {
+    background-size: cover;
+    background-position: center;
+}
+
+#first_slide {
+	background-image: url("../images/first1.jpg");
+}
+#second_slide {
+	background-image: url("../images/first2.jpg");
+}
+#third_slide {
+	background-image: url("../images/first3.jpg");
+}
+#fourth_slide {
+	background-image: url("../images/first4.jpg");
+}
+.carousel-caption h1 {
+	font-size: 4em;
+}
+.carousel-caption p {
+	font-size: 1.5em;
+}
+.btn-primary {
+	background-color: #A52A2A;
+	border: 1px solid #606060;
+}
+/*End Carousel*/
+.text-muted {
+	color: #A52A2A;
+}
+/*Partners*/
+#partners {
+	background-image: url(../images/back12.png);
+	padding-bottom: 30px;
+}
+#partners img {
+	width: 150px;
+}
+
+#h3_title {
+	text-align: center;
+	font-size: 4em;
+	margin-top: 90px;
+	margin-bottom: -40px;	
+}
+#h3_title2 {
+	text-align: center;
+	font-size: 4em;
+	padding-bottom: 45px;
+}
+#myCarousel h1 {
+	font-size: 4em;
+	color: white;
+}
+#myCarousel p, #footer p {
+	color: white;
+}
+.featurette-image {
+	border-radius: 5px;
+}
+h1, h2, h3, p {
+	font-family: 'Open Sans', sans-serif;
+	color: black;
+}
+h4, h5 {
+	font-family: 'Noto Sans', sans-serif;
+	color: black;
+}
+.title {
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.form-control {
+	font-size: 1.2em;
+}
+textarea { 
+	resize: vertical; 
+}
+#send {
+	font-size: 1.2em;
+}
+#footer {
+	color: white;
+	padding: 20px;
+	margin-top: 100px;
+	background-color: #222222;
+}
+
+@media (max-width: 433px) {
+	.navbar-header {
+	padding-top: 15px;
+	height: 85px;
+	}
+}
+
+hr {
+	border: 1px solid;
+}
