@@ -299,33 +299,7 @@
     <!-- Our Works -->
     <div class="row"><br><br><br>
     <h3 id="h3_title2">Meie tehtud tööd</h3>
-    <?php
-        $servername = "mysql.hostinger.ee";
-        $username = "u221157496_ferar";
-        $password = "Zaqzaq12";
-        $dbname = "u221157496_ferar";
 
-        // Create connection
-        $conn = mysqli_connect($servername, $username, $password, $dbname);
-        // Check connection
-        if (!$conn) {
-            die("Connection failed: " . mysqli_connect_error());
-        }
-
-        $sql = "SELECT est_name, est_description FROM works";
-        $result = mysqli_query($conn, $sql);
-
-        if (mysqli_num_rows($result) > 0) {
-            // output data of each row
-            while($row = mysqli_fetch_assoc($result)) {
-                echo "<div class='col-md-4'><h4 class='lead title'>" . $row["est_name"] . "</h4><h5 class='lead'>" . $row["est_description"] . "</h5></div>";
-            }
-        } else {
-            echo "";
-        }
-
-        mysqli_close($conn);
-    ?>
     </div>
     
     <!-- End Our Works -->
@@ -336,13 +310,7 @@
         <div class="col-md-6">
           <h3 id="h3_title2">Võta meiega ühendust</h3><br>
           <form method="POST" class="form-horizontal">
-            <?php
-              if (isset ($_POST['messageFF'])) {
-                mail ("radu@bk.ru",
-                      "заполнена контактная форма с ".$_SERVER['HTTP_REFERER'],
-                      "Имя: ".$_POST['nameFF']."\nEmail: ".$_POST['contactFF']."\nСообщение: ".$_POST['messageFF']);
-                echo ("<script type='text/javascript'>alert('Kiri on saadetud!');</script>");}
-            ?>
+         
             <div class="form-group">
               <div class="col-sm-12">
                 <input required name="nameFF" type="text" class="form-control" placeholder="Nimi">
