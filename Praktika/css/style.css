@@ -1,0 +1,8 @@
+/*Style for slow showing effect*/
+.slow-show {
+	opacity: 0.0;
+}
+/* Div with framework info */
+.framework {
+	padding: 10px 15px;
+}
