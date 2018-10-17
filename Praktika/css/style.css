@@ -1,3 +1,13 @@
+/*Sticky footer*/
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+}
+
+main {
+	flex: 1 0 auto;
+}
 /*Style for slow showing effect*/
 .slow-show {
 	opacity: 0.0;
@@ -5,4 +15,20 @@
 /* Div with framework info */
 .framework {
 	padding: 10px 15px;
+}
+/*Target Wrapper*/
+.tap-target-wrapper {
+	right: -348px; 
+	bottom: -327px; 
+	position: fixed;
+}
+.tap-target-content {
+	width: 456px;
+	height: 400px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+	padding: 56px;
+	vertical-align: bottom;
 }

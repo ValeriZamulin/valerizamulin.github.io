@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Wizard</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body class="slow-show">
+  <header>
+    <nav class="blue darken-3" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">Logo</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="wizard1.html">Wizard</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+
+        <ul id="nav-mobile" class="sidenav">
+          <li><a href="wizard1.html">Wizard</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>  
+    <nav class="blue darken-1 z-depth-4">
+      <div class="nav-wrapper container">
+        <div class="col s12">
+          <a href="wizard1.html" class="breadcrumb">Wizard</a>
+          <a href="wizard1.html" class="breadcrumb">Шаг 1</a>
+          <a href="#!" class="breadcrumb">Шаг 2</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container">
+    <h1 class="center">Wizard</h1>
+    <p class="center"><i>Интерактивный мастер</i></p>
+    <p class="center">Пожалуйста выберите подходящий для себя режим</p>
+    <div class="divider"></div><br><br>
+    <div class="row">
+      <div class="col s12 m6">
+        <div class="card blue darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Автоматический режим</span>
+            <p>Интерактивный мастер выбирает только важные элементы для создания сайта.
+              <a class="waves-effect waves-light" onclick="$('.tap-target1').tapTarget('open')">
+                <i class="material-icons">info</i>
+              </a>
+            </p>
+          </div>
+          <div class="card-action">
+            <a href="#" class="orange-text text-accent-1">Начать</a>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="card blue darken-1">
+          <div class="card-content white-text">
+            <span class="card-title">Ручной режим</span>
+            <p>Пользователь сам выбирает необходимые ему компоненты для создания сайта.</p>
+          </div>
+          <div class="card-action">
+            <a href="#" class="orange-text text-accent-1">Начать</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    Коммерческие сайты = Сайт-витрина, Промо-сайты, Интернет-магазины, Сайты-визитки, Целевая страница (лендинг)
+
+Корпоративные  = Сайт-визитка, Корпоративный сайт., Имиджевый, Корпоративный ПОРТАЛ, Сайт-портфолио
+
+Социальные проекты= Форум, Социальные сети= Узконаправленные, Общенаправленные
+
+Различные веб-сервисы= Каталоги, Почтовые сервисы, Поисковые системы, Доски объявлений, Сайты хостинги
+
+
+  </main>
+  
+  
+
+  <footer class="page-footer orange accent-3">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Company Bio</h5>
+          <p class="grey-text text-lighten-4">We are a team of college students working on this project like it's our full time job. Any amount would help support and continue development on this project and is greatly appreciated.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Settings</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Connect</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="#!">Link 4</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      &copy Valeri Zamulin | <i>All rights reserved</i>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="materialize/js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+
+
+    <!-- Element Showed -->
+    <div class="tap-target-wrapper"><div class="tap-target tap-target1 grey darken-4" data-activates="menu">
+      <div class="tap-target-content white-text">
+        <h5>Время</h5>
+        <p class="white-text">Здесь вы можете выбрать время, в которое вы желаете уснуть.<br>Пожалуйста щёкните по циферблату</p>
+        <div class="tap-target-wave" style="right: 5px; bottom: -70px; width: 80px; height: 80px;">
+          <a class="btn btn-floating btn-large amber accent-4 tap-target-origin" onclick="$('.tap-target1').tapTarget('close')">
+            <i class="material-icons">close</i>
+          </a>
+        </div>
+      </div>
+    </div>
+      <div class="tap-target-wave">
+        <a class="btn btn-floating btn-large amber accent-4 tap-target-origin">
+          <i class="material-icons">close</i>
+        </a>
+      </div>
+    </div>
+
+  </body>
+</html>

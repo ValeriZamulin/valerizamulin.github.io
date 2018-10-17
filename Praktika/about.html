@@ -11,92 +11,82 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body class="slow-show">
-  <nav class="blue darken-3" role="navigation">
-    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="#">О проекте</a></li>
-      </ul>
+  <header>
+    <div class="navbar-fixed z-depth-4">
+      <nav class="blue darken-3" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">Logo</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="wizard1.html">Wizard</a></li>
+            <li><a href="about.html">О проекте</a></li>
+          </ul>
 
-      <ul id="nav-mobile" class="sidenav">
-        <li><a href="#">Navbar Link</a></li>
-      </ul>
-      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+          <ul id="nav-mobile" class="sidenav">
+            <li><a href="wizard1.html">Wizard</a></li>
+            <li><a href="about.html">О проекте</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
     </div>
-  </nav>
-  <nav class="blue darken-1">
-    <div class="nav-wrapper container">
-      <div class="col s12">
-        <a href="index.html" class="breadcrumb">Главная</a>
-        <a href="#!" class="breadcrumb">О проекте</a>
-      </div>
-    </div>
-  </nav>
-  <div class="section no-pad-bot" id="index-banner">
+  </header>
+  <main>
     <div class="container">
+      <div class="section">
+        <h1 class="center">О проекте</h1>
+          <p>С каждым годом использование интернет ресурсов только растёт. Интернет стал нашей повседневной жизнью, поиск информации, шопинг, регистрация на приём к врачу и многие другие вещи делаются непосредственно через интернет. Для того, чтобы это всё возможно было осуществить, необходимо каждому предприятию либо организации наличие веб-сайта. Для значительного ускорения, упрощения, стандартизации дизайна и адаптивности веб приложений для всех устройств, при создании веб-сайта, разработчики используют различные фреймворки. Но какой же фреймворк выбрать? Таким вопросом задаются многие начинающие и некоторые продвинутые программисты. Различные виды веб-сайтов имеют индивидуальную структуру, из-за чего разработчик должен рассмотреть несколько фреймворков и определить наиболее подходящий, для решения поставленных задач. Время, которое тратит разработчик на выбор фреймворка зависит напрямую от опыта его работы в этой области. </p>
+          <br>
+          <br>
+        <div class="row">
+          <div class="col s12 m4">
+            <div class="framework center">
+              <img class="responsive-img" src="image/bootstrap-stack.png"/>
+              <h2 class="center">Bootstrap</h2>
+              <p class="light left-align">
+                Это популярный фреймворк, который позволяет быстро и качественно создавать ста-
+                тичные веб-сайты и веб-приложения. Это бесплатный набор инструментов, позволяющий использовать
+                Html, CSS и JavaScript, разработанный компанией Twitter.
+                Поддержка браузерами: <br>Chrome 45+<br>Firefox 38+<br>Safari 9+<br>Opera 30+<br>Edge 12+<br>IE10+
+              </p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="framework center">
+              <img class="responsive-img" src="image/materialize.png"/>
+              <h2 class="center">Materialize</h2>
+              <p class="light left-align">Это новый фреймворк, который использует большое количество стилей, элементов, компонентов, анимации и, конечно, принципы Материального дизайна от Google. Есть две доступные версии – Standard, включающий в себя уменьшенные и не уменьшенные файлы CSS и JS, и версия SASS, предоставляющая Вам полную свободу выбора компонентов, которые Вы хотите использовать. 
+              Chrome 35+
+              Firefox 31+
+              Safari 9+
+              Opera
+              Edge
+              IE 11+
+              </p>
+            </div>
+          </div>
+
+          <div class="col s12 m4">
+            <div class="framework center">
+              <img class="responsive-img" src="image/uikit-logo-large.png"/>
+              <h2 class="center">UIKit</h2>
+              <p class="light left-align">представляет собой фраймворк с открытым исходным кодом, который позволяет веб сайту выглядеть хорошо. Легкий и модульный интерфейсный фреймворк подходящий для разработки быстрых и мощных веб-интерфейсов. На данной платформе есть возможность создавать свои собственные стили. UIkit дает Вам полный набор HTML, CSS, и JS компонентов, который является простым в использовании, легко настраивается и расширяемый.
+              Chrome - Latest
+              Firefox - Latest
+              Safari 9.1+
+              Opera - Latest
+              Edge - Latest
+              IE 11+
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
       <br><br>
-      <h1 class="header center orange-text text-accent-2">Starter Template</h1>
-      <div class="row center">
-        <p class="header col s12 light">A modern responsive front-end framework based on Material Design</p>
-      </div>
-      <div class="row center">
-        <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light orange accent-3">Get Started</a>
-      </div>
-      <br><br>
-
     </div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="framework center">
-            <img class="responsive-img" src="image/bootstrap-stack.png"/>
-            <h2 class="center">Bootstrap</h2>
-            <p class="light left-align">
-              Это популярный фреймворк, который позволяет быстро и качественно создавать ста-
-тичные веб-сайты и веб-приложения. Это бесплатный набор инструментов, позволяющий использовать
-Html, CSS и JavaScript, разработанный компанией Twitter.
-Поддержка браузерами: <br>Chrome 45+<br>Firefox 38+<br>Safari 9+<br>Opera 30+<br>Edge 12+<br>IE10+
-            </p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="framework center">
-            <img class="responsive-img" src="image/materialize.png"/>
-            <h2 class="center">Materialize</h2>
-            <p class="light left-align">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.Chrome 35+
-Firefox 31+
-Safari 9+
-Opera
-Edge
-IE 11+
-</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="framework center">
-            <img class="responsive-img" src="image/uikit-logo-large.png"/>
-            <h2 class="center">UIKit</h2>
-            <p class="light left-align">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.Chrome - Latest
-Firefox - Latest
-Safari 9.1+
-Opera - Latest
-Edge - Latest
-IE 11+
-</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-    <br><br>
-  </div>
+  </main>
+  
+  
 
   <footer class="page-footer orange accent-3">
     <div class="container">
