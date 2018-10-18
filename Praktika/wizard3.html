@@ -26,11 +26,13 @@
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </div>
     </nav>  
-    <nav class="blue darken-1 z-depth-4 slow-show">
-      <div class="nav-wrapper container">
+    <nav class="blue darken-1 z-depth-4">
+      <div class="nav-wrapper container slow-show">
         <div class="col s12">
-          <a href="#!" class="breadcrumb">Wizard</a>
-          <a href="#!" class="breadcrumb">Шаг 1</a>
+          <a href="wizard1.html" class="breadcrumb">Wizard</a>
+          <a href="wizard1.html" class="breadcrumb">Шаг 1</a>
+          <a href="wizard2.html" class="breadcrumb">Шаг 2</a>
+          <a href="#!" class="breadcrumb slow-show">Шаг 3</a>
         </div>
       </div>
     </nav>
@@ -38,42 +40,32 @@
   <main class="container slow-show">
     <h1 class="center">Wizard</h1>
     <p class="center"><i>Интерактивный мастер</i></p>
-    <p class="center">Пожалуйста выберите подходящий для себя режим</p>
+    <p class="center">Пожалуйста выберите тип сайта</p>
     <div class="divider"></div><br><br>
     <div class="row">
-      <div class="col s12 m6">
-        <div class="card blue darken-1">
-          <div class="card-content white-text">
-            <span class="card-title">Автоматический режим</span>
-            <p>Интерактивный мастер выбирает только важные элементы для создания сайта.
-              <a class="waves-effect waves-light" onclick="$('.tap-target1').tapTarget('open')">
-                <i class="material-icons">info</i>
-              </a>
-            </p>
-          </div>
-          <div class="card-action">
-            <a href="wizard2.html" class="orange-text text-accent-1">Начать</a>
-          </div>
-        </div>
-      </div>
-      <div class="col s12 m6">
-        <div class="card blue darken-1">
-          <div class="card-content white-text">
-            <span class="card-title">Ручной режим</span>
-            <p>Пользователь сам выбирает необходимые ему компоненты для создания сайта.</p>
-          </div>
-          <div class="card-action">
-            <a href="manual.html" class="orange-text text-accent-1">Начать</a>
-          </div>
-        </div>
-      </div>
-    </div>
+    	<div class="col s12 m12">Bootstrap
+			<div class="progress blue lighten-4">
+				<div class="determinate blue" style="width: 20%"></div>
+			</div>
+    	</div>
+    	<div class="col s12 m12">Materialize
+			<div class="progress blue lighten-4">
+				<div class="determinate blue" style="width: 50%"></div>
+			</div>
+    	</div>
+    	<div class="col s12 m12">UIKit
+			<div class="progress blue lighten-4">
+				<div class="determinate blue" style="width: 80%"></div>
+			</div>
+    	</div>
 
+
+    </div>
   </main>
   
   
 
-  <footer class="page-footer orange accent-3 slow-show">
+  <footer class="page-footer orange accent-3">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
