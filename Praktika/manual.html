@@ -45,28 +45,77 @@
 
 
 		<ul class="collapsible expandable">
-			<li>
+			<li class="active">
 				<div class="collapsible-header"><i class="material-icons">filter_drama</i>First
 					<!-- Switch -->
-					<div class="switch">
+					<div class="switch collapsible-secondary">
 						<label>
 							Off
-							<input type="checkbox" id="sw1">
+							<input type="checkbox" checked id="switcher1" onclick="Switcher(1)">
 							<span class="lever"></span>
 							On
 						</label>
 					</div>
 				</div>
-				<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+				<div class="collapsible-body">
+          <span>
+            <ul class="collection">
+              <li class="collection-item">
+                <label>
+                  <input type="checkbox" />
+                  <span>Red</span>
+                </label>
+              </li>
+              <li class="collection-item">
+                <label>
+                  <input type="checkbox" />
+                  <span>Red</span>
+                </label>
+              </li>
+              <li class="collection-item">
+                <label>
+                  <input type="checkbox" />
+                  <span>Red</span>
+                </label>
+              </li>
+              <li class="collection-item">
+                <label>
+                  <input type="checkbox" />
+                  <span>Red</span>
+                </label>
+              </li>
+            </ul>
+          </span>
+        </div>
 			</li>
-			<li>
-				<div class="collapsible-header"><i class="material-icons">place</i>Second</div>
-				<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-			</li>
-			<li>
-				<div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
-				<div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-			</li>
+			<li class="active">
+        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Second
+          <!-- Switch -->
+          <div class="switch collapsible-secondary">
+            <label>
+              Off
+              <input type="checkbox" checked id="switcher2" onclick="Switcher(2)">
+              <span class="lever"></span>
+              On
+            </label>
+          </div>
+        </div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      </li>
+      <li class="active">
+        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Forms
+          <!-- Switch -->
+          <div class="switch collapsible-secondary">
+            <label>
+              Off
+              <input type="checkbox" checked id="switcher3" onclick="Switcher(3)">
+              <span class="lever"></span>
+              On
+            </label>
+          </div>
+        </div>
+        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+      </li>
 		</ul>
 
     </div>

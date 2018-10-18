@@ -32,3 +32,11 @@ main {
 	padding: 56px;
 	vertical-align: bottom;
 }
+/*Switcher in accardion to right side*/
+.collapsible-header {
+	position: relative;
+}
+.collapsible-secondary { 
+	position: absolute; 
+	right: 20px; 
+}
