@@ -24,4 +24,7 @@ function Switcher(i) {
 	}		
 }
 
-M.toast({html: 'I am a toast'})
+// Toasts
+function Toast(name) {
+	M.toast({html: name})
+}
