@@ -42,84 +42,82 @@
     <p class="center">Пожалуйста выберите тип сайта</p>
     <div class="divider"></div><br><br>
     <div class="row">
-
-
-		<ul class="collapsible expandable">
-			<li class="active">
-				<div class="collapsible-header"><i class="material-icons">filter_drama</i>First
-					<!-- Switch -->
-					<div class="switch collapsible-secondary">
-						<label>
-							Off
-							<input type="checkbox" checked id="switcher1" onclick="Switcher(1)">
-							<span class="lever"></span>
-							On
-						</label>
-					</div>
-				</div>
-				<div class="collapsible-body">
-          <span>
-            <ul class="collection">
-              <li class="collection-item">
+      <div class="col s12 l8">
+        <ul class="collapsible expandable">
+          <li class="active">
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First
+              <!-- Switch -->
+              <div class="switch collapsible-secondary">
                 <label>
-                  <input type="checkbox" onclick="Toast('Red')" />
-                  <span>Red</span>
+                  Off
+                  <input type="checkbox" checked id="switcher1" onclick="Switcher(1,'checkbox1','checkbox2','checkbox3','checkbox4')">
+                  <span class="lever"></span>
+                  On
                 </label>
-              </li>
-              <li class="collection-item">
+              </div>
+            </div>
+            <div class="collapsible-body">
+              <span>
+                <ul class="collection">
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox1" onclick="Toast('Red', 'checkbox1')" />
+                      <span>Red</span>
+                    </label>
+                  </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox2" onclick="Toast('Red2', 'checkbox2')" />
+                      <span>Red</span>
+                    </label>
+                  </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox3" onclick="Toast('Red3', 'checkbox3')" />
+                      <span>Red</span>
+                    </label>
+                  </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox4" onclick="Toast('Red4', 'checkbox4')" />
+                      <span>Red</span>
+                    </label>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </li>
+          <li class="active">
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Second
+              <!-- Switch -->
+              <div class="switch collapsible-secondary">
                 <label>
-                  <input type="checkbox" />
-                  <span>Red</span>
+                  Off
+                  <input type="checkbox" checked id="switcher2" onclick="Switcher(2)">
+                  <span class="lever"></span>
+                  On
                 </label>
-              </li>
-              <li class="collection-item">
+              </div>
+            </div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+          <li class="active">
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Forms
+              <!-- Switch -->
+              <div class="switch collapsible-secondary">
                 <label>
-                  <input type="checkbox" />
-                  <span>Red</span>
+                  Off
+                  <input type="checkbox" checked id="switcher3" onclick="Switcher(3)">
+                  <span class="lever"></span>
+                  On
                 </label>
-              </li>
-              <li class="collection-item">
-                <label>
-                  <input type="checkbox" />
-                  <span>Red</span>
-                </label>
-              </li>
-            </ul>
-          </span>
-        </div>
-			</li>
-			<li class="active">
-        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Second
-          <!-- Switch -->
-          <div class="switch collapsible-secondary">
-            <label>
-              Off
-              <input type="checkbox" checked id="switcher2" onclick="Switcher(2)">
-              <span class="lever"></span>
-              On
-            </label>
-          </div>
-        </div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-      </li>
-      <li class="active">
-        <div class="collapsible-header"><i class="material-icons">filter_drama</i>Forms
-          <!-- Switch -->
-          <div class="switch collapsible-secondary">
-            <label>
-              Off
-              <input type="checkbox" checked id="switcher3" onclick="Switcher(3)">
-              <span class="lever"></span>
-              On
-            </label>
-          </div>
-        </div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-      </li>
-		</ul>
-
+              </div>
+            </div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+          </li>
+        </ul>
+      </div>
     </div>
-
   </main>
   
   
