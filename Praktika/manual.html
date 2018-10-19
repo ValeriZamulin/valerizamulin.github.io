@@ -42,18 +42,15 @@
     <p class="center">Пожалуйста выберите тип сайта</p>
     <div class="divider"></div><br><br>
     <div class="row">
-      
+      <div class="col s12 l8">
         <ul class="collapsible expandable">
           <li class="active">
             <div class="collapsible-header"><i class="material-icons">filter_drama</i>First
-              <!-- Switch1 -->
-              <script type="text/javascript">
-                var Switcher1 = [];
-              </script>
+              <!-- Switcher 1 -->
               <div class="switch collapsible-secondary">
                 <label>
                   Off
-                  <input type="checkbox" checked id="switcher1" onclick="Switcher(1,'checkbox1','checkbox2','checkbox3','checkbox4')">
+                  <input type="checkbox" checked id="switcher1" onclick="Switcher(1)">
                   <span class="lever"></span>
                   On
                 </label>
@@ -64,25 +61,25 @@
                 <ul class="collection">
                   <li class="collection-item">
                     <label>
-                      <input type="checkbox" id="checkbox1" onclick="Toast('Red', 'checkbox1')" />
+                      <input type="checkbox" id="checkbox1" onclick="Toast('Message 1', 'checkbox1', 1)" />
                       <span>Red</span>
                     </label>
                   </li>
                   <li class="collection-item">
                     <label>
-                      <input type="checkbox" id="checkbox2" onclick="Toast('Red2', 'checkbox2')" />
+                      <input type="checkbox" id="checkbox2" onclick="Toast('Red2', 'checkbox2', 1)" />
                       <span>Red</span>
                     </label>
                   </li>
                   <li class="collection-item">
                     <label>
-                      <input type="checkbox" id="checkbox3" onclick="Toast('Red3', 'checkbox3')" />
+                      <input type="checkbox" id="checkbox3" onclick="Toast('Red3', 'checkbox3', 1)" />
                       <span>Red</span>
                     </label>
                   </li>
                   <li class="collection-item">
                     <label>
-                      <input type="checkbox" id="checkbox4" onclick="Toast('Red4', 'checkbox4')" />
+                      <input type="checkbox" id="checkbox4" onclick="Toast('Red4', 'checkbox4', 1)" />
                       <span>Red</span>
                     </label>
                   </li>
@@ -120,7 +117,7 @@
           </li>
         </ul>
       </div>
-    
+    </div>
   </main>
   
   
