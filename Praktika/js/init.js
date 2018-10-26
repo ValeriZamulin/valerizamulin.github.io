@@ -14,8 +14,7 @@ var instance = M.Collapsible.init(elem, {
 // Disable accardion animation
 instance.destroy();
 
-// Checker in manual part of wizard - Open accardion if switch is enabled
-var switcher1;
+// Switvher in manual part of wizard - Open accardion if switch is enabled
 function Switcher(i) {
 	document.getElementById('switcher'+i).onchange = function(){
 		if(this.checked){
@@ -30,15 +29,13 @@ function Switcher(i) {
 
 /*******************TOASTS**********************/
 // Toasts - show toast with info if checked
-function Toast(name, id, newclass) {
+function Toast(name, id, classname) {
 	if (document.getElementById(id).checked == true) {
-		// Add new class for switcher - if switch is turned off, all checkboxes with this class will be unchecked
-		document.getElementById(id).classList.add(newclass);
-		var func = "'"+id+"'";
-		var toastHTML = '<span>' +name+ '</span><button class="btn-flat toast-action" onclick="unCheck('+func+')">Undo</button>';
+		var func = "'"+id+"','"+classname+"'";
+		var toastHTML = '<span>' +name+ '</span><button class="btn-flat toast-action" onclick="unCheck('+func+')">Отменить</button>';
 		M.toast({
 			html: toastHTML, 
-			displayLength: 180000, 
+			displayLength: 10000, 
 			classes: 'rounded '+id,
 		});
 	}
@@ -49,9 +46,12 @@ function Toast(name, id, newclass) {
 	}
 }
 // Uncheck and delete toast if press Undo on toast
-function unCheck(id) {
+function unCheck(id, classname) {
 	document.getElementById(id).checked = false;
 	Toast('noname', id);
+	if (id.indexOf('0') > -1) {
+		unCheckSeveral(classname);
+	}
 }
 // Uncheck all checkboxes if switch is turned off
 function unCheckSeveral(classname) {
@@ -59,4 +59,17 @@ function unCheckSeveral(classname) {
 	for(var i = 0; boxes.length >= i; i++) {
 		boxes[i].checked = false;
 	}
+}
+// Check all checkboxes in this section if choosed "check all" checkbox
+function checkSeveral(id, classname) {
+	var boxes = document.getElementsByClassName(classname);
+	for(var i = 0; boxes.length >= i; i++) {
+		boxes[i].checked = true;
+	}
+}
+function checkUncheck(id, classname) {
+	if (document.getElementById(id).checked == true) {
+		checkSeveral(id, classname);
+	}
+	else unCheckSeveral(classname);
 }
