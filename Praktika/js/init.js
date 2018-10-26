@@ -22,7 +22,11 @@ function Switcher(i) {
 		} 
 		else {
 			instance.close(i-1);
-			unCheckSeveral(i);
+			var boxes = document.getElementsByClassName(i);
+			for(var z = 0; boxes.length >= z; z++) {
+				boxes[z].checked = false;
+				M.Toast.getInstance(document.querySelector('.ch'+i)).dismiss();
+			}
 		}
 	}		
 }
@@ -64,10 +68,12 @@ function unCheck(id, classname) {
 }
 // Uncheck all checkboxes if switch is turned off
 function unCheckSeveral(classname) {
-	unChips(classname);
 	var boxes = document.getElementsByClassName(classname);
 	for(var i = 0; boxes.length >= i; i++) {
 		boxes[i].checked = false;
+	}
+	for(var q = 1; q <= document.getElementsByClassName(i).length; q++ ) {
+		M.Toast.getInstance(document.querySelector('.ch'+i)).dismiss();
 	}
 }
 // Check all checkboxes in this section if choosed "check all" checkbox
