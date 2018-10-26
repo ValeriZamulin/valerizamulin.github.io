@@ -30,19 +30,28 @@ function Switcher(i) {
 /*******************TOASTS**********************/
 // Toasts - show toast with info if checked
 function Toast(name, id, classname) {
-	if (document.getElementById(id).checked == true) {
-		var func = "'"+id+"','"+classname+"'";
-		var toastHTML = '<span>' +name+ '</span><button class="btn-flat toast-action" onclick="unCheck('+func+')">Отменить</button>';
+	var checkbox = document.getElementById(id);
+	if (checkbox.checked == true) {
+		var func = "'"+id+"'";
+		var func2 = "'"+classname+"'";
+		var toastHTML = '<span>' +name+ '</span><button class="btn-flat toast-action" onclick="unCheck('+func+','+func2+')">Отменить</button>';
 		M.toast({
 			html: toastHTML, 
 			displayLength: 10000, 
-			classes: 'rounded '+id,
+			classes: 'ch'+classname + ' rounded ' + id,
 		});
 	}
 	else {
-		var toastElement = document.querySelector('.'+id);
-		var toastInstance = M.Toast.getInstance(toastElement);
-		toastInstance.dismiss();
+		/*Find id of first checkbox*/
+		var getname = id.replace(/[0-9]/g, '') + '0';
+		var firstCheckbox = document.getElementById(getname);
+		/*Uncheck fisrst checkbox with "Check All"*/
+		if (firstCheckbox.checked == true) {
+			document.getElementById(getname).checked = false;
+			M.Toast.getInstance(document.querySelector('.'+getname)).dismiss();
+		}
+		/*Remove toast*/
+		M.Toast.getInstance(document.querySelector('.'+id)).dismiss();
 	}
 }
 // Uncheck and delete toast if press Undo on toast
@@ -55,6 +64,7 @@ function unCheck(id, classname) {
 }
 // Uncheck all checkboxes if switch is turned off
 function unCheckSeveral(classname) {
+	unChips(classname);
 	var boxes = document.getElementsByClassName(classname);
 	for(var i = 0; boxes.length >= i; i++) {
 		boxes[i].checked = false;
@@ -67,9 +77,24 @@ function checkSeveral(id, classname) {
 		boxes[i].checked = true;
 	}
 }
-function checkUncheck(id, classname) {
+function checkUncheck(name, id, classname) {
 	if (document.getElementById(id).checked == true) {
+		Toast(name, id, classname);
 		checkSeveral(id, classname);
 	}
-	else unCheckSeveral(classname);
+	else {
+		if (document.querySelector('.ch'+classname)) {
+			M.Toast.getInstance(document.querySelector('.ch'+classname)).dismiss();
+		}
+		var boxes = document.getElementsByClassName(classname);
+		for(var i = 0; boxes.length >= i; i++) {
+			boxes[i].checked = false;
+		}
+	}
+}
+
+function unChips(i) {
+	for(var q = 1; q <= document.getElementsByClassName(i).length; q++ ) {
+		M.Toast.getInstance(document.querySelector('.ch'+i)).dismiss();
+	}
 }
