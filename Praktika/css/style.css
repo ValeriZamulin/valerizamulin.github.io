@@ -17,18 +17,23 @@ main {
 	padding: 10px 15px;
 }
 /*Target Wrapper*/
+.fixed-action-btn {
+	bottom: 45px;
+	right: 24px;
+	visibility: hidden;
+}
 .tap-target-wrapper {
-	right: -348px; 
-	bottom: -327px; 
 	position: fixed;
+	right: -331px;
+	bottom: -327px;
 }
 .tap-target-content {
 	width: 456px;
 	height: 400px;
-	top: 0px;
+	top: 0px; 
 	right: 0px;
-	bottom: 0px;
-	left: 0px;
+	bottom: 0px; 
+	left: 0px; 
 	padding: 56px;
 	vertical-align: bottom;
 }
@@ -55,4 +60,8 @@ main {
 [type="checkbox"].filled-in:checked + span:not(.lever):after {
 	border: 2px solid #0277bd;
     background-color: #0277bd;
+}
+/*Frameworks list in list of components*/
+.frameworks-list {
+
 }

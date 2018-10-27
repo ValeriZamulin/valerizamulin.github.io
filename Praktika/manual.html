@@ -39,20 +39,20 @@
   <main class="container slow-show">
     <h1 class="center">Wizard</h1>
     <p class="center"><i>Интерактивный мастер</i></p>
-    <p class="center">Пожалуйста выберите тип сайта</p>
+    <p class="center">Пожалуйста выберите элементы, которые желаете использовать при создании сайта</p>
     <div class="divider"></div><br><br>
     <div class="row">
-      <div class="col s12 l8">
+      <div class="col s12 l12">
         <ul class="collapsible expandable">
           <li>
             <div class="collapsible-header"><i class="material-icons">filter_drama</i>Forms
               <!-- Switcher 1 -->
               <div class="switch collapsible-secondary">
                 <label>
-                  Off
+                  Нет
                   <input type="checkbox" unchecked id="switcher1" onclick="Switcher(1)">
                   <span class="lever"></span>
-                  On
+                  Да
                 </label>
               </div>
             </div>
@@ -70,12 +70,32 @@
                       <input type="checkbox" id="checkbox1" class="1" onclick="Toast('Autocomplete', 'checkbox1', 1)" />
                       <span>Autocomplete</span>
                     </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(1)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a href=""><img src="image/bootstrap-stack-small.png" alt="bootstrap icon"></a>
+                      <a href=""><img src="image/materialize-small.png" alt="materialize icon"></a>
+                      <a href=""><img src="image/uikit-logo-small.png" alt="uikit icon"></a>
+                    </div>
                   </li>
                   <li class="collection-item">
                     <label>
                       <input type="checkbox" id="checkbox2" class="1" onclick="Toast('Checkboxes', 'checkbox2', 1)" />
                       <span>Checkboxes</span>
                     </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a href=""><img src="image/bootstrap-stack-small.png" alt="bootstrap icon"></a>
+                      <a href=""><img src="image/materialize-small.png" alt="materialize icon"></a>
+                      <a href=""><img src="image/uikit-logo-small.png" alt="uikit icon"></a>
+                    </div>
                   </li>
                   <li class="collection-item">
                     <label>
@@ -135,34 +155,7 @@
               </span>
             </div>
           </li>
-          <li class="active">
-            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Second
-              <!-- Switch -->
-              <div class="switch collapsible-secondary">
-                <label>
-                  Off
-                  <input type="checkbox" checked id="switcher2" onclick="Switcher(2)">
-                  <span class="lever"></span>
-                  On
-                </label>
-              </div>
-            </div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-          </li>
-          <li class="active">
-            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Forms
-              <!-- Switch -->
-              <div class="switch collapsible-secondary">
-                <label>
-                  Off
-                  <input type="checkbox" checked id="switcher3" onclick="Switcher(3)">
-                  <span class="lever"></span>
-                  On
-                </label>
-              </div>
-            </div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-          </li>
+          
         </ul>
       </div>
     </div>
@@ -212,26 +205,21 @@
   <script src="materialize/js/materialize.js"></script>
   <script src="js/init.js"></script>
 
+  <!-- Information window -->
+  <div class="fixed-action-btn">
+    <a id="menu" class="btn btn-floating btn-large cyan">
+      <i class="material-icons">close</i>
+    </a>
+  </div>
 
-
-    <!-- Element Showed -->
-    <div class="tap-target-wrapper"><div class="tap-target tap-target1 grey darken-4" data-activates="menu">
+  <div class="tap-target-wrapper">
+    <div class="tap-target cyan" data-target="menu">
       <div class="tap-target-content white-text">
-        <h5>Время</h5>
-        <p class="white-text">Здесь вы можете выбрать время, в которое вы желаете уснуть.<br>Пожалуйста щёкните по циферблату</p>
-        <div class="tap-target-wave" style="right: 5px; bottom: -70px; width: 80px; height: 80px;">
-          <a class="btn btn-floating btn-large amber accent-4 tap-target-origin" onclick="$('.tap-target1').tapTarget('close')">
-            <i class="material-icons">close</i>
-          </a>
-        </div>
+        <h5 id="info-name"></h5>
+        <p class="white-text" id="info-description"></p>
       </div>
     </div>
-      <div class="tap-target-wave">
-        <a class="btn btn-floating btn-large amber accent-4 tap-target-origin">
-          <i class="material-icons">close</i>
-        </a>
-      </div>
-    </div>
+  </div>
 
   </body>
 </html>

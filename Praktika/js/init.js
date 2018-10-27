@@ -25,7 +25,10 @@ function Switcher(i) {
 			var boxes = document.getElementsByClassName(i);
 			for(var z = 0; boxes.length >= z; z++) {
 				boxes[z].checked = false;
-				M.Toast.getInstance(document.querySelector('.ch'+i)).dismiss();
+				// Delete toast if present
+				if (document.querySelector('.ch'+i)) {
+					M.Toast.getInstance(document.querySelector('.ch'+i)).dismiss();
+				}
 			}
 		}
 	}		
@@ -45,6 +48,7 @@ function Toast(name, id, classname) {
 			classes: 'ch'+classname + ' rounded ' + id,
 		});
 	}
+
 	else {
 		/*Find id of first checkbox*/
 		var getname = id.replace(/[0-9]/g, '') + '0';
@@ -58,6 +62,7 @@ function Toast(name, id, classname) {
 		M.Toast.getInstance(document.querySelector('.'+id)).dismiss();
 	}
 }
+
 // Uncheck and delete toast if press Undo on toast
 function unCheck(id, classname) {
 	document.getElementById(id).checked = false;
@@ -66,6 +71,7 @@ function unCheck(id, classname) {
 		unCheckSeveral(classname);
 	}
 }
+
 // Uncheck all checkboxes if switch is turned off
 function unCheckSeveral(classname) {
 	var boxes = document.getElementsByClassName(classname);
@@ -76,6 +82,7 @@ function unCheckSeveral(classname) {
 		M.Toast.getInstance(document.querySelector('.ch'+i)).dismiss();
 	}
 }
+
 // Check all checkboxes in this section if choosed "check all" checkbox
 function checkSeveral(id, classname) {
 	var boxes = document.getElementsByClassName(classname);
@@ -83,11 +90,13 @@ function checkSeveral(id, classname) {
 		boxes[i].checked = true;
 	}
 }
+
 function checkUncheck(name, id, classname) {
 	if (document.getElementById(id).checked == true) {
 		Toast(name, id, classname);
 		checkSeveral(id, classname);
 	}
+
 	else {
 		if (document.querySelector('.ch'+classname)) {
 			M.Toast.getInstance(document.querySelector('.ch'+classname)).dismiss();
@@ -98,9 +107,32 @@ function checkUncheck(name, id, classname) {
 		}
 	}
 }
-
+// Not in use
 function unChips(i) {
 	for(var q = 1; q <= document.getElementsByClassName(i).length; q++ ) {
 		M.Toast.getInstance(document.querySelector('.ch'+i)).dismiss();
 	}
+}
+
+/**************************Tap Target (info icon) ********************************/
+// Open info box
+function getInfo(id) {
+	// Open empty info box
+	$('.tap-target').tapTarget('open');
+
+	// Add text to info box
+	switch(id) {
+		case 1:
+			var nameText = 'Text number 1';
+			var descriptionText = 'Description number 1';
+			break;
+		case 2:
+			var nameText = 'Text number 2';
+			var descriptionText = 'Description number 2 Description number 2 Description number 2';
+			break;
+	}
+
+	// Place text
+	$( "#info-name" ).replaceWith('<h5 id="info-name">'+nameText+'</h5>');
+	$( "#info-description" ).replaceWith('<p class="white-text" id="info-description">'+descriptionText+'</p>');
 }
