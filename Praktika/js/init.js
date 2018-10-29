@@ -1,7 +1,8 @@
 $(document).ready(function(){
 	$('.sidenav').sidenav();
-	$(".slow-show").fadeTo(1200, 1);
+	$(".slow-show").fadeTo(1200, 1); // function for slow showing elements from transparent (time,opacity)
 	$('.tap-target').tapTarget();
+	$('.modal').modal();
 });
 
 
@@ -133,6 +134,159 @@ function getInfo(id) {
 	}
 
 	// Place text
-	$( "#info-name" ).replaceWith('<h5 id="info-name">'+nameText+'</h5>');
-	$( "#info-description" ).replaceWith('<p class="white-text" id="info-description">'+descriptionText+'</p>');
+	$("#info-name").replaceWith('<h5 id="info-name">' + nameText + '</h5>');
+	$("#info-description").replaceWith('<p class="white-text" id="info-description">' + descriptionText + '</p>');
+}
+
+
+
+/************************************* Modal Windows *****************************************/
+function openModal(id) {
+
+	switch(id) {
+		//************************FORMS************************//
+		// Autocomplete
+		case 'forms2':
+			var header = "Autocomplete";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/autocomplete.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/autocomplete.html"></iframe>';
+			break;
+
+		// Checkboxes
+		case 'forms4':
+			var header = "Checkboxes";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/components/input-group/#checkboxes-and-radios">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/components/input-group/#checkboxes-and-radios"></iframe>';
+			break;
+		case 'forms5':
+			var header = "Checkboxes";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/checkboxes.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/checkboxes.html"></iframe>';
+			break;
+
+		case 'forms6':
+			var header = "Checkboxes";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/form">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/form"></iframe>';
+			break;
+		
+		// Chips
+		case 'forms8':
+			var header = "Chips";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/chips.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/chips.html"></iframe>';
+			break;
+
+		// Pickers
+		case 'forms11':
+			var header = "Pickers";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/pickers.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/pickers.html"></iframe>';
+			break;
+
+		// Radiobuttons
+		case 'forms13':
+			var header = "Radiobuttons";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/components/input-group/#checkboxes-and-radios">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/components/input-group/#checkboxes-and-radios"></iframe>';
+			break;
+		case 'forms14':
+			var header = "Radiobuttons";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/radio-buttons.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/radio-buttons.html"></iframe>';
+			break;
+		case 'forms15':
+			var header = "Radiobuttons";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/form#layout">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/form#layout"></iframe>';
+			break;
+
+		// Range
+		case 'forms16':
+			var header = "Range";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/components/forms/#range-inputs">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/components/forms/#range-inputs"></iframe>';
+			break;
+		case 'forms17':
+			var header = "Range";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/range.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/range.html"></iframe>';
+			break;
+		case 'forms18':
+			var header = "Range";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/form">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/form"></iframe>';
+			break;
+
+		// Select
+		case 'forms19':
+			var header = "Select";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/components/input-group/#custom-select">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/components/input-group/#custom-select"></iframe>';
+			break;
+		case 'forms20':
+			var header = "Select";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/select.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/select.html"></iframe>';
+			break;
+		case 'forms21':
+			var header = "Select";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/form">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/form"></iframe>';
+			break;
+
+		// Switches
+		case 'forms23':
+			var header = "Select";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/switches.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/switches.html"></iframe>';
+			break;
+
+		// Text inputs
+		case 'forms25':
+			var header = "Text inputs";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/components/input-group/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/components/input-group/"></iframe>';
+			break;
+		case 'forms26':
+			var header = "Text inputs";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/text-inputs.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/text-inputs.html"></iframe>';
+			break;
+		case 'forms27':
+			var header = "Text inputs";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/form">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/form"></iframe>';
+			break;
+
+		// File browser
+		case 'forms28':
+			var header = "File browser";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/components/forms/#file-browser">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/components/forms/#file-browser"></iframe>';
+			break;
+		case 'forms29':
+			var header = "File browser";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/text-inputs.html#file">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/text-inputs.html#file"></iframe>';
+			break;
+		case 'forms30':
+			var header = "File browser";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/form#custom-controls">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/form#custom-controls"></iframe>';
+			break;
+
+	}
+
+
+
+
+
+
+	
+
+	$("#modal-header").replaceWith('<h4 id="modal-header">' + header + '</h4>');
+	$("#modal-iframe").replaceWith(iframe);
+	$("#modal-link").replaceWith(link);
+    $('#modal').modal('open');
 }

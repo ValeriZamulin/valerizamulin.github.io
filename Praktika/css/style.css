@@ -40,6 +40,7 @@ main {
 /*Switcher in accardion to right side*/
 .collapsible-header {
 	position: relative;
+	cursor: default;
 }
 .collapsible-secondary { 
 	position: absolute; 
@@ -62,6 +63,18 @@ main {
     background-color: #0277bd;
 }
 /*Frameworks list in list of components*/
-.frameworks-list {
-
+.frameworks-list a {
+	cursor: pointer;
+}
+.frameworks-list .inactive {
+	cursor: default;
+	opacity: 0.3;
+	filter:grayscale(100%);
+}
+/*Iframe with information about each component*/
+iframe {
+	height: 75%; 
+	width: 100%; 
+	border: 1px solid #909090; 
+	margin-bottom: 10px;
 }

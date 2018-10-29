@@ -39,13 +39,14 @@
   <main class="container slow-show">
     <h1 class="center">Wizard</h1>
     <p class="center"><i>Интерактивный мастер</i></p>
-    <p class="center">Пожалуйста выберите элементы, которые желаете использовать при создании сайта</p>
+    <p class="center">Пожалуйста выберите компоненты, которые желаете использовать при создании сайта</p>
     <div class="divider"></div><br><br>
     <div class="row">
       <div class="col s12 l12">
         <ul class="collapsible expandable">
+          <!-- First block -->
           <li>
-            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Forms
+            <div class="collapsible-header"><i class="material-icons">format_list_bulleted</i>Forms
               <!-- Switcher 1 -->
               <div class="switch collapsible-secondary">
                 <label>
@@ -63,6 +64,7 @@
                     <label>
                       <input class="filled-in 1" type="checkbox" id="checkbox0" onclick="checkUncheck('All Forms', 'checkbox0', 1)" />
                       <span><b>Отметить все</b></span>
+                      <span class="right hide-on-small-only"><b>Пример компонента &nbsp&nbsp&nbsp&nbsp&nbsp</b></span>
                     </label>
                   </li>
                   <li class="collection-item">
@@ -76,10 +78,17 @@
                     </a>
                     <!-- Frameworks icons with link -->
                     <div class="frameworks-list right hide-on-small-only">
-                      <a href=""><img src="image/bootstrap-stack-small.png" alt="bootstrap icon"></a>
-                      <a href=""><img src="image/materialize-small.png" alt="materialize icon"></a>
-                      <a href=""><img src="image/uikit-logo-small.png" alt="uikit icon"></a>
+                      <a title="У фреймворка Bootstrap компонент Autocomplete отсутствует" class="inactive">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Autocomplete для фреймворка Materialize" onclick="openModal('forms2')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="У фреймворка UIKit компонент Autocomplete отсутствует" class="inactive">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
                     </div>
+
                   </li>
                   <li class="collection-item">
                     <label>
@@ -92,9 +101,15 @@
                     </a>
                     <!-- Frameworks icons with link -->
                     <div class="frameworks-list right hide-on-small-only">
-                      <a href=""><img src="image/bootstrap-stack-small.png" alt="bootstrap icon"></a>
-                      <a href=""><img src="image/materialize-small.png" alt="materialize icon"></a>
-                      <a href=""><img src="image/uikit-logo-small.png" alt="uikit icon"></a>
+                      <a title="Посмотреть документацию на компонент Checkboxes для фреймворка Bootstrap" onclick="openModal('forms4')">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Checkboxes для фреймворка Materialize" onclick="openModal('forms5')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Checkboxes для фреймворка UIKit" onclick="openModal('forms6')">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
                     </div>
                   </li>
                   <li class="collection-item">
@@ -102,60 +117,429 @@
                       <input type="checkbox" id="checkbox3" class="1" onclick="Toast('Chips', 'checkbox3', 1)" />
                       <span>Chips</span>
                     </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(3)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="У фреймворка Bootstrap компонент Chips отсутствует" class="inactive">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Chips для фреймворка Materialize" onclick="openModal('forms8')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="У фреймворка UIKit компонент Chips отсутствует" class="inactive">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
                   </li>
                   <li class="collection-item">
                     <label>
                       <input type="checkbox" id="checkbox4" class="1" onclick="Toast('Pickers', 'checkbox4', 1)" />
                       <span>Pickers</span>
                     </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="У фреймворка Bootstrap компонент Pickers отсутствует" class="inactive">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Pickers для фреймворка Materialize" onclick="openModal('forms11')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="У фреймворка UIKit компонент Pickers отсутствует" class="inactive">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
                   </li>
                   <li class="collection-item">
                     <label>
-                      <input type="checkbox" id="checkbox5" class="1" onclick="Toast('Radiobuttons', 'checkbox5', 1)" />
-                      <span>Radiobuttons</span>
+                      <input type="checkbox" id="checkbox5" class="1" onclick="Toast('Radio buttons', 'checkbox5', 1)" />
+                      <span>Radio buttons</span>
                     </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="Посмотреть документацию на компонент Radio buttons для фреймворка Bootstrap" onclick="openModal('forms13')">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Radio buttons для фреймворка Materialize" onclick="openModal('forms14')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Radio buttons для фреймворка UIKit" onclick="openModal('forms15')">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
                   </li>
                   <li class="collection-item">
                     <label>
                       <input type="checkbox" id="checkbox6" class="1" onclick="Toast('Range', 'checkbox6', 1)" />
                       <span>Range</span>
                     </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="Посмотреть документацию на компонент Range для фреймворка Bootstrap" onclick="openModal('forms16')">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Range для фреймворка Materialize" onclick="openModal('forms17')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Range для фреймворка UIKit" onclick="openModal('forms18')">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
                   </li>
                   <li class="collection-item">
                     <label>
                       <input type="checkbox" id="checkbox7" class="1" onclick="Toast('Select', 'checkbox7', 1)" />
                       <span>Select</span>
                     </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="Посмотреть документацию на компонент Select для фреймворка Bootstrap" onclick="openModal('forms19')">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Select для фреймворка Materialize" onclick="openModal('forms20')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Select для фреймворка UIKit" onclick="openModal('forms21')">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
                   </li>
                   <li class="collection-item">
                     <label>
                       <input type="checkbox" id="checkbox8" class="1" onclick="Toast('Switches', 'checkbox8', 1)" />
                       <span>Switches</span>
                     </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="У фреймворка Bootstrap компонент Switches отсутствует" class="inactive">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Switches для фреймворка Materialize" onclick="openModal('forms23')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="У фреймворка UIKit компонент Switches отсутствует" class="inactive">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
                   </li>
                   <li class="collection-item">
                     <label>
                       <input type="checkbox" id="checkbox9" class="1" onclick="Toast('Text Inputs', 'checkbox9', 1)" />
                       <span>Text Inputs</span>
                     </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="Посмотреть документацию на компонент Text inputs для фреймворка Bootstrap" onclick="openModal('forms25')">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Text inputs для фреймворка Materialize" onclick="openModal('forms26')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Text inputs для фреймворка UIKit" onclick="openModal('forms27')">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
                   </li>
                   <li class="collection-item">
                     <label>
                       <input type="checkbox" id="checkbox10" class="1" onclick="Toast('File browser', 'checkbox10', 1)" />
                       <span>File browser</span>
                     </label>
-                  </li>
-                  <li class="collection-item">
-                    <label>
-                      <input type="checkbox" id="checkbox11" class="1" onclick="Toast('Input group', 'checkbox11', 1)" />
-                      <span>Input group</span>
-                    </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="Посмотреть документацию на компонент File browser для фреймворка Bootstrap" onclick="openModal('forms28')">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент File browser для фреймворка Materialize" onclick="openModal('forms29')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент File browser для фреймворка UIKit" onclick="openModal('forms30')">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
                   </li>
                 </ul>
               </span>
             </div>
           </li>
-          
+          <!-- Second block -->
+          <li>
+            <div class="collapsible-header"><i class="material-icons">format_list_bulleted</i>Forms
+              <!-- Switcher 1 -->
+              <div class="switch collapsible-secondary">
+                <label>
+                  Нет
+                  <input type="checkbox" unchecked id="switcher1" onclick="Switcher(1)">
+                  <span class="lever"></span>
+                  Да
+                </label>
+              </div>
+            </div>
+            <div class="collapsible-body">
+              <span>
+                <ul class="collection">
+                  <li class="collection-item">
+                    <label>
+                      <input class="filled-in 1" type="checkbox" id="checkbox0" onclick="checkUncheck('All Forms', 'checkbox0', 1)" />
+                      <span><b>Отметить все</b></span>
+                      <span class="right hide-on-small-only"><b>Пример компонента &nbsp&nbsp&nbsp&nbsp&nbsp</b></span>
+                    </label>
+                  </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox1" class="1" onclick="Toast('Autocomplete', 'checkbox1', 1)" />
+                      <span>Autocomplete</span>
+                    </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(1)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="У фреймворка Bootstrap компонент Autocomplete отсутствует" class="inactive">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Autocomplete для фреймворка Materialize" onclick="openModal('forms2')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="У фреймворка UIKit компонент Autocomplete отсутствует" class="inactive">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
+
+                  </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox2" class="1" onclick="Toast('Checkboxes', 'checkbox2', 1)" />
+                      <span>Checkboxes</span>
+                    </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="Посмотреть документацию на компонент Checkboxes для фреймворка Bootstrap" onclick="openModal('forms4')">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Checkboxes для фреймворка Materialize" onclick="openModal('forms5')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Checkboxes для фреймворка UIKit" onclick="openModal('forms6')">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
+                  </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox3" class="1" onclick="Toast('Chips', 'checkbox3', 1)" />
+                      <span>Chips</span>
+                    </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(3)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="У фреймворка Bootstrap компонент Chips отсутствует" class="inactive">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Chips для фреймворка Materialize" onclick="openModal('forms8')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="У фреймворка UIKit компонент Chips отсутствует" class="inactive">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
+                  </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox4" class="1" onclick="Toast('Pickers', 'checkbox4', 1)" />
+                      <span>Pickers</span>
+                    </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="У фреймворка Bootstrap компонент Pickers отсутствует" class="inactive">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Pickers для фреймворка Materialize" onclick="openModal('forms11')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="У фреймворка UIKit компонент Pickers отсутствует" class="inactive">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
+                  </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox5" class="1" onclick="Toast('Radio buttons', 'checkbox5', 1)" />
+                      <span>Radio buttons</span>
+                    </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="Посмотреть документацию на компонент Radio buttons для фреймворка Bootstrap" onclick="openModal('forms13')">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Radio buttons для фреймворка Materialize" onclick="openModal('forms14')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Radio buttons для фреймворка UIKit" onclick="openModal('forms15')">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
+                  </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox6" class="1" onclick="Toast('Range', 'checkbox6', 1)" />
+                      <span>Range</span>
+                    </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="Посмотреть документацию на компонент Range для фреймворка Bootstrap" onclick="openModal('forms16')">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Range для фреймворка Materialize" onclick="openModal('forms17')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Range для фреймворка UIKit" onclick="openModal('forms18')">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
+                  </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox7" class="1" onclick="Toast('Select', 'checkbox7', 1)" />
+                      <span>Select</span>
+                    </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="Посмотреть документацию на компонент Select для фреймворка Bootstrap" onclick="openModal('forms19')">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Select для фреймворка Materialize" onclick="openModal('forms20')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Select для фреймворка UIKit" onclick="openModal('forms21')">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
+                  </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox8" class="1" onclick="Toast('Switches', 'checkbox8', 1)" />
+                      <span>Switches</span>
+                    </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="У фреймворка Bootstrap компонент Switches отсутствует" class="inactive">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Switches для фреймворка Materialize" onclick="openModal('forms23')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="У фреймворка UIKit компонент Switches отсутствует" class="inactive">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
+                  </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox9" class="1" onclick="Toast('Text Inputs', 'checkbox9', 1)" />
+                      <span>Text Inputs</span>
+                    </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="Посмотреть документацию на компонент Text inputs для фреймворка Bootstrap" onclick="openModal('forms25')">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Text inputs для фреймворка Materialize" onclick="openModal('forms26')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Text inputs для фреймворка UIKit" onclick="openModal('forms27')">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
+                  </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox10" class="1" onclick="Toast('File browser', 'checkbox10', 1)" />
+                      <span>File browser</span>
+                    </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="Посмотреть документацию на компонент File browser для фреймворка Bootstrap" onclick="openModal('forms28')">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент File browser для фреймворка Materialize" onclick="openModal('forms29')">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент File browser для фреймворка UIKit" onclick="openModal('forms30')">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </span>
+            </div>
+          </li>
         </ul>
       </div>
     </div>
@@ -205,6 +589,8 @@
   <script src="materialize/js/materialize.js"></script>
   <script src="js/init.js"></script>
 
+
+  <!--******************* Addition elements *********************-->
   <!-- Information window -->
   <div class="fixed-action-btn">
     <a id="menu" class="btn btn-floating btn-large cyan">
@@ -220,6 +606,19 @@
       </div>
     </div>
   </div>
+
+  <!-- Modal window -->
+  <div id="modal" class="modal modal-fixed-footer">
+    <div class="modal-content"><i class="material-icons right modal-close">close</i>
+      <h4 id="modal-header"></h4>
+      <iframe id="modal-iframe"></iframe>
+      <a id="modal-link"></a>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-blue btn-flat">Закрыть</a>
+    </div>
+  </div>
+
 
   </body>
 </html>
