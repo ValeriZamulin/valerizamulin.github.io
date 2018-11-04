@@ -19,7 +19,7 @@ main {
 /*Target Wrapper*/
 .fixed-action-btn {
 	bottom: 45px;
-	right: 24px;
+	right: 45px;
 	visibility: hidden;
 }
 .tap-target-wrapper {
@@ -30,10 +30,10 @@ main {
 .tap-target-content {
 	width: 456px;
 	height: 400px;
-	top: 0px; 
+	top: 0px;
 	right: 0px;
-	bottom: 0px; 
-	left: 0px; 
+	bottom: 0px;
+	left: 0px;
 	padding: 56px;
 	vertical-align: bottom;
 }
@@ -42,9 +42,9 @@ main {
 	position: relative;
 	cursor: default;
 }
-.collapsible-secondary { 
-	position: absolute; 
-	right: 20px; 
+.collapsible-secondary {
+	position: absolute;
+	right: 20px;
 }
 /*Switch color*/
 .switch label input[type=checkbox]:checked+.lever:after {
@@ -73,8 +73,8 @@ main {
 }
 /*Iframe with information about each component*/
 iframe {
-	height: 75%; 
-	width: 100%; 
-	border: 1px solid #909090; 
+	height: 75%;
+	width: 100%;
+	border: 1px solid #909090;
 	margin-bottom: 10px;
 }
