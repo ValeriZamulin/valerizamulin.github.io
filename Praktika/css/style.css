@@ -4,10 +4,15 @@ body {
 	min-height: 100vh;
 	flex-direction: column;
 }
-
 main {
 	flex: 1 0 auto;
 }
+/******************Typography ****************/
+.infobox-description {
+	font-size: 13px;
+	font-style: italic;
+}
+/******************End Typography ****************/
 /*Style for slow showing effect*/
 .slow-show {
 	opacity: 0.0;
@@ -28,13 +33,12 @@ main {
 	bottom: -327px;
 }
 .tap-target-content {
-	width: 456px;
+	width: 500px !important;
 	height: 400px;
 	top: 0px;
 	right: 0px;
-	bottom: 0px;
 	left: 0px;
-	padding: 56px;
+	padding: 11px 30px 60px 80px !important;
 	vertical-align: bottom;
 }
 /*Switcher in accardion to right side*/
@@ -77,4 +81,15 @@ iframe {
 	width: 100%;
 	border: 1px solid #909090;
 	margin-bottom: 10px;
+}
+/* Fixing side navigation */
+.fixed {
+	top: 35%;
+	position: fixed;
+}
+.table-of-contents a.active, .table-of-contents a.active:hover {
+	border-left: solid 2px #1e88e5;
+}
+.table-of-contents a:hover {
+	border-left: solid 1px #1e88e5;
 }

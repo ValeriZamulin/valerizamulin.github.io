@@ -15,7 +15,8 @@
 <body>
   <header>
     <nav class="blue darken-3" role="navigation">
-      <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">Logo</a>
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="index.html" class="brand-logo">Logo</a>
         <ul class="right hide-on-med-and-down">
           <li><a href="wizard1.html">Wizard</a></li>
           <li><a href="about.html">О проекте</a></li>
@@ -39,27 +40,28 @@
     </nav>
   </header>
   <main class="container slow-show">
-    <h1 class="center">Wizard</h1>
-    <p class="center"><i>Интерактивный мастер</i></p>
-    <p class="center">Пожалуйста выберите компоненты, которые желаете использовать при создании сайта</p>
-    <div class="divider"></div><br><br>
     <div class="row">
-      <div class="col s12 l12">
+      <div class="col s12 l9">
+        <h1 class="center">Wizard</h1>
+        <p class="center"><i>Интерактивный мастер</i></p>
+        <p class="center">Пожалуйста выберите компоненты, которые желаете использовать при создании сайта</p>
+        <div class="divider"></div><br><br>
         <ul class="collapsible expandable">
           <!-- First block -->
-          <li>
-            <div class="collapsible-header"><i class="material-icons">format_list_bulleted</i>Формы
+          <li class="active">
+            <div class="collapsible-header">
+              <i class="material-icons">format_list_bulleted</i>Формы
               <!-- Switcher 1 -->
               <div class="switch collapsible-secondary">
                 <label>
                   Нет
-                  <input type="checkbox" unchecked id="switcher1" onclick="Switcher(1)">
+                  <input type="checkbox" checked id="switcher1" onclick="Switcher(1)" class="section scrollspy">
                   <span class="lever"></span>
                   Да
                 </label>
               </div>
             </div>
-            <div class="collapsible-body">
+            <div class="collapsible-body section scrollspy" id="block-1">
               <span>
                 <ul class="collection">
                   <li class="collection-item">
@@ -142,7 +144,7 @@
                       <span>Pickers</span>
                     </label>
                     <!-- Info icon -->
-                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                    <a class="waves-effect waves-light" onclick="getInfo(4)">
                       <i class="material-icons">info</i>
                     </a>
                     <!-- Frameworks icons with link -->
@@ -164,7 +166,7 @@
                       <span>Radio buttons</span>
                     </label>
                     <!-- Info icon -->
-                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                    <a class="waves-effect waves-light" onclick="getInfo(5)">
                       <i class="material-icons">info</i>
                     </a>
                     <!-- Frameworks icons with link -->
@@ -186,7 +188,7 @@
                       <span>Range</span>
                     </label>
                     <!-- Info icon -->
-                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                    <a class="waves-effect waves-light" onclick="getInfo(6)">
                       <i class="material-icons">info</i>
                     </a>
                     <!-- Frameworks icons with link -->
@@ -208,7 +210,7 @@
                       <span>Select</span>
                     </label>
                     <!-- Info icon -->
-                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                    <a class="waves-effect waves-light" onclick="getInfo(7)">
                       <i class="material-icons">info</i>
                     </a>
                     <!-- Frameworks icons with link -->
@@ -230,7 +232,7 @@
                       <span>Switches</span>
                     </label>
                     <!-- Info icon -->
-                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                    <a class="waves-effect waves-light" onclick="getInfo(8)">
                       <i class="material-icons">info</i>
                     </a>
                     <!-- Frameworks icons with link -->
@@ -252,7 +254,7 @@
                       <span>Text Inputs</span>
                     </label>
                     <!-- Info icon -->
-                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                    <a class="waves-effect waves-light" onclick="getInfo(9)">
                       <i class="material-icons">info</i>
                     </a>
                     <!-- Frameworks icons with link -->
@@ -274,7 +276,7 @@
                       <span>File browser</span>
                     </label>
                     <!-- Info icon -->
-                    <a class="waves-effect waves-light" onclick="getInfo(2)">
+                    <a class="waves-effect waves-light" onclick="getInfo(10)">
                       <i class="material-icons">info</i>
                     </a>
                     <!-- Frameworks icons with link -->
@@ -290,24 +292,48 @@
                       </a>
                     </div>
                   </li>
+                  <li class="collection-item">
+                    <label>
+                      <input type="checkbox" id="checkbox11" class="1" onclick="Toast('Input group', 'checkbox11', 1)" />
+                      <span>Input group</span>
+                    </label>
+                    <!-- Info icon -->
+                    <a class="waves-effect waves-light" onclick="getInfo(11)">
+                      <i class="material-icons">info</i>
+                    </a>
+                    <!-- Frameworks icons with link -->
+                    <div class="frameworks-list right hide-on-small-only">
+                      <a title="Посмотреть документацию на компонент Input group для фреймворка Bootstrap" onclick="openModal('forms31')">
+                        <img src="image/bootstrap-stack-small.png" alt="bootstrap icon">
+                      </a>
+                      <a title="У фреймворка Materialize компонент Input group отсутствует" class="inactive">
+                        <img src="image/materialize-small.png" alt="materialize icon">
+                      </a>
+                      <a title="Посмотреть документацию на компонент Input group для фреймворка UIKit" class="inactive">
+                        <img src="image/uikit-logo-small.png" alt="uikit icon">
+                      </a>
+                    </div>
+                  </li>
                 </ul>
               </span>
             </div>
           </li>
+
           <!-- Second block -->
-          <li>
-            <div class="collapsible-header"><i class="material-icons">art_track</i>Компоненты
+          <li class="active">
+            <div class="collapsible-header">
+              <i class="material-icons">art_track</i>Компоненты
               <!-- Switcher 1 -->
               <div class="switch collapsible-secondary">
                 <label>
                   Нет
-                  <input type="checkbox" unchecked id="switcher2" onclick="Switcher(2)">
+                  <input type="checkbox" checked id="switcher2" onclick="Switcher(2)">
                   <span class="lever"></span>
                   Да
                 </label>
               </div>
             </div>
-            <div class="collapsible-body">
+            <div class="collapsible-body section scrollspy" id="block-2">
               <span>
                 <ul class="collection">
                   <li class="collection-item">
@@ -1777,19 +1803,20 @@
 
 
           <!-- Third block -->
-          <li>
-            <div class="collapsible-header"><i class="material-icons">style</i>Стилизация
+          <li class="active">
+            <div class="collapsible-header">
+              <i class="material-icons">style</i>Стилизация
               <!-- Switcher 1 -->
               <div class="switch collapsible-secondary">
                 <label>
                   Нет
-                  <input type="checkbox" unchecked id="switcher3" onclick="Switcher(3)">
+                  <input type="checkbox" checked id="switcher3" onclick="Switcher(3)">
                   <span class="lever"></span>
                   Да
                 </label>
               </div>
             </div>
-            <div class="collapsible-body">
+            <div class="collapsible-body section scrollspy" id="block-3">
               <span>
                 <ul class="collection">
                   <li class="collection-item">
@@ -2533,10 +2560,16 @@
           </li>
         </ul>
       </div>
+      <!-- Side navigation sector -->
+      <div class="col hide-on-med-and-down offset-l1 l2">
+        <ul class="section table-of-contents fixed">
+          <li id="show-sidenav-1"><a href="#block-1">Формы</a></li>
+          <li id="show-sidenav-2"><a href="#block-2">Компоненты</a></li>
+          <li id="show-sidenav-3"><a href="#block-3">Стилизация</a></li>
+        </ul>
+      </div>
     </div>
   </main>
-
-
 
   <footer class="page-footer orange accent-3">
     <div class="container">
@@ -2584,13 +2617,13 @@
   <!--******************* Addition elements *********************-->
   <!-- Information window -->
   <div class="fixed-action-btn">
-    <a id="menu" class="btn btn-floating btn-large cyan">
+    <a id="menu" class="btn btn-floating btn-large orange accent-3">
       <i class="material-icons">close</i>
     </a>
   </div>
 
   <div class="tap-target-wrapper">
-    <div class="tap-target cyan" data-target="menu">
+    <div class="tap-target blue darken-2" data-target="menu">
       <div class="tap-target-content white-text">
         <h5 id="info-name"></h5>
         <p class="white-text" id="info-description"></p>

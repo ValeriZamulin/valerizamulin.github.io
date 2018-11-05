@@ -3,6 +3,7 @@ $(document).ready(function(){
 	$(".slow-show").fadeTo(1200, 1); // function for slow showing elements from transparent (time,opacity)
 	$('.tap-target').tapTarget();
 	$('.modal').modal();
+	$('.scrollspy').scrollSpy();
 });
 
 
@@ -20,9 +21,18 @@ function Switcher(i) {
 	document.getElementById('switcher'+i).onchange = function(){
 		if(this.checked){
 			instance.open(i-1);
-		} 
+			// Show sidenav element
+			//document.getElementById('show-sidenav-'+i).style.display = 'block';
+			// Change sidenav link to switcher if block disabled
+			$("#show-sidenav-"+i).replaceWith('<li id="show-sidenav-'+i+'"><a href="#block-'+i+'">Формы</a></li>');
+		}
 		else {
 			instance.close(i-1);
+			// Hidde sidenav element
+			//document.getElementById('show-sidenav-'+i).style.display = 'none';
+			// Change sidenav link to switcher if block disabled
+			$("#show-sidenav-"+i).replaceWith('<li id="show-sidenav-1"><a href="#switcher'+i+'">Формы</a></li>');
+			// Uncheck all block components if switch is off
 			var boxes = document.getElementsByClassName(i);
 			for(var z = 0; boxes.length >= z; z++) {
 				boxes[z].checked = false;
@@ -32,8 +42,9 @@ function Switcher(i) {
 				}
 			}
 		}
-	}		
+	}
 }
+
 
 /*******************TOASTS**********************/
 // Toasts - show toast with info if checked
@@ -44,8 +55,8 @@ function Toast(name, id, classname) {
 		var func2 = "'"+classname+"'";
 		var toastHTML = '<span>' +name+ '</span><button class="btn-flat toast-action" onclick="unCheck('+func+','+func2+')">Отменить</button>';
 		M.toast({
-			html: toastHTML, 
-			displayLength: 10000, 
+			html: toastHTML,
+			displayLength: 10000,
 			classes: 'ch'+classname + ' rounded ' + id,
 		});
 	}
@@ -124,17 +135,53 @@ function getInfo(id) {
 	// Add text to info box
 	switch(id) {
 		case 1:
-			var nameText = 'Text number 1';
-			var descriptionText = 'Description number 1';
+			var nameText = 'Autocomplete<br><span class="infobox-description">Автозаполнение для окна ввода</span>';
+			var descriptionText = 'Занесите в список слова, которые будут предлагаться при заполнении текстового поля.';
 			break;
 		case 2:
-			var nameText = 'Text number 2';
-			var descriptionText = 'Description number 2 Description number 2 Description number 2';
+			var nameText = 'Checkboxes<br><span class="infobox-description">Элемент для выбора из списка</span>';
+			var descriptionText = 'Элемент графического пользовательского интерфейса, позволяющий пользователю управлять параметром с двумя состояниями — ☑ включено и ☐ выключено. Во включённом состоянии внутри чекбокса отображается отметка (галочка (✓))';
+			break;
+		case 3:
+			var nameText = 'Chips<br><span class="infobox-description">Небольшие блоки информации</span>';
+			var descriptionText = 'Могут использоваться для представления небольших блоков информации. Чаще всего используются для контактов, либо для тегов.';
+			break;
+		case 4:
+			var nameText = 'Pickers<br><span class="infobox-description">Выбор даты или времени из интерактивного меню</span>';
+			var descriptionText = 'Позволяет пользователям выбтрать дату из стилизованного интерактивного календаря и время из интерактивных часов';
+			break;
+		case 5:
+			var nameText = 'Radio buttons<br><span class="infobox-description">Элемент для выбора из списка</span>';
+			var descriptionText = 'Кнопки «Радио» используются, когда пользователь должен сделать только один выбор из группы элементов.';
+			break;
+		case 6:
+			var nameText = 'Range<br><span class="infobox-description">Диапазон значений</span>';
+			var descriptionText = 'Ползунок для значений с широким диапазоном.';
+			break;
+		case 7:
+			var nameText = 'Select<br><span class="infobox-description">Выбор из выпадающего списока</span>';
+			var descriptionText = 'Позволяет делать выбор пользователю через указанные параметры';
+			break;
+		case 8:
+			var nameText = 'Switches<br><span class="infobox-description">Переключатель (Выкл/Вкл)</span>';
+			var descriptionText = 'Чтобы включить или выключить тумблер, нужно перетащить движок тумблера в ту или иную сторону. ';
+			break;
+		case 9:
+			var nameText = 'Text Inputs<br><span class="infobox-description">Поле ввода для текста</span>';
+			var descriptionText = 'Служит для ввода информации, такой как имя пользователя, пароль, электронный адрес и т.п.';
+			break;
+		case 10:
+			var nameText = 'File browser<br><span class="infobox-description">Элемент для выбора файла с компьютера</span>';
+			var descriptionText = 'Стилизованный элемент с помощью которого можно прикрепить файл для отправки.';
+			break;
+		case 11:
+			var nameText = 'Input group<br><span class="infobox-description">Поля для ввода с добавленной информацией</span>';
+			var descriptionText = 'Легко расширяйте элементы управления форматом, добавляя текст, кнопки или группы кнопок с обеих сторон текстовых полей ввода.';
 			break;
 	}
 
 	// Place text
-	$("#info-name").replaceWith('<h5 id="info-name">' + nameText + '</h5>');
+	$("#info-name").replaceWith('<h5 id="info-name" class="center">' + nameText + '</h5>');
 	$("#info-description").replaceWith('<p class="white-text" id="info-description">' + descriptionText + '</p>');
 }
 
@@ -169,7 +216,7 @@ function openModal(id) {
 			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/form">Ссылка на документацию</a>';
 			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/form"></iframe>';
 			break;
-		
+
 		// Chips
 		case 'forms8':
 			var header = "Chips";
@@ -275,6 +322,11 @@ function openModal(id) {
 			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/form#custom-controls">Ссылка на документацию</a>';
 			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/form#custom-controls"></iframe>';
 			break;
+		case 'forms31':
+			var header = "Input group";
+			var link = '<a target="_blank" id="modal-link" href="http://getbootstrap.com/docs/4.1/components/input-group">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="http://getbootstrap.com/docs/4.1/components/input-group"></iframe>';
+			break;
 
 	}
 
@@ -283,7 +335,7 @@ function openModal(id) {
 
 
 
-	
+
 
 	$("#modal-header").replaceWith('<h4 id="modal-header">' + header + '</h4>');
 	$("#modal-iframe").replaceWith(iframe);
