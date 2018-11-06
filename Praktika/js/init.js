@@ -49,12 +49,6 @@ function Switcher(i) {
 		}
 	}
 }
-// $("a[href^='http://stackoverflow.com']")
-//    .each(function()
-//    {
-//       this.href = this.href.replace(/^http:\/\/beta\.stackoverflow\.com/,
-//          "http://stackoverflow.com");
-//    });
 
 
 /*******************TOASTS**********************/
@@ -304,7 +298,7 @@ function getInfo(id) {
 			var descriptionText = 'Используется в основном для отображения серии контента';
 			break;
 		case 48:
-			var nameText = 'Marker<br><span class="infobox-description">Значёк маркера</span>';
+			var nameText = 'Marker<br><span class="infobox-description">Значок маркера</span>';
 			var descriptionText = 'Создайте значок маркера, который может отображаться поверх изображений.';
 			break;
 		case 49:
@@ -379,26 +373,188 @@ function getInfo(id) {
 			var nameText = 'Slidenav<br><span class="infobox-description">Навигация для слайд-шоу</span>';
 			var descriptionText = 'Элементы навигации для слайд-шоу (стилизованные стрелки влево и вправо)';
 			break;
-									case 60:
-										var nameText = 'Pushpin<br><span class="infobox-description">Плагин позиционирования</span>';
-										var descriptionText = '';
-										break;
-										case 60:
-											var nameText = 'Pushpin<br><span class="infobox-description">Плагин позиционирования</span>';
-											var descriptionText = '';
-											break;
-											case 60:
-												var nameText = 'Pushpin<br><span class="infobox-description">Плагин позиционирования</span>';
-												var descriptionText = '';
-												break;
-												case 60:
-													var nameText = 'Pushpin<br><span class="infobox-description">Плагин позиционирования</span>';
-													var descriptionText = '';
-													break;
-													case 60:
-														var nameText = 'Pushpin<br><span class="infobox-description">Плагин позиционирования</span>';
-														var descriptionText = '';
-														break;
+		case 67:
+			var nameText = 'Sortable <br><span class="infobox-description">Сортировка</span>';
+			var descriptionText = 'Создайте сортируемые сетки и списки для изменения порядока элементов.';
+			break;
+		case 68:
+			var nameText = 'Spinner/Circular<br><span class="infobox-description">Значок загрузки</span>';
+			var descriptionText = 'Стилизованный анимированный значок загрузки';
+			break;
+		case 69:
+			var nameText = 'Sticky<br><span class="infobox-description">Липкий элемент</span>';
+			var descriptionText = 'Элементы остаются в верхней части окна просмотра, как липкая навигация.';
+			break;
+		case 70:
+			var nameText = 'Subnav<br><span class="infobox-description">Вспомогательная навигация</span>';
+			var descriptionText = 'Стилизованный компонент для дополнительной навигации';
+			break;
+		case 71:
+			var nameText = 'SVG<br><span class="infobox-description">Векторные изображения</span>';
+			var descriptionText = 'Внесите встроенные SVG-изображения в разметку страницы и стилизуйте их с помощью CSS.';
+			break;
+		case 72:
+			var nameText = 'Switcher<br><span class="infobox-description">Динамическая смена элемента</span>';
+			var descriptionText = 'Динамический переход через различные панели контента.';
+			break;
+		case 73:
+			var nameText = 'Tabs<br><span class="infobox-description">Вкладки</span>';
+			var descriptionText = 'Вкладки служат для структурирования контента.';
+			break;
+		case 74:
+			var nameText = 'Thumbnav<br><span class="infobox-description">Навигация по картинкам</span>';
+			var descriptionText = 'В основном используется как навигация для галереи.';
+			break;
+		case 75:
+			var nameText = 'Tile<br><span class="infobox-description">Стилизованный коньейнер</span>';
+			var descriptionText = 'Контейнеры с разными фонами, которые можно легко размещать рядом друг с другом.';
+			break;
+		case 76:
+			var nameText = 'Toggle<br><span class="infobox-description">Переключатель содержимого</span>';
+			var descriptionText = 'Скройте, переключите или измените внешний вид содержимого с помощью переключателя.';
+			break;
+		case 77:
+			var nameText = 'Tooltips<br><span class="infobox-description">Подсказки</span>';
+			var descriptionText = 'Всплывающие подсказки в основном используются с кнопками.';
+			break;
+		case 78:
+			var nameText = 'Totop<br><span class="infobox-description">Прокрутка к началу страницы</span>';
+			var descriptionText = 'Кнопка с функцией плавной прокрутки к началу страницы';
+			break;
+		case 79:
+			var nameText = 'Upload<br><span class="infobox-description">Загрузка файлов</span>';
+			var descriptionText = 'Размеченное пространство для загрузки файлов.';
+			break;
+		case 80:
+			var nameText = 'Video<br><span class="infobox-description">Контейнер для видео</span>';
+			var descriptionText = 'Стилизованный, адаптивный контейнер для воспроизведения видео';
+			break;
+
+		// Third block
+		case 101:
+			var nameText = 'Align<br><span class="infobox-description">Расположение контента</span>';
+			var descriptionText = 'Простые в использовании классы, которые помогут вам выровнять ваш контент.';
+			break;
+		case 102:
+			var nameText = 'Border-radius/Circular images<br><span class="infobox-description">Закругление краёв картинки</span>';
+			var descriptionText = 'Классы к элементу, чтобы легко закруглить его углы.';
+			break;
+		case 103:
+			var nameText = 'Borders<br><span class="infobox-description">Граница элемента</span>';
+			var descriptionText = 'Классы для создания границ элемента. Отлично подходит для изображений, кнопок или любого другого элемента.';
+			break;
+		case 104:
+			var nameText = 'Close<br><span class="infobox-description">Иконка для закрытия</span>';
+			var descriptionText = 'Стилизованная кнопка закрытия элемента';
+			break;
+		case 105:
+			var nameText = 'Color<br><span class="infobox-description">Цветовая палитра</span>';
+			var descriptionText = 'Подобранная палитра цветов для элементов и текста';
+			break;
+		case 106:
+			var nameText = 'Column<br><span class="infobox-description">Колонка</span>';
+			var descriptionText = 'Разбитие текста по столбцам в одном контейнере ';
+			break;
+		case 107:
+			var nameText = 'Container<br><span class="infobox-description">Контейнер</span>';
+			var descriptionText = 'Основной элемент компоновки, требуются при использовании сетки по умолчанию.';
+			break;
+		case 108:
+			var nameText = 'Cover<br><span class="infobox-description">Фон для контейнера</span>';
+			var descriptionText = 'Разверните изображения, видео или фреймы, чтобы покрыть весь контейнер и разместить свой собственный контент сверху.';
+			break;
+		case 109:
+			var nameText = 'Divider<br><span class="infobox-description">Разделитель</span>';
+			var descriptionText = 'Стилизованный разделитель';
+			break;
+		case 110:
+			var nameText = 'Flex<br><span class="infobox-description">Плагин позиционирования</span>';
+			var descriptionText = 'Быстрое управление компоновкой, выравниванием и размером столбцов сетки, навигации, компонентов и т.д.';
+			break;
+		case 111:
+			var nameText = 'Grid<br><span class="infobox-description">Адаптивная сетка</span>';
+			var descriptionText = 'Мощная мобильная сетка для построения макетов всех форм и размеров благодаря двенадцатиколоночной системе.';
+			break;
+		case 112:
+			var nameText = 'Heading<br><span class="infobox-description">Заголовок</span>';
+			var descriptionText = 'Различные стили для заголовка';
+			break;
+		case 113:
+			var nameText = 'Height<br><span class="infobox-description">Высота элементов</span>';
+			var descriptionText = 'Определитель высоты элементов в зависимости от вида экрана.';
+			break;
+		case 114:
+			var nameText = 'Image replacement<br><span class="infobox-description">Замена текста картинкой</span>';
+			var descriptionText = 'Класс для замены текста на изображение';
+			break;
+		case 115:
+			var nameText = 'Inverse<br><span class="infobox-description">Противоположность</span>';
+			var descriptionText = 'Обратный стиль любого компонента для светлого или темного фона.';
+			break;
+		case 116:
+			var nameText = 'Jumbotron<br><span class="infobox-description">Стилизация ключевого элемента</span>';
+			var descriptionText = 'Дополнительное увеличение ключевого сообщения.';
+			break;
+		case 117:
+			var nameText = 'Link<br><span class="infobox-description">Ссылка</span>';
+			var descriptionText = 'Классы для стилизации ссылок';
+			break;
+		case 118:
+			var nameText = 'List<br><span class="infobox-description">Список</span>';
+			var descriptionText = 'Классы для стилизации списка';
+			break;
+		case 119:
+			var nameText = 'Margin/Padding/Spacing<br><span class="infobox-description">Промежутки</span>';
+			var descriptionText = 'Классы для промежутков между элементами';
+			break;
+		case 120:
+			var nameText = 'Position<br><span class="infobox-description">Позиция контента</span>';
+			var descriptionText = 'Коллекция классов для размещения содержимого';
+			break;
+		case 121:
+			var nameText = 'Print/Display<br><span class="infobox-description">Печать</span>';
+			var descriptionText = 'Оптимизация страницы для печати.';
+			break;
+		case 122:
+			var nameText = 'Pulse<br><span class="infobox-description">Эффект пульсации</span>';
+			var descriptionText = 'Эффект пульсации кнопок для привлечения внимания.';
+			break;
+		case 123:
+			var nameText = 'Screenreaders<br><span class="infobox-description">Чтение с экрана</span>';
+			var descriptionText = 'Показать элемент только программе для чтения с экрана.';
+			break;
+		case 124:
+			var nameText = 'Shadow<br><span class="infobox-description">Тень</span>';
+			var descriptionText = 'Тени для контейнеров.';
+			break;
+		case 125:
+			var nameText = 'Tables<br><span class="infobox-description">Таблицы</span>';
+			var descriptionText = 'Стили для таблиц';
+			break;
+		case 126:
+			var nameText = 'Text<br><span class="infobox-description">Текст</span>';
+			var descriptionText = 'Набор полезных текстовых классов для стилизации вашего контента.';
+			break;
+		case 127:
+			var nameText = 'Transition<br><span class="infobox-description">Плавный переход</span>';
+			var descriptionText = 'Создавайте плавные переходы между двумя состояниями при наведении на элемент.';
+			break;
+		case 128:
+			var nameText = 'Typography<br><span class="infobox-description">Типография</span>';
+			var descriptionText = 'Базовые стили для тегов заголовков.';
+			break;
+		case 129:
+			var nameText = 'Visibility/Hidding/Showing content<br><span class="infobox-description">Отображение элемента</span>';
+			var descriptionText = 'Классы для контроля видимости элемента без изменения отображения.';
+			break;
+		case 130:
+			var nameText = 'Wawes<br><span class="infobox-description">Эффект волн</span>';
+			var descriptionText = 'Внешняя библиотека для создания эффекта чернил, описанная в Material Design.';
+			break;
+		case 125:
+			var nameText = 'Width/Sizing<br><span class="infobox-description">Определение размера</span>';
+			var descriptionText = 'Классы для определения размеров элементов для разных экранов';
+			break;
 
 	}
 
