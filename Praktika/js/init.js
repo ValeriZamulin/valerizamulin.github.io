@@ -4,7 +4,7 @@ $(document).ready(function(){
 	$('.tap-target').tapTarget();
 	$('.modal').modal();
 	$('.scrollspy').scrollSpy();
-	$('.tooltipped').tooltip();
+	$('.tooltipped').tooltip({enterDelay: 310});
 });
 
 
@@ -1221,54 +1221,361 @@ function openModal(id) {
 			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/tooltip">Ссылка на документацию</a>';
 			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/tooltip"></iframe>';
 			break;
+			// Totop
+		case 'documentation-box-132':
+			var header = "Totop";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/totop">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/totop"></iframe>';
+			break;
+			// Upload
+		case 'documentation-box-133':
+			var header = "Upload";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/upload">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/upload"></iframe>';
+			break;
+			// Video/Embeds
+		case 'documentation-box-134':
+			var header = "Embeds";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/embed/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/embed/"></iframe>';
+			break;
+		case 'documentation-box-135':
+			var header = "Videos";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/media-css.html#videos">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/media-css.html#videos"></iframe>';
+			break;
+		case 'documentation-box-136':
+			var header = "Video";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/video">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/video"></iframe>';
+			break;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+			// Align
+		case 'documentation-box-200':
+			var header = "Align";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/text/#text-alignment">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/text/#text-alignment"></iframe>';
+			break;
+		case 'documentation-box-201':
+			var header = "Align";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/helpers.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/helpers.html"></iframe>';
+			break;
+		case 'documentation-box-202':
+			var header = "Align";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/align">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/align"></iframe>';
+			break;
+			// Border-radius/Circular images
+		case 'documentation-box-203':
+			var header = "Border-radius";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/borders/#border-radius">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/borders/#border-radius"></iframe>';
+			break;
+		case 'documentation-box-204':
+			var header = "Circular images";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/media-css.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/media-css.html"></iframe>';
+			break;
+		case 'documentation-box-205':
+			var header = "Border-radius";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/utility#border-radius">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/utility#border-radius"></iframe>';
+			break;
+			// Borders
+		case 'documentation-box-206':
+			var header = "Borders";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/borders/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/borders/"></iframe>';
+			break;
+			// Close
+		case 'documentation-box-207':
+			var header = "Close icon";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/close-icon/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/close-icon/"></iframe>';
+			break;
+		case 'documentation-box-208':
+			var header = "Close";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/close">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/close"></iframe>';
+			break;
+			// Color
+		case 'documentation-box-209':
+			var header = "Colors";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/colors/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/colors/"></iframe>';
+			break;
+		case 'documentation-box-210':
+			var header = "Color";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/color.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/color.html"></iframe>';
+			break;
+			// Column
+		case 'documentation-box-212':
+			var header = "Column";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/column">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/column"></iframe>';
+			break;
+			// Container
+		case 'documentation-box-213':
+			var header = "Containers";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/layout/overview/#containers">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/layout/overview/#containers"></iframe>';
+			break;
+		case 'documentation-box-214':
+			var header = "Container";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/grid.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/grid.html"></iframe>';
+			break;
+		case 'documentation-box-215':
+			var header = "Container";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/container">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/container"></iframe>';
+			break;
+			// Cover
+		case 'documentation-box-216':
+			var header = "Cover";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/cover">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/cover"></iframe>';
+			break;
+			// Divider
+		case 'documentation-box-217':
+			var header = "Divider";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/grid.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/grid.html"></iframe>';
+			break;
+		case 'documentation-box-218':
+			var header = "Divider";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/divider">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/divider"></iframe>';
+			break;
+			// Flex
+		case 'documentation-box-219':
+			var header = "Flex";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/flex/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/flex/"></iframe>';
+			break;
+		case 'documentation-box-220':
+			var header = "Flex";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/flex">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/flex"></iframe>';
+			break;
+			// Grid
+		case 'documentation-box-221':
+			var header = "Grid";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/layout/grid">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/layout/grid"></iframe>';
+			break;
+		case 'documentation-box-222':
+			var header = "Grid";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/grid.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/grid.html"></iframe>';
+			break;
+		case 'documentation-box-223':
+			var header = "Grid";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/grid">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/grid"></iframe>';
+			break;
+		// 	// Heading
+		// case 'documentation-box-224':
+		// 	var header = "Heading";
+		// 	var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/heading">Ссылка на документацию</a>';
+		// 	var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/heading"></iframe>';
+		// 	break;
+			// Height
+		case 'documentation-box-225':
+			var header = "Height";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/height">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/height"></iframe>';
+			break;
+			// Image replacement
+		case 'documentation-box-226':
+			var header = "Image replacement";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/image-replacement/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/image-replacement/"></iframe>';
+			break;
+			// Inverse
+		case 'documentation-box-227':
+			var header = "Inverse";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/inverse">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/inverse"></iframe>';
+			break;
+			// Jumbotron
+		case 'documentation-box-228':
+			var header = "Jumbotron";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/components/jumbotron/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/components/jumbotron/"></iframe>';
+			break;
+			// Link
+		case 'documentation-box-229':
+			var header = "Link";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/link">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/link"></iframe>';
+			break;
+			// List
+		case 'documentation-box-230':
+			var header = "List";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/list">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/list"></iframe>';
+			break;
+			// Margin/Padding
+		case 'documentation-box-231':
+			var header = "Margin/Padding";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/layout/utilities-for-layout/#margin-and-padding">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/layout/utilities-for-layout/#margin-and-padding"></iframe>';
+			break;
+		case 'documentation-box-232':
+			var header = "Margin";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/margin">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/margin"></iframe>';
+			break;
+			// Position
+		case 'documentation-box-233':
+			var header = "Position";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/position">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/position"></iframe>';
+			break;
+			// Print/Display
+		case 'documentation-box-234':
+			var header = "Display";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/display/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/display/"></iframe>';
+			break;
+		case 'documentation-box-235':
+			var header = "Print";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/print">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/print"></iframe>';
+			break;
+			// Pulse
+		case 'documentation-box-236':
+			var header = "Pulse";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/pulse.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/pulse.html"></iframe>';
+			break;
+			// Screenreaders
+		case 'documentation-box-237':
+			var header = "Screenreaders";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/screenreaders/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/screenreaders/"></iframe>';
+			break;
+			// Scrollspy
+		case 'documentation-box-238':
+			var header = "Scrollspy";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/scrollspy">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/scrollspy"></iframe>';
+			break;
+			// Shadow
+		case 'documentation-box-239':
+			var header = "Shadows";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/shadows/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/shadows/"></iframe>';
+			break;
+		case 'documentation-box-240':
+			var header = "Shadow";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/shadow.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/shadow.html"></iframe>';
+			break;
+		case 'documentation-box-241':
+			var header = "Shadow";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/utility#box-shadow">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/utility#box-shadow"></iframe>';
+			break;
+			// Sticky
+		case 'documentation-box-242':
+			var header = "Sticky";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/sticky">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/sticky"></iframe>';
+			break;
+			// Tables
+		case 'documentation-box-243':
+			var header = "Tables";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/content/tables/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/content/tables/"></iframe>';
+			break;
+		case 'documentation-box-244':
+			var header = "Table";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/table.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/table.html"></iframe>';
+			break;
+		case 'documentation-box-245':
+			var header = "Table";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/table">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/table"></iframe>';
+			break;
+			// Text
+		case 'documentation-box-246':
+			var header = "Text";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/text/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/text/"></iframe>';
+			break;
+		case 'documentation-box-247':
+			var header = "Text";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/text">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/text"></iframe>';
+			break;
+			// Toggle
+		case 'documentation-box-248':
+			var header = "Toggle";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/toggle">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/toggle"></iframe>';
+			break;
+			// Transition
+		case 'documentation-box-249':
+			var header = "Transition";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/transition">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/transition"></iframe>';
+			break;
+			// Typography/Heading
+		case 'documentation-box-250':
+			var header = "Typography";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/content/typography/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/content/typography/"></iframe>';
+			break;
+		case 'documentation-box-251':
+			var header = "Typography";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/typography.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/typography.html"></iframe>';
+			break;
+		case 'documentation-box-252':
+			var header = "Heading";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/heading">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/heading"></iframe>';
+			break;
+			// Visibility/Hidding/Showing content
+		case 'documentation-box-253':
+			var header = "Visibility";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/visibility/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/visibility/"></iframe>';
+			break;
+		case 'documentation-box-254':
+			var header = "Hiding/Showing Content";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/helpers.html#hiding">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/helpers.html#hiding"></iframe>';
+			break;
+		case 'documentation-box-255':
+			var header = "Visibility";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/visibility">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/visibility"></iframe>';
+			break;
+			// Wawes
+		case 'documentation-box-256':
+			var header = "Wawes";
+			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/waves.html">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://materializecss.com/waves.html"></iframe>';
+			break;
+			// Width/Sizing
+		case 'documentation-box-257':
+			var header = "Sizing";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/utilities/sizing/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/utilities/sizing/"></iframe>';
+			break;
+		case 'documentation-box-258':
+			var header = "Width";
+			var link = '<a target="_blank" id="modal-link" href="https://getuikit.com/docs/width">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/width"></iframe>';
+			break;
 
 	}
-
-
-
-
-
-
-
 
 	$("#modal-header").replaceWith('<h4 id="modal-header">' + header + '</h4>');
 	$("#modal-iframe").replaceWith(iframe);
