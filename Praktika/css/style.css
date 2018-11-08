@@ -7,6 +7,17 @@ body {
 main {
 	flex: 1 0 auto;
 }
+/* Breadcrump */
+.breadcrumb:before {
+	color: #0288d1;
+}
+.breadcrumb, .breadcrumb:last-child {
+		font-weight: 500;
+ 		color: #0288d1;
+}
+#active-link {
+	font-weight: 400;
+}
 /******************Typography ****************/
 /* Box with info */
 .infobox-description {
@@ -57,19 +68,19 @@ main {
 }
 /*Switch color*/
 .switch label input[type=checkbox]:checked+.lever:after {
-    background-color: #03a9f4  !important;
+    background-color: #5eb8ff !important;
 }
 .switch label input[type=checkbox]:checked+.lever {
-    background-color: #81d4fa  !important;
+    background-color: #0288d1  !important;
 }
 /*Checkboxes color*/
 [type="checkbox"]:checked + span:not(.lever):before {
-	border-right: 3px solid #0277bd;
-    border-bottom: 2px solid #0277bd;
+	border-right: 3px solid #0288d1;
+    border-bottom: 2px solid #0288d1;
 }
 [type="checkbox"].filled-in:checked + span:not(.lever):after {
-	border: 2px solid #0277bd;
-    background-color: #0277bd;
+	border: 2px solid #0288d1;
+    background-color: #0288d1;
 }
 /*Frameworks list in list of components*/
 .frameworks-list a {
@@ -93,8 +104,12 @@ iframe {
 	position: fixed;
 }
 .table-of-contents a.active, .table-of-contents a.active:hover {
-	border-left: solid 2px #1e88e5;
+	border-left: solid 3px #0288d1;
 }
 .table-of-contents a:hover {
-	border-left: solid 1px #1e88e5;
+	border-left: solid 1px #0288d1;
+}
+/* Toast */
+.toast {
+    background-color: #455a64;
 }
