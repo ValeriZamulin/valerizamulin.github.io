@@ -1582,3 +1582,29 @@ function openModal(id) {
 	$("#modal-link").replaceWith(link);
     $('#modal').modal('open');
 }
+
+// *********************************Sorting*********************************
+// Open wizard2.html with parametr
+function openWizard2(id) {
+	location.href = 'wizard2.html?id='+id+'';
+}
+
+// Wizard1 function for sort
+function whichFramework() {
+	//разбиваем подстроку на массив.
+	var str = window.location.search.split('id=');
+	//берем из него второй элемент и проверяем число это или нет, Если не null показываем.
+	if(str[1].match(/\d/) != null) {
+		switch (Number(str[1])) {
+			case 1:
+				document.getElementById('checkbox1').checked = true;
+				break;
+			default:
+
+		}
+	}
+}
+
+function countComponents() {
+	location.href = 'wizard3.html';
+}

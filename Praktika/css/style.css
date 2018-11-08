@@ -118,3 +118,37 @@ iframe {
 	color: #546e7a;
 }
 /* #039be5; */
+.preloader-background p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	z-index: 100;
+	top: -150px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.preloader-background {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #eee;
+
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* Botton in wizard2 */
+#count-btn {
+	position: fixed;
+	bottom: 300px;
+}
+#count-mob-btn {
+	height: 200px; 
+	padding-top: 40px;
+}

@@ -13,6 +13,37 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+  <!-- Page loading -->
+  <div class="preloader-background"><p>Ваш запрос обрабатывается</p>
+  	<div class="preloader-wrapper big active">
+  		<div class="spinner-layer spinner-blue-only">
+  			<div class="circle-clipper left">
+  				<div class="circle"></div>
+  			</div>
+  			<div class="gap-patch">
+  				<div class="circle"></div>
+  			</div>
+  			<div class="circle-clipper right">
+  				<div class="circle"></div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <!-- Loader -->
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(){
+      $('.preloader-background').delay(1700).fadeOut('slow');
+      $('.preloader-wrapper')
+        .delay(1000)
+        .fadeOut();
+    });
+    // Sort frameworks
+    window.onload = function() {
+      setTimeout(function(){
+        whichFramework();
+      },500);
+    };
+  </script>
   <header>
     <nav class="light-blue darken-2" role="navigation">
       <div class="nav-wrapper container">
@@ -2130,7 +2161,7 @@
                   </li>
                   <li class="collection-item">
                     <label>
-                      <input type="checkbox" id="component44" class="2" onclick="Toast('Scrollspy', 'component44', 2)" />
+                      <input type="checkbox" id="stylization38" class="3" onclick="Toast('Scrollspy', 'stylization38', 3)" />
                       <span>Scrollspy</span>
                     </label>
                     <!-- Info icon -->
@@ -2174,7 +2205,7 @@
                   </li>
                   <li class="collection-item">
                     <label>
-                      <input type="checkbox" id="component53" class="2" onclick="Toast('Sticky', 'component53', 2)" />
+                      <input type="checkbox" id="stylization37" class="3" onclick="Toast('Sticky', 'stylization37', 3)" />
                       <span>Sticky</span>
                     </label>
                     <!-- Info icon -->
@@ -2241,7 +2272,7 @@
                   </li>
                   <li class="collection-item">
                     <label>
-                      <input type="checkbox" id="component60" class="2" onclick="Toast('Toggle', 'component60', 2)" />
+                      <input type="checkbox" id="stylization36" class="3" onclick="Toast('Toggle', 'stylization36', 3)" />
                       <span>Toggle</span>
                     </label>
                     <!-- Info icon -->
@@ -2330,7 +2361,7 @@
                   </li>
                   <li class="collection-item">
                     <label>
-                      <input type="checkbox" id="component66" class="2" onclick="Toast('Wawes', 'component66', 2)" />
+                      <input type="checkbox" id="stylization35" class="3" onclick="Toast('Wawes', 'stylization35', 3)" />
                       <span>Wawes</span>
                     </label>
                     <!-- Info icon -->
@@ -2386,7 +2417,16 @@
           <li><a id="show-sidenav-2" href="#block-2">Компоненты</a></li>
           <li><a id="show-sidenav-3" href="#block-3">Утилиты</a></li>
         </ul>
+        <a onclick="countComponents()" class="right waves-effect waves-light btn-large pulse orange lighten-1" id="count-btn">
+          <i class="material-icons left">assessment</i>button
+        </a>
       </div>
+    </div>
+    <!-- Button for mobile devices -->
+    <div class="center hide-on-large-only" id="count-mob-btn">
+      <a onclick="countComponents()" class="waves-effect waves-light btn-large pulse orange lighten-1">
+        <i class="material-icons left">assessment</i>button
+      </a>
     </div>
   </main>
 
