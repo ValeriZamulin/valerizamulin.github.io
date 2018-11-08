@@ -9,14 +9,14 @@ main {
 }
 /* Breadcrump */
 .breadcrumb:before {
-	color: #0288d1;
+	color: #546e7a;
 }
 .breadcrumb, .breadcrumb:last-child {
-		font-weight: 500;
- 		color: #0288d1;
+	color: #546e7a;
+	font-weight: 500;
 }
 #active-link {
-	font-weight: 400;
+	font-weight: 300;
 }
 /******************Typography ****************/
 /* Box with info */
@@ -111,5 +111,10 @@ iframe {
 }
 /* Toast */
 .toast {
-    background-color: #455a64;
+    background-color: #455a64f0;
 }
+/* wizard1 buttons, tabs */
+.collection a.collection-item {
+	color: #546e7a;
+}
+/* #039be5; */

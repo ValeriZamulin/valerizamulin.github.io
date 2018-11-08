@@ -14,223 +14,101 @@
 </head>
 <body>
   <header>
-    <nav class="blue darken-3" role="navigation">
-      <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">Logo</a>
+    <nav class="light-blue darken-2" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="index.html" class="brand-logo">Logo</a>
         <ul class="right hide-on-med-and-down">
           <li><a href="wizard1.html">Wizard</a></li>
           <li><a href="about.html">О проекте</a></li>
         </ul>
-
+        <!-- Navigation for mobile -->
         <ul id="nav-mobile" class="sidenav">
           <li><a href="wizard1.html">Wizard</a></li>
           <li><a href="about.html">О проекте</a></li>
         </ul>
-        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <!-- Back button for mobile devices -->
+        <a href="javascript:history.back()" class="left hide-on-med-and-up"><i class="material-icons">arrow_back</i></a>
+        <!-- Menu (burger) button -->
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
       </div>
     </nav>
-    <nav class="blue darken-1 z-depth-4">
+    <!-- Addition navigation -->
+    <nav class="z-depth-0 transparent hide-on-small-only">
       <div class="nav-wrapper container slow-show">
         <div class="col s12">
-          <a href="wizard1.html" class="breadcrumb">Wizard</a>
-          <a href="wizard1.html" class="breadcrumb">Шаг 1</a>
-          <a href="#!" class="breadcrumb slow-show">Шаг 2</a>
+          <a href="wizard1.html" class="breadcrumb ">Wizard</a>
+          <a href="javascript:history.back()" class="breadcrumb ">Шаг 1</a>
+          <a href="#!" class="breadcrumb slow-show" id="active-link">Шаг 2</a>
         </div>
       </div>
     </nav>
   </header>
+
   <main class="container slow-show">
     <h1 class="center">Wizard</h1>
     <p class="center"><i>Интерактивный мастер</i></p>
     <p class="center">Пожалуйста выберите тип сайта</p>
     <div class="divider"></div><br><br>
+
+
     <div class="row">
-    	<div class="col s12 m6">
-	    	<ul class="collection with-header">
-				<li class="collection-header">
-					<h2>Коммерческий сайт</h2>
-				</li>
-				<li class="collection-item">
-					<div>
-						Сайт-витрина
-						<a href="wizard2.html" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-				<li class="collection-item">
-					<div>
-						Промо-сайт
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-				<li class="collection-item">
-					<div>
-						Интернет-магазины
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-				<li class="collection-item">
-					<div>
-						Сайты-визитки
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-				<li class="collection-item">
-					<div>
-						Целевая страница
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-			</ul>
-    	</div>
-    	<div class="col s12 m6">
-	    	<ul class="collection with-header">
-				<li class="collection-header">
-					<h2>Корпоративный сайт</h2>
-				</li>
-				<li class="collection-item">
-					<div>
-						Сайт-визитка
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-				<li class="collection-item">
-					<div>
-						Корпоративный сайт
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-				<li class="collection-item">
-					<div>
-						Имиджевый сайт
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-				<li class="collection-item">
-					<div>
-						Корпоративный портал
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-				<li class="collection-item">
-					<div>
-						Сайт-портфолио
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-			</ul>
-    	</div>
-    	<div class="col s12 m6">
-	    	<ul class="collection with-header">
-				<li class="collection-header">
-					<h2>Социальный проект</h2>
-				</li>
-				<li class="collection-item">
-					<div>
-						Форум
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-				<li class="collection-item">
-					<div>
-						Социальные сети
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-			</ul>
-    	</div>
-    	<div class="col s12 m6">
-	    	<ul class="collection with-header">
-				<li class="collection-header">
-					<h2>Различные веб-сервисы</h2>
-				</li>
-				<li class="collection-item">
-					<div>
-						Каталог
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-				<li class="collection-item">
-					<div>
-						Почтовый сервис
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-				<li class="collection-item">
-					<div>
-						Поисковыя система
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-				<li class="collection-item">
-					<div>
-						Доска объявлений
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-				<li class="collection-item">
-					<div>
-						Сайт - хостинг
-						<a href="#!" class="secondary-content">
-							<i class="material-icons">send</i>
-						</a>
-					</div>
-				</li>
-			</ul>
-    	</div>
-
-
-    Коммерческие сайты = Сайт-витрина, Промо-сайты, Интернет-магазины, Сайты-визитки, Целевая страница (лендинг)
-
-	Корпоративные  = Сайт-визитка, Корпоративный сайт., Имиджевый, Корпоративный ПОРТАЛ, Сайт-портфолио
-
-	Социальные проекты= Форум, Социальные сети= Узконаправленные, Общенаправленные
-
-	Различные веб-сервисы= Каталоги, Почтовые сервисы, Поисковые системы, Доски объявлений, Сайты хостинги
-
+      <div class="col s12 m6">
+        <div class="collection">
+          <h2 class="collection-header">Коммерческий сайт</h2>
+          <div class="divider"></div>
+          <a href="#!" class="collection-item">Сайт-витрина</a>
+          <a href="#!" class="collection-item">Промо-сайт</a>
+          <a href="#!" class="collection-item">Интернет-магазины</a>
+          <a href="#!" class="collection-item">Сайты-визитки</a>
+          <a href="#!" class="collection-item">Целевая страница</a>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="collection">
+          <h2>Корпоративный сайт</h2>
+          <div class="divider"></div>
+          <a href="#!" class="collection-item">Сайт-визитка</a>
+          <a href="#!" class="collection-item">Корпоративный сайт</a>
+          <a href="#!" class="collection-item">Имиджевый сайт</a>
+          <a href="#!" class="collection-item">Корпоративный портал</a>
+          <a href="#!" class="collection-item">Сайт-портфолио</a>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="collection">
+          <h2>Социальный проект</h2>
+          <div class="divider"></div>
+          <a href="#!" class="collection-item">Форум</a>
+          <a href="#!" class="collection-item">Социальные сети</a>
+          <a href="#!" class="collection-item">Alvin</a>
+          <a href="#!" class="collection-item">Alvin</a>
+        </div>
+      </div>
+      <div class="col s12 m6">
+        <div class="collection">
+          <h2>Веб-сервисы</h2>
+          <div class="divider"></div>
+          <a href="#!" class="collection-item">Каталог</a>
+          <a href="#!" class="collection-item">Почтовый сервис</a>
+          <a href="#!" class="collection-item">Поисковыя система</a>
+          <a href="#!" class="collection-item">Доска объявлений</a>
+          <a href="#!" class="collection-item">Сайт - хостинг</a>
+        </div>
+      </div>
     </div>
 
-	<div class="row">
-		<div class="divider"></div>
-		<h2 class="center">Не нашли чего искали?</h2>
-		<p class="center">Попробуйте использовать <a href="manual.html">ручной режим</a></p>
-	</div>
+
+
+
+  <div class="row">
+    <div class="divider"></div>
+    <h2 class="center">Не нашли чего искали?</h2>
+    <p class="center">Попробуйте использовать <a href="manual.html">ручной режим</a></p>
+  </div>
 
   </main>
 
-
-
-  <footer class="page-footer orange accent-3">
+  <footer class="page-footer blue-grey darken-1">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -251,9 +129,9 @@
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="https://getbootstrap.com/">Bootstrap</a></li>
+            <li><a class="white-text" href="https://materializecss.com/">Materialize</a></li>
+            <li><a class="white-text" href="https://getuikit.com/">UIKit</a></li>
             <li><a class="white-text" href="#!">Link 4</a></li>
           </ul>
         </div>
@@ -273,25 +151,35 @@
   <script src="js/init.js"></script>
 
 
+  <!--******************* Addition elements *********************-->
+  <!-- Information window -->
+  <div class="fixed-action-btn">
+    <a id="menu" class="btn btn-floating btn-large orange lighten-1">
+      <i class="material-icons">close</i>
+    </a>
+  </div>
 
-    <!-- Element Showed -->
-    <div class="tap-target-wrapper"><div class="tap-target tap-target1 grey darken-4" data-activates="menu">
+  <div class="tap-target-wrapper">
+    <div class="tap-target light-blue darken-2" data-target="menu">
       <div class="tap-target-content white-text">
-        <h5>Время</h5>
-        <p class="white-text">Здесь вы можете выбрать время, в которое вы желаете уснуть.<br>Пожалуйста щёкните по циферблату</p>
-        <div class="tap-target-wave" style="right: 5px; bottom: -70px; width: 80px; height: 80px;">
-          <a class="btn btn-floating btn-large amber accent-4 tap-target-origin" onclick="$('.tap-target1').tapTarget('close')">
-            <i class="material-icons">close</i>
-          </a>
-        </div>
+        <h5 id="info-name"></h5>
+        <p class="white-text" id="info-description"></p>
       </div>
     </div>
-      <div class="tap-target-wave">
-        <a class="btn btn-floating btn-large amber accent-4 tap-target-origin">
-          <i class="material-icons">close</i>
-        </a>
-      </div>
+  </div>
+
+  <!-- Modal window -->
+  <div id="modal" class="modal modal-fixed-footer">
+    <div class="modal-content"><i class="material-icons right modal-close">close</i>
+      <h4 id="modal-header"></h4>
+      <iframe id="modal-iframe"></iframe>
+      <a id="modal-link"></a>
     </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-blue btn-flat">Закрыть</a>
+    </div>
+  </div>
+
 
   </body>
 </html>
