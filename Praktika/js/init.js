@@ -3,8 +3,9 @@ $(document).ready(function(){
 	$(".slow-show").fadeTo(1200, 1); // function for slow showing elements from transparent (time,opacity)
 	$('.tap-target').tapTarget();
 	$('.modal').modal();
-	$('.scrollspy').scrollSpy();
+	$('.scrollspy').scrollSpy({scrollOffset: 210});
 	$('.tooltipped').tooltip({enterDelay: 310});
+	$('.pushpin').pushpin({top: 140, bottom: 5400});
 });
 
 
@@ -1606,5 +1607,16 @@ function whichFramework() {
 }
 
 function countComponents() {
-	location.href = 'wizard3.html';
+	var url;
+	//var url = [];
+	for (var i = 1; i <= 12; i++) {
+		if(document.getElementById('checkbox'+i).checked == true) {
+			url += i+',';
+			alert(url);
+		}
+	}
+	if(document.getElementById('checkbox1').checked == true) {
+		url.push(4);
+	}
+	//location.href = 'wizard3.html?id='+url+'';
 }

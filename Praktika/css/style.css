@@ -98,11 +98,6 @@ iframe {
 	border: 1px solid #909090;
 	margin-bottom: 10px;
 }
-/* Fixing side navigation */
-.fixed {
-	top: 35%;
-	position: fixed;
-}
 .table-of-contents a.active, .table-of-contents a.active:hover {
 	border-left: solid 3px #0288d1;
 }
@@ -143,12 +138,29 @@ iframe {
 	bottom: 0;
 }
 
-/* Botton in wizard2 */
-#count-btn {
+/* Fixing side navigation */
+/* .fixed {
+	top: 0;
 	position: fixed;
-	bottom: 300px;
-}
+} */
+/* Botton in wizard2 */
+
 #count-mob-btn {
-	height: 200px; 
+	height: 200px;
 	padding-top: 40px;
+}
+/* // Class for when element is above threshold */
+.pin-top {
+  position: relative;
+}
+/* // Class for when element is below threshold */
+.pin-bottom {
+  position: relative;
+}
+/* // Class for when element is pinned */
+.pinned {
+  position: fixed !important;
+}
+.pushpin .btn-large {
+	margin-top: 60px;
 }

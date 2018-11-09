@@ -32,7 +32,7 @@
   <!-- Loader -->
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function(){
-      $('.preloader-background').delay(1700).fadeOut('slow');
+      $('.preloader-background').delay(700).fadeOut('slow');
       $('.preloader-wrapper')
         .delay(1000)
         .fadeOut();
@@ -2411,16 +2411,19 @@
         </ul>
       </div>
       <!-- Side navigation sector -->
-      <div class="col hide-on-med-and-down offset-l1 l2">
-        <ul class="section table-of-contents fixed">
-          <li><a id="show-sidenav-1" href="#block-1">Формы</a></li>
-          <li><a id="show-sidenav-2" href="#block-2">Компоненты</a></li>
-          <li><a id="show-sidenav-3" href="#block-3">Утилиты</a></li>
-        </ul>
-        <a onclick="countComponents()" class="right waves-effect waves-light btn-large pulse orange lighten-1" id="count-btn">
-          <i class="material-icons left">assessment</i>button
-        </a>
+      <div class="col hide-on-med-and-down l3">
+        <div class="pushpin" style="padding-top:200px">
+          <ul class="section table-of-contents">
+            <li><a id="show-sidenav-1" href="#block-1">Формы</a></li>
+            <li><a id="show-sidenav-2" href="#block-2">Компоненты</a></li>
+            <li><a id="show-sidenav-3" href="#block-3">Утилиты</a></li>
+          </ul>
+          <a onclick="countComponents()" class="waves-effect waves-light btn-large pulse orange lighten-1" id="count-btn">
+            <i class="material-icons left">assessment</i>button
+          </a>
+        </div>
       </div>
+
     </div>
     <!-- Button for mobile devices -->
     <div class="center hide-on-large-only" id="count-mob-btn">
