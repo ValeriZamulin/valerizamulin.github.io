@@ -4,7 +4,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <link rel="shortcut icon" type="image/png" href="image/favicon.ico"/>
-    
+
   <title>Wizard</title>
 
   <!-- CSS  -->
@@ -13,6 +13,37 @@
   <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 </head>
 <body>
+  <!-- Page loading -->
+  <div class="preloader-background"><p>Идёт обработка данных<br>Пожалуйста подождите......</p>
+  	<div class="preloader-wrapper big active">
+  		<div class="spinner-layer spinner-blue-only">
+  			<div class="circle-clipper left">
+  				<div class="circle"></div>
+  			</div>
+  			<div class="gap-patch">
+  				<div class="circle"></div>
+  			</div>
+  			<div class="circle-clipper right">
+  				<div class="circle"></div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <!-- Loader -->
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(){
+      $('.preloader-background').delay(3700).fadeOut('slow');
+      $('.preloader-wrapper')
+        .delay(3000)
+        .fadeOut();
+    });
+    // Sort frameworks
+    window.onload = function() {
+      setTimeout(function(){
+        whichFramework();
+      },500);
+    };
+  </script>
   <header>
     <nav class="blue darken-3" role="navigation">
       <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">Logo</a>
@@ -27,7 +58,7 @@
         </ul>
         <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
       </div>
-    </nav>  
+    </nav>
     <nav class="blue darken-1 z-depth-4">
       <div class="nav-wrapper container slow-show">
         <div class="col s12">
@@ -64,8 +95,8 @@
 
     </div>
   </main>
-  
-  
+
+
 
   <footer class="page-footer orange accent-3">
     <div class="container">

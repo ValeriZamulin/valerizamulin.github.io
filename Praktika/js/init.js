@@ -1605,18 +1605,37 @@ function whichFramework() {
 		}
 	}
 }
+// *************************************************************************************************8Dodelat top
 
 function countComponents() {
-	var url;
-	//var url = [];
-	for (var i = 1; i <= 12; i++) {
-		if(document.getElementById('checkbox'+i).checked == true) {
-			url += i+',';
-			alert(url);
+	var url1 = 'checkbox=';
+	var url2 = 'component=';
+	var url3 = 'stylization=';
+	// Find all checked components from Forms
+	for (var i = 1; i <= 11; i++) {
+		if (document.getElementById('checkbox'+i) != null) {
+			if (document.getElementById('checkbox'+i).checked == true) {
+				url1+=i+',';
+			}
 		}
 	}
-	if(document.getElementById('checkbox1').checked == true) {
-		url.push(4);
+	// Find all checked components from Components
+	for (var i = 1; i <= 70; i++) {
+		if (document.getElementById('component'+i) != null) {
+			if (document.getElementById('component'+i).checked == true) {
+				url2+=i+',';
+			}
+		}
 	}
-	//location.href = 'wizard3.html?id='+url+'';
+	// Find all checked components from Utilites
+	for (var i = 1; i <= 40; i++) {
+		if (document.getElementById('stylization'+i) != null) {
+			if (document.getElementById('stylization'+i).checked == true) {
+				url3+=i+',';
+			}
+		}
+	}
+	location.href = 'wizard3.html?'+url1+'?'+url2+'?'+url3;
 }
+
+// **************************************** Wizard3 ***************************************
