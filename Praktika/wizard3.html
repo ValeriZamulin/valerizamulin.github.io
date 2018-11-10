@@ -6,6 +6,8 @@
   <link rel="shortcut icon" type="image/png" href="image/favicon.ico"/>
 
   <title>Wizard</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -14,7 +16,7 @@
 </head>
 <body>
   <!-- Page loading -->
-  <div class="preloader-background"><p>Идёт обработка данных<br>Пожалуйста подождите......</p>
+  <div class="preloader-background"><p class="center">Идёт обработка данных<br>Пожалуйста подождите......</p>
   	<div class="preloader-wrapper big active">
   		<div class="spinner-layer spinner-blue-only">
   			<div class="circle-clipper left">
@@ -32,7 +34,7 @@
   <!-- Loader -->
   <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", function(){
-      $('.preloader-background').delay(3700).fadeOut('slow');
+      $('.preloader-background').delay(3300).fadeOut('slow');
       $('.preloader-wrapper')
         .delay(3000)
         .fadeOut();
@@ -80,7 +82,48 @@
     <div class="divider"></div><br><br>
     <div class="row">
 
+      <div class="col s12 m4">
+        <div class="framework center">
+          <img class="responsive-img" src="image/bootstrap-stack.png"/>
+          <h2 class="center">Bootstrap</h2>
+          <!-- Overall results -->
+          <span class="left">Bootstrap</span>
+          <span class="right" id="bootstrap-overall-value">0%</span>
+          <div class="progress blue lighten-4">
+            <div id="bootstrap-overall-progress" class="determinate blue"></div>
+          </div>
+        </div>
+      </div>
 
+      <div class="col s12 m4">
+        <div class="framework center">
+          <img class="responsive-img" src="image/materialize.png"/>
+          <h2 class="center">Materialize</h2>
+          <!-- Overall results -->
+          <div class="col s12 m12 l4">
+            <span>Materialize</span>
+            <span class="right" id="materialize-overall-value">0%</span>
+            <div class="progress blue lighten-4">
+              <div id="materialize-overall-progress" class="determinate blue"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="framework center">
+          <img class="responsive-img" src="image/uikit-logo-large.png"/>
+          <h2 class="center">UIKit</h2>
+          <!-- Overall results -->
+          <div class="col s12 m12 l4">
+            <span>UIKit</span>
+            <span class="right" id="uikit-overall-value">0%</span>
+            <div class="progress blue lighten-4">
+              <div id="uikit-overall-progress" class="determinate blue"></div>
+            </div>
+          </div>
+        </div>
+      </div>
 
 
 
@@ -102,6 +145,7 @@
           <div id="bootstrap-overall-progress" class="determinate blue"></div>
         </div>
       </div>
+      <!-- Overall results -->
       <div class="col s12 m12 l4">
         <span>Materialize</span>
         <span class="right" id="materialize-overall-value">0%</span>
@@ -109,6 +153,7 @@
           <div id="materialize-overall-progress" class="determinate blue"></div>
         </div>
       </div>
+      <!-- Overall results -->
       <div class="col s12 m12 l4">
         <span>UIKit</span>
         <span class="right" id="uikit-overall-value">0%</span>

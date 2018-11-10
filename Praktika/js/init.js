@@ -1809,34 +1809,40 @@ function whichFramework() {
 // Create value in %
 
 // % for bootstrap
-var bootstrap_forms_value = Math.round(bootstrap_form_suit/form.length*100);	//Forms
-var bootstrap_components_value = Math.round(bootstrap_component_suit/component.length*100);	//Components
-var bootstrap_stylizations_value = Math.round(bootstrap_stylization_suit/stylization.length*100);	//Stylizations
+var bootstrap_forms_value = Math.round(bootstrap_form_suit / form.length * 100);	//Forms
+var bootstrap_components_value = Math.round(bootstrap_component_suit / component.length * 100);	//Components
+var bootstrap_stylizations_value = Math.round(bootstrap_stylization_suit / stylization.length * 100);	//Stylizations
 //Check
-if(isNaN(parseFloat(bootstrap_forms_value))){bootstrap_forms_value = 0};
-if(isNaN(parseFloat(bootstrap_components_value))){bootstrap_components_value = 0};
-if(isNaN(parseFloat(bootstrap_stylizations_value))){bootstrap_stylizations_value = 0};
-var bootstrap_overall_value = Math.round((bootstrap_forms_value + bootstrap_components_value + bootstrap_stylizations_value)/3);	//Overall value
+var bootstrap_check = 3;
+if(isNaN(parseFloat(bootstrap_forms_value))){bootstrap_forms_value = 0; bootstrap_check--};
+if(isNaN(parseFloat(bootstrap_components_value))){bootstrap_components_value = 0; bootstrap_check--};
+if(isNaN(parseFloat(bootstrap_stylizations_value))){bootstrap_stylizations_value = 0; bootstrap_check--};
+//Overall value
+if (bootstrap_check == 0) {bootstrap_overall_value = 0} else {var bootstrap_overall_value = Math.round((bootstrap_forms_value + bootstrap_components_value + bootstrap_stylizations_value) / bootstrap_check)}
 
 // % for materialize
-var materialize_forms_value = Math.round(materialize_form_suit/form.length*100);	//Forms
-var materialize_components_value = Math.round(materialize_component_suit/component.length*100);	//Components
-var materialize_stylizations_value = Math.round(materialize_stylization_suit/stylization.length*100);	//Stylizations
+var materialize_forms_value = Math.round(materialize_form_suit / form.length * 100);	//Forms
+var materialize_components_value = Math.round(materialize_component_suit / component.length * 100);	//Components
+var materialize_stylizations_value = Math.round(materialize_stylization_suit / stylization.length * 100);	//Stylizations
 //Check
-if(isNaN(parseFloat(materialize_forms_value))){materialize_forms_value = 0};
-if(isNaN(parseFloat(materialize_components_value))){materialize_components_value = 0};
-if(isNaN(parseFloat(materialize_stylizations_value))){materialize_stylizations_value = 0};
-var materialize_overall_value = Math.round((materialize_forms_value + materialize_components_value + materialize_stylizations_value)/3);	//Overall value
+var materialize_check = 3;
+if(isNaN(parseFloat(materialize_forms_value))){materialize_forms_value = 0; materialize_check--};
+if(isNaN(parseFloat(materialize_components_value))){materialize_components_value = 0; materialize_check--};
+if(isNaN(parseFloat(materialize_stylizations_value))){materialize_stylizations_value = 0; materialize_check--};
+//Overall value
+if (materialize_check == 0) {materialize_overall_value = 0} else {var materialize_overall_value = Math.round((materialize_forms_value + materialize_components_value + materialize_stylizations_value) / materialize_check)}
 
 // % for uikit
-var uikit_forms_value = Math.round(uikit_form_suit/form.length*100);	//Forms
-var uikit_components_value = Math.round(uikit_component_suit/component.length*100);	//Components
-var uikit_stylizations_value = Math.round(uikit_stylization_suit/stylization.length*100);	//Stylizations
+var uikit_forms_value = Math.round(uikit_form_suit / form.length * 100);	//Forms
+var uikit_components_value = Math.round(uikit_component_suit / component.length * 100);	//Components
+var uikit_stylizations_value = Math.round(uikit_stylization_suit / stylization.length * 100);	//Stylizations
 // Check
-if(isNaN(parseFloat(uikit_forms_value))){uikit_forms_value = 0};
-if(isNaN(parseFloat(uikit_components_value))){uikit_components_value = 0};
-if(isNaN(parseFloat(uikit_stylizations_value))){uikit_stylizations_value = 0};
-var uikit_overall_value = Math.round((uikit_forms_value + uikit_components_value + uikit_stylizations_value)/3);	//Overall value
+var uikit_check = 3;
+if(isNaN(parseFloat(uikit_forms_value))){uikit_forms_value = 0; uikit_check--};
+if(isNaN(parseFloat(uikit_components_value))){uikit_components_value = 0; uikit_check--};
+if(isNaN(parseFloat(uikit_stylizations_value))){uikit_stylizations_value = 0; uikit_check--};
+//Overall value
+if (uikit_check == 0) {uikit_overall_value = 0} else {var uikit_overall_value = Math.round((uikit_forms_value + uikit_components_value + uikit_stylizations_value) / uikit_check)}
 
 
 //***************** Show bootstrap % and preloader ********************

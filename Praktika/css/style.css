@@ -3,6 +3,7 @@ body {
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
+	font-family: 'Open Sans', sans-serif;
 }
 main {
 	flex: 1 0 auto;
@@ -19,6 +20,24 @@ main {
 	font-weight: 300;
 }
 /******************Typography ****************/
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Roboto', sans-serif;
+	color: #37474f;
+}
+h1 {
+	font-size: 3.5em;
+}
+.collection-header {
+	padding: 0 20px;
+}
+h2 {
+	font-size: 2em;
+}
+p {
+	font-size: 1em;
+	color: #455a64;
+}
+
 /* Box with info */
 .infobox-description {
 	font-size: 13px;
@@ -35,7 +54,7 @@ main {
 }
 /* Div with framework info */
 .framework {
-	padding: 10px 15px;
+	padding: 10px 5px;
 }
 /*Target Wrapper*/
 .fixed-action-btn {
@@ -110,7 +129,7 @@ iframe {
 }
 /* wizard1 buttons, tabs */
 .collection a.collection-item {
-	color: #546e7a;
+	color: #455a64;
 }
 /* #039be5; */
 .preloader-background p {
@@ -129,7 +148,6 @@ iframe {
 	align-items: center;
 	justify-content: center;
 	background-color: #eee;
-
 	position: fixed;
 	z-index: 100;
 	top: 0;
@@ -138,11 +156,6 @@ iframe {
 	bottom: 0;
 }
 
-/* Fixing side navigation */
-/* .fixed {
-	top: 0;
-	position: fixed;
-} */
 /* Botton in wizard2 */
 
 #count-mob-btn {
@@ -163,4 +176,9 @@ iframe {
 }
 .pushpin .btn-large {
 	margin-top: 60px;
+}
+
+/* Progress bar in wizard3 */
+.progress {
+	height: 15px;
 }
