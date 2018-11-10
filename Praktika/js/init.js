@@ -1591,7 +1591,7 @@ function openWizard2(id) {
 }
 
 // Wizard1 function for sort
-function whichFramework() {
+function whichComponents() {
 	//разбиваем подстроку на массив.
 	var str = window.location.search.split('id=');
 	//берем из него второй элемент и проверяем число это или нет, Если не null показываем.
@@ -1635,7 +1635,256 @@ function countComponents() {
 			}
 		}
 	}
-	location.href = 'wizard3.html?'+url1+'?'+url2+'?'+url3;
+	location.href = 'wizard3.html?'+url1+'&'+url2+'&'+url3;
 }
 
 // **************************************** Wizard3 ***************************************
+
+function whichFramework() {
+
+	// Take values from URL
+	var forms = location.search.split("&")[0].replace("?","").split("=")[1];
+	var components = location.search.split("&")[1].replace("?","").split("=")[1];
+	var stylizations = location.search.split("&")[2].replace("?","").split("=")[1];
+
+	// Split every component nr. to array
+	var form = forms.split(',');
+	var component = components.split(',');
+	var stylization = stylizations.split(',');
+
+	// delete last ,
+	--form.length;
+	--component.length;
+	--stylization.length;
+
+
+	// Which framework what component have
+	//******************************Checkboxes*******************************
+	var materialize_form = ['1','2','3','4','5','6','7','8','9','10'];
+	var bootstrap_form = ['2','5','6','7','9','10','11'];
+	var uikit_form = ['2','5','6','7','9','10'];
+	//******************************Components*******************************
+	var materialize_component = ['4','6','7','9','10','11','12','18','19','21','22','24','27','28','30','32','33','35','36','39','40','41','43','44','47','51','54','57'];
+	var bootstrap_component = ['1','6','7','8','9','10','11','12','18','28','30','32','35','38','39','41','51','54','57'];
+	var uikit_component = ['1','2','3','5','6','7','8','9','10','11','12','13','14','15','16','17','18','20','23','24','25','26','27','29','30','31','32','33','34','35','36','37','39','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57'];
+	//******************************Stylizations*****************************
+	var materialize_stylization = ['1','2','5','7','9','11','21','24','26','30','31','32'];
+	var bootstrap_stylization = ['1','2','3','4','5','7','10','11','13','15','18','20','22','24','26','27','30','31','33'];
+	var uikit_stylization = ['1','2','4','6','7','8','9','10','11','12','14','16','17','18','19','20','23','24','25','26','27','28','29','30','31','33'];
+
+
+	// how many components suitable for each framework
+	//******************************Checkboxes*******************************
+	var materialize_form_suit = 0;
+	var bootstrap_form_suit = 0;
+	var uikit_form_suit = 0;
+	//******************************Components*******************************
+	var materialize_component_suit = 0;
+	var bootstrap_component_suit = 0;
+	var uikit_component_suit = 0;
+	//******************************Stylizations*****************************
+	var materialize_stylization_suit = 0;
+	var bootstrap_stylization_suit = 0;
+	var uikit_stylization_suit = 0;
+
+
+	// Create array with list of not suitable components
+	//******************************Checkboxes*******************************
+	var materialize_form_not_suit_array = [];
+	var bootstrap_form_not_suit_array = [];
+	var uikit_form_not_suit_array = [];
+	//******************************Components*******************************
+	var materialize_component_not_suit_array = [];
+	var bootstrap_component_not_suit_array = [];
+	var uikit_component_not_suit_array = [];
+	//******************************Stylizations*****************************
+	var materialize_stylization_not_suit_array = [];
+	var bootstrap_stylization_not_suit_array = [];
+	var uikit_stylization_not_suit_array = [];
+
+
+	//****************** Check every framework for component availability
+	//******************************Checkboxes*******************************
+	// Materialize
+	for (var i = 0; i < form.length; i++) {
+		if (materialize_form.includes(form[i])) {
+			// Add value if it's true
+			materialize_form_suit++;
+		}
+		else {
+			// Add value to array if it's not true
+			materialize_form_not_suit_array.push(form[i]);
+		}
+	}
+	// Bootstrap
+	for (var i = 0; i < form.length; i++) {
+		if (bootstrap_form.includes(form[i])) {
+			// Add value if it's true
+			bootstrap_form_suit++;
+		}
+		else {
+			// Add value to array if it's not true
+			bootstrap_form_not_suit_array.push(form[i]);
+		}
+	}
+	// Uikit
+	for (var i = 0; i < form.length; i++) {
+		if (uikit_form.includes(form[i])) {
+			// Add value if it's true
+			uikit_form_suit++;
+		}
+		else {
+			// Add value to array if it's not true
+			uikit_form_not_suit_array.push(form[i]);
+		}
+	}
+	//******************************Components*******************************
+	for (var i = 0; i < component.length; i++) {
+		if (materialize_component.includes(component[i])) {
+			// Add value if it's true
+			materialize_component_suit++;
+		}
+		else {
+			// Add value to array if it's not true
+			materialize_component_not_suit_array.push(component[i]);
+		}
+	}
+	// Bootstrap
+	for (var i = 0; i < component.length; i++) {
+		if (bootstrap_component.includes(component[i])) {
+			// Add value if it's true
+			bootstrap_component_suit++;
+		}
+		else {
+			// Add value to array if it's not true
+			bootstrap_component_not_suit_array.push(component[i]);
+		}
+	}
+	// Uikit
+	for (var i = 0; i < component.length; i++) {
+		if (uikit_component.includes(component[i])) {
+			// Add value if it's true
+			uikit_component_suit++;
+		}
+		else {
+			// Add value to array if it's not true
+			uikit_component_not_suit_array.push(component[i]);
+		}
+	}
+	//******************************Stylizations*****************************
+	for (var i = 0; i < stylization.length; i++) {
+		if (materialize_stylization.includes(stylization[i])) {
+			// Add value if it's true
+			materialize_stylization_suit++;
+		}
+		else {
+			// Add value to array if it's not true
+			materialize_stylization_not_suit_array.push(stylization[i]);
+		}
+	}
+	// Bootstrap
+	for (var i = 0; i < stylization.length; i++) {
+		if (bootstrap_stylization.includes(stylization[i])) {
+			// Add value if it's true
+			bootstrap_stylization_suit++;
+		}
+		else {
+			// Add value to array if it's not true
+			bootstrap_stylization_not_suit_array.push(stylization[i]);
+		}
+	}
+	// Uikit
+	for (var i = 0; i < stylization.length; i++) {
+		if (uikit_stylization.includes(stylization[i])) {
+			// Add value if it's true
+			uikit_stylization_suit++;
+		}
+		else {
+			// Add value to array if it's not true
+			uikit_stylization_not_suit_array.push(stylization[i]);
+		}
+	}
+
+//***************************Progress bar setup*****************************************
+// Create value in %
+
+// % for bootstrap
+var bootstrap_forms_value = Math.round(bootstrap_form_suit/form.length*100);	//Forms
+var bootstrap_components_value = Math.round(bootstrap_component_suit/component.length*100);	//Components
+var bootstrap_stylizations_value = Math.round(bootstrap_stylization_suit/stylization.length*100);	//Stylizations
+//Check
+if(isNaN(parseFloat(bootstrap_forms_value))){bootstrap_forms_value = 0};
+if(isNaN(parseFloat(bootstrap_components_value))){bootstrap_components_value = 0};
+if(isNaN(parseFloat(bootstrap_stylizations_value))){bootstrap_stylizations_value = 0};
+var bootstrap_overall_value = Math.round((bootstrap_forms_value + bootstrap_components_value + bootstrap_stylizations_value)/3);	//Overall value
+
+// % for materialize
+var materialize_forms_value = Math.round(materialize_form_suit/form.length*100);	//Forms
+var materialize_components_value = Math.round(materialize_component_suit/component.length*100);	//Components
+var materialize_stylizations_value = Math.round(materialize_stylization_suit/stylization.length*100);	//Stylizations
+//Check
+if(isNaN(parseFloat(materialize_forms_value))){materialize_forms_value = 0};
+if(isNaN(parseFloat(materialize_components_value))){materialize_components_value = 0};
+if(isNaN(parseFloat(materialize_stylizations_value))){materialize_stylizations_value = 0};
+var materialize_overall_value = Math.round((materialize_forms_value + materialize_components_value + materialize_stylizations_value)/3);	//Overall value
+
+// % for uikit
+var uikit_forms_value = Math.round(uikit_form_suit/form.length*100);	//Forms
+var uikit_components_value = Math.round(uikit_component_suit/component.length*100);	//Components
+var uikit_stylizations_value = Math.round(uikit_stylization_suit/stylization.length*100);	//Stylizations
+// Check
+if(isNaN(parseFloat(uikit_forms_value))){uikit_forms_value = 0};
+if(isNaN(parseFloat(uikit_components_value))){uikit_components_value = 0};
+if(isNaN(parseFloat(uikit_stylizations_value))){uikit_stylizations_value = 0};
+var uikit_overall_value = Math.round((uikit_forms_value + uikit_components_value + uikit_stylizations_value)/3);	//Overall value
+
+
+//***************** Show bootstrap % and preloader ********************
+// Forms
+document.getElementById("bootstrap-forms-value").innerHTML = bootstrap_forms_value + '%';
+document.getElementById("bootstrap-forms-progress").style.width = bootstrap_forms_value + '%';
+// Components
+document.getElementById("bootstrap-components-value").innerHTML = bootstrap_components_value + '%';
+document.getElementById("bootstrap-components-progress").style.width = bootstrap_components_value + '%';
+// Stylizations
+document.getElementById("bootstrap-stylizations-value").innerHTML = bootstrap_stylizations_value + '%';
+document.getElementById("bootstrap-stylizations-progress").style.width = bootstrap_stylizations_value + '%';
+
+//***************** Show materialize % and preloader ******************
+// Forms
+document.getElementById("materialize-forms-value").innerHTML = materialize_forms_value + '%';
+document.getElementById("materialize-forms-progress").style.width = materialize_forms_value + '%';
+// Components
+document.getElementById("materialize-components-value").innerHTML = materialize_components_value + '%';
+document.getElementById("materialize-components-progress").style.width = materialize_components_value + '%';
+// Stylizations
+document.getElementById("materialize-stylizations-value").innerHTML = materialize_stylizations_value + '%';
+document.getElementById("materialize-stylizations-progress").style.width = materialize_stylizations_value + '%';
+
+//***************** Show uikit % and preloader ************************
+// Forms
+document.getElementById("uikit-forms-value").innerHTML = uikit_forms_value + '%';
+document.getElementById("uikit-forms-progress").style.width = uikit_forms_value + '%';
+// Components
+document.getElementById("uikit-components-value").innerHTML = uikit_components_value + '%';
+document.getElementById("uikit-components-progress").style.width = uikit_components_value + '%';
+// Stylizations
+document.getElementById("uikit-stylizations-value").innerHTML = uikit_stylizations_value + '%';
+document.getElementById("uikit-stylizations-progress").style.width = uikit_stylizations_value + '%';
+
+
+//***************** Show overall results ******************************
+// Bootstrap
+document.getElementById("bootstrap-overall-value").innerHTML = bootstrap_overall_value + '%';
+document.getElementById("bootstrap-overall-progress").style.width = bootstrap_overall_value + '%';
+// Materialize
+document.getElementById("materialize-overall-value").innerHTML = materialize_overall_value + '%';
+document.getElementById("materialize-overall-progress").style.width = materialize_overall_value + '%';
+// Uikit
+document.getElementById("uikit-overall-value").innerHTML = uikit_overall_value + '%';
+document.getElementById("uikit-overall-progress").style.width = uikit_overall_value + '%';
+
+
+
+
+}
