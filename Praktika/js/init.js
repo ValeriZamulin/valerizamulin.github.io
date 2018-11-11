@@ -60,7 +60,7 @@ function Toast(name, id, classname) {
 	if (checkbox.checked == true) {
 		var func = "'"+id+"'";
 		var func2 = "'"+classname+"'";
-		var toastHTML = '<span>' +name+ '</span><button class="btn-flat toast-action" onclick="unCheck('+func+','+func2+')">Отменить</button>';
+		var toastHTML = '<span class="white-text">' +name+ '</span><button class="btn-flat toast-action" onclick="unCheck('+func+','+func2+')">Отменить</button>';
 		M.toast({
 			html: toastHTML,
 			displayLength: 10000,
@@ -143,425 +143,425 @@ function getInfo(id) {
 	switch(id) {
 		// First block
 		case 1:
-			var nameText = 'Autocomplete<br><span class="infobox-description">Автозаполнение для окна ввода</span>';
+			var nameText = 'Autocomplete<br><span class="infobox-description white-text">Автозаполнение для окна ввода</span>';
 			var descriptionText = 'Занесите в список слова, которые будут предлагаться при заполнении текстового поля.';
 			break;
 		case 2:
-			var nameText = 'Checkboxes<br><span class="infobox-description">Элемент для выбора из списка</span>';
+			var nameText = 'Checkboxes<br><span class="infobox-description white-text">Элемент для выбора из списка</span>';
 			var descriptionText = 'Элемент графического пользовательского интерфейса, позволяющий пользователю управлять параметром с двумя состояниями — ☑ включено и ☐ выключено. Во включённом состоянии внутри чекбокса отображается отметка (галочка (✓))';
 			break;
 		case 3:
-			var nameText = 'Chips<br><span class="infobox-description">Небольшие блоки информации</span>';
+			var nameText = 'Chips<br><span class="infobox-description white-text">Небольшие блоки информации</span>';
 			var descriptionText = 'Могут использоваться для представления небольших блоков информации. Чаще всего используются для контактов, либо для тегов.';
 			break;
 		case 4:
-			var nameText = 'Pickers<br><span class="infobox-description">Выбор даты или времени из интерактивного меню</span>';
+			var nameText = 'Pickers<br><span class="infobox-description white-text">Выбор даты или времени из интерактивного меню</span>';
 			var descriptionText = 'Позволяет пользователям выбтрать дату из стилизованного интерактивного календаря и время из интерактивных часов';
 			break;
 		case 5:
-			var nameText = 'Radio buttons<br><span class="infobox-description">Элемент для выбора из списка</span>';
+			var nameText = 'Radio buttons<br><span class="infobox-description white-text">Элемент для выбора из списка</span>';
 			var descriptionText = 'Кнопки «Радио» используются, когда пользователь должен сделать только один выбор из группы элементов.';
 			break;
 		case 6:
-			var nameText = 'Range<br><span class="infobox-description">Диапазон значений</span>';
+			var nameText = 'Range<br><span class="infobox-description white-text">Диапазон значений</span>';
 			var descriptionText = 'Ползунок для значений с широким диапазоном.';
 			break;
 		case 7:
-			var nameText = 'Select<br><span class="infobox-description">Выбор из выпадающего списока</span>';
+			var nameText = 'Select<br><span class="infobox-description white-text">Выбор из выпадающего списока</span>';
 			var descriptionText = 'Позволяет делать выбор пользователю через указанные параметры';
 			break;
 		case 8:
-			var nameText = 'Switches<br><span class="infobox-description">Переключатель (Выкл/Вкл)</span>';
+			var nameText = 'Switches<br><span class="infobox-description white-text">Переключатель (Выкл/Вкл)</span>';
 			var descriptionText = 'Чтобы включить или выключить тумблер, нужно перетащить движок тумблера в ту или иную сторону. ';
 			break;
 		case 9:
-			var nameText = 'Text Inputs<br><span class="infobox-description">Поле ввода для текста</span>';
+			var nameText = 'Text Inputs<br><span class="infobox-description white-text">Поле ввода для текста</span>';
 			var descriptionText = 'Служит для ввода информации, такой как имя пользователя, пароль, электронный адрес и т.п.';
 			break;
 		case 10:
-			var nameText = 'File browser<br><span class="infobox-description">Элемент для выбора файла с компьютера</span>';
+			var nameText = 'File browser<br><span class="infobox-description white-text">Элемент для выбора файла с компьютера</span>';
 			var descriptionText = 'Стилизованный элемент с помощью которого можно прикрепить файл для отправки.';
 			break;
 		case 11:
-			var nameText = 'Input group<br><span class="infobox-description">Поля для ввода с добавленной информацией</span>';
+			var nameText = 'Input group<br><span class="infobox-description white-text">Поля для ввода с добавленной информацией</span>';
 			var descriptionText = 'Легко расширяйте элементы управления форматом, добавляя текст, кнопки или группы кнопок с обеих сторон текстовых полей ввода.';
 			break;
 		// Second block
 		case 20:
-			var nameText = 'Alerts<br><span class="infobox-description">Предупредительное сообщение</span>';
+			var nameText = 'Alerts<br><span class="infobox-description white-text">Предупредительное сообщение</span>';
 			var descriptionText = 'Обратная связь для пользователя с помощью доступного и гибкого предупреждающего сообщения.';
 			break;
 		case 21:
-			var nameText = 'Animation<br><span class="infobox-description">Анимация объектов</span>';
+			var nameText = 'Animation<br><span class="infobox-description white-text">Анимация объектов</span>';
 			var descriptionText = 'Коллекция гладких анимаций для блоков для использования на вашей странице.';
 			break;
 		case 22:
-			var nameText = 'Article<br><span class="infobox-description">Создание статей</span>';
+			var nameText = 'Article<br><span class="infobox-description white-text">Создание статей</span>';
 			var descriptionText = 'Служит для создания стилизованных статей на вашей странице';
 			break;
 		case 23:
-			var nameText = 'Auto init<br><span class="infobox-description">Инициализация компонентов</span>';
+			var nameText = 'Auto init<br><span class="infobox-description white-text">Инициализация компонентов</span>';
 			var descriptionText = 'Инициализация всех компонентов с помощью одного вызова функции';
 			break;
 		case 24:
-			var nameText = 'Background<br><span class="infobox-description">Задний фон</span>';
+			var nameText = 'Background<br><span class="infobox-description white-text">Задний фон</span>';
 			var descriptionText = 'Добавление фона с различными эффектами в элементы';
 			break;
 		case 25:
-			var nameText = 'Badges/Label<br><span class="infobox-description">Значки уведомлений</span>';
+			var nameText = 'Badges/Label<br><span class="infobox-description white-text">Значки уведомлений</span>';
 			var descriptionText = 'Значки могут уведомить вас о появлении новых или непрочитанных сообщений или уведомлений.';
 			break;
 		case 26:
-			var nameText = 'Breadcrumb<br><span class="infobox-description">Вспомогательная навигация</span>';
+			var nameText = 'Breadcrumb<br><span class="infobox-description white-text">Вспомогательная навигация</span>';
 			var descriptionText = 'Хороший способ отобразить ваше текущее местоположение. Обычно это используется, когда у вас несколько слоев контента.';
 			break;
 		case 27:
-			var nameText = 'Button group<br><span class="infobox-description">Сгрупированый ряд кнопок</span>';
+			var nameText = 'Button group<br><span class="infobox-description white-text">Сгрупированый ряд кнопок</span>';
 			var descriptionText = 'Группируйте вместе ряд кнопок на одной строке.';
 			break;
 		case 28:
-			var nameText = 'Buttons<br><span class="infobox-description">Кнопки</span>';
+			var nameText = 'Buttons<br><span class="infobox-description white-text">Кнопки</span>';
 			var descriptionText = 'Стилизованные кнопки для действий, используются в формах, диалогох и т.д';
 			break;
 		case 29:
-			var nameText = 'Cards<br><span class="infobox-description">Гибкий контейнер</span>';
+			var nameText = 'Cards<br><span class="infobox-description white-text">Гибкий контейнер</span>';
 			var descriptionText = 'Удобное средство отображения контента, состоящего из разных типов объектов.';
 			break;
 		case 30:
-			var nameText = 'Carousel<br><span class="infobox-description">Слайд-шоу</span>';
+			var nameText = 'Carousel<br><span class="infobox-description white-text">Слайд-шоу</span>';
 			var descriptionText = 'Слайд-шоу для циклирования  элементов';
 			break;
 		case 31:
-			var nameText = 'Collapse<br><span class="infobox-description">Переключатель видимости контента</span>';
+			var nameText = 'Collapse<br><span class="infobox-description white-text">Переключатель видимости контента</span>';
 			var descriptionText = 'Это элементы расширяемый при нажатии. Он позволяет скрывать контент, который не имеет непосредственного отношения к пользователю.';
 			break;
 		case 32:
-			var nameText = 'Comment<br><span class="infobox-description">Стили для комментариев</span>';
+			var nameText = 'Comment<br><span class="infobox-description white-text">Стили для комментариев</span>';
 			var descriptionText = 'Стилизованный блок комментариев для сайта.';
 			break;
 		case 33:
-			var nameText = 'Countdown<br><span class="infobox-description">Обратный счётчик времени</span>';
+			var nameText = 'Countdown<br><span class="infobox-description white-text">Обратный счётчик времени</span>';
 			var descriptionText = 'Обратный счётчик времени используется для временных скидок или компаний, также для информирования об оставшемся времени до открытия сайта и т.п.';
 			break;
 		case 34:
-			var nameText = 'Description list<br><span class="infobox-description">Списки с описанием</span>';
+			var nameText = 'Description list<br><span class="infobox-description white-text">Списки с описанием</span>';
 			var descriptionText = 'Служит для создания красивых списков с описанием.';
 			break;
 		case 35:
-			var nameText = 'Dotnav<br><span class="infobox-description">Точечная навигация</span>';
+			var nameText = 'Dotnav<br><span class="infobox-description white-text">Точечная навигация</span>';
 			var descriptionText = 'Создайте точечную навигацию для управления слайд-шоу или для перехода к различным разделам страницы.';
 			break;
 		case 36:
-			var nameText = 'Drop<br><span class="infobox-description">Выпадающий элемент</span>';
+			var nameText = 'Drop<br><span class="infobox-description white-text">Выпадающий элемент</span>';
 			var descriptionText = 'Для создания одного выподающего элемента по отношению к другому элементу при наведении или нажатии на него.';
 			break;
 		case 37:
-			var nameText = 'Dropdowns<br><span class="infobox-description">Раскрывающийся список</span>';
+			var nameText = 'Dropdowns<br><span class="infobox-description white-text">Раскрывающийся список</span>';
 			var descriptionText = 'Добавьте раскрывающийся список на любую кнопку';
 			break;
 		case 38:
-			var nameText = 'FeatureDiscovery<br><span class="infobox-description">Окно с подсказкой</span>';
+			var nameText = 'FeatureDiscovery<br><span class="infobox-description white-text">Окно с подсказкой</span>';
 			var descriptionText = 'Стилизованное окно оповещения, служит для подсказок в случае нехватки информации.';
 			break;
 		case 39:
-			var nameText = 'Filter<br><span class="infobox-description">Сортировка элементов по метаданным</span>';
+			var nameText = 'Filter<br><span class="infobox-description white-text">Сортировка элементов по метаданным</span>';
 			var descriptionText = 'Любой макет может быть отфильтрован или отсортирован независимо от расположения. Элементы исчезают и перемещаются с плавными переходами между различными состояниями фильтрации и сортировки.';
 			break;
 		case 40:
-			var nameText = 'Floating Action Button<br><span class="infobox-description">Кнопка с выпадающими иконками</span>';
+			var nameText = 'Floating Action Button<br><span class="infobox-description white-text">Кнопка с выпадающими иконками</span>';
 			var descriptionText = 'Кнопка фиксированного плавающего действия, вы можете добавить несколько действий, которые будут отображаться при наведении.';
 			break;
 		case 41:
-			var nameText = 'Footer<br><span class="infobox-description">Нижний колонтитул</span>';
+			var nameText = 'Footer<br><span class="infobox-description white-text">Нижний колонтитул</span>';
 			var descriptionText = 'Компонент содержащий дополнительную или дублирующую навигацию и информацию на сайте в конце страницы';
 			break;
 		case 42:
-			var nameText = 'Iconnav<br><span class="infobox-description">Навигация из иконок</span>';
+			var nameText = 'Iconnav<br><span class="infobox-description white-text">Навигация из иконок</span>';
 			var descriptionText = 'Навигация из иконок служит для дополнительных возможностей в навигации или в случае отсутствия места для навигации, например на мобильных устройствах';
 			break;
 		case 43:
-			var nameText = 'Icons<br><span class="infobox-description">Иконки</span>';
+			var nameText = 'Icons<br><span class="infobox-description white-text">Иконки</span>';
 			var descriptionText = 'Легко подключаемые стилизованные под дизайн фреймворка иконки.';
 			break;
 		case 44:
-			var nameText = 'Image<br><span class="infobox-description">Изображение</span>';
+			var nameText = 'Image<br><span class="infobox-description white-text">Изображение</span>';
 			var descriptionText = 'Ускорьте время загрузки страницы и уменьшайте трафик, загружая только изображения, когда они входят в область просмотра.';
 			break;
 		case 45:
-			var nameText = 'Leader<br><span class="infobox-description">Строчная привязка к тексту</span>';
+			var nameText = 'Leader<br><span class="infobox-description white-text">Строчная привязка к тексту</span>';
 			var descriptionText = 'Чаще всего используется в меню ресторана, между блюдами и ценами, а также для оглавлений, между названиями и номерами страниц.';
 			break;
 		case 46:
-			var nameText = 'Lightbox<br><span class="infobox-description">Отзывчивая галерея</span>';
+			var nameText = 'Lightbox<br><span class="infobox-description white-text">Отзывчивая галерея</span>';
 			var descriptionText = 'Отзывчивая стилизованная галерея для изображений и видео';
 			break;
 		case 47:
-			var nameText = 'List group/Collections<br><span class="infobox-description">Группированный список</span>';
+			var nameText = 'List group/Collections<br><span class="infobox-description white-text">Группированный список</span>';
 			var descriptionText = 'Используется в основном для отображения серии контента';
 			break;
 		case 48:
-			var nameText = 'Marker<br><span class="infobox-description">Значок маркера</span>';
+			var nameText = 'Marker<br><span class="infobox-description white-text">Значок маркера</span>';
 			var descriptionText = 'Создайте значок маркера, который может отображаться поверх изображений.';
 			break;
 		case 49:
-			var nameText = 'Modal<br><span class="infobox-description">Модальное диалоговое окно</span>';
+			var nameText = 'Modal<br><span class="infobox-description white-text">Модальное диалоговое окно</span>';
 			var descriptionText = 'Всплывающее диалоговое окно для подтверждения действий или отображения другого контента';
 			break;
 		case 50:
-			var nameText = 'Nav<br><span class="infobox-description">Навигация по спискам</span>';
+			var nameText = 'Nav<br><span class="infobox-description white-text">Навигация по спискам</span>';
 			var descriptionText = 'Вспомагательная навигация по списку.';
 			break;
 		case 51:
-			var nameText = 'Navbar<br><span class="infobox-description">Панель навигации по сайту</span>';
+			var nameText = 'Navbar<br><span class="infobox-description white-text">Панель навигации по сайту</span>';
 			var descriptionText = 'Основная навигация по сайту';
 			break;
 		case 52:
-		var nameText = 'Notification/Toasts<br><span class="infobox-description">Уведомления</span>';
+		var nameText = 'Notification/Toasts<br><span class="infobox-description white-text">Уведомления</span>';
 			var descriptionText = 'Ненавязчивые, автоматически исчезающие уведомления';
 			break;
 		case 53:
-			var nameText = 'Overlay<br><span class="infobox-description">Накладываемый слой</span>';
+			var nameText = 'Overlay<br><span class="infobox-description white-text">Накладываемый слой</span>';
 			var descriptionText = 'Накладываемый слой на изображение с различными стилями';
 			break;
 		case 54:
-			var nameText = 'Pagination<br><span class="infobox-description">Навигация по страницам</span>';
+			var nameText = 'Pagination<br><span class="infobox-description white-text">Навигация по страницам</span>';
 			var descriptionText = 'Добавьте ссылки на страницы, чтобы помочь разделить ваш длинный контент на более короткие, понятные блоки.';
 			break;
 		case 55:
-			var nameText = 'Image<br><span class="infobox-description">Изображение</span>';
+			var nameText = 'Image<br><span class="infobox-description white-text">Изображение</span>';
 			var descriptionText = '';
 			break;
 		case 56:
-			var nameText = 'Parallax<br><span class="infobox-description">Анимация фонового содержимого</span>';
+			var nameText = 'Parallax<br><span class="infobox-description white-text">Анимация фонового содержимого</span>';
 			var descriptionText = 'Эффект, при котором фоновое содержимое или изображение в этом случае перемещаются с другой скоростью, чем содержимое переднего плана во время прокрутки.';
 			break;
 		case 57:
-			var nameText = 'Placeholder<br><span class="infobox-description">Размеченное пространство</span>';
+			var nameText = 'Placeholder<br><span class="infobox-description white-text">Размеченное пространство</span>';
 			var descriptionText = 'Создайте размеченное пространство, которое можно использовать для загрузки файлов с помощью перетаскивания.';
 			break;
 		case 58:
-			var nameText = 'Popovers<br><span class="infobox-description">Всплывающие подсказки</span>';
+			var nameText = 'Popovers<br><span class="infobox-description white-text">Всплывающие подсказки</span>';
 			var descriptionText = 'Всплывающие подсказки подобных тем, которые используются в iOS, к любому элементу вашего сайта.';
 			break;
 		case 59:
-			var nameText = 'Progress/Preloader<br><span class="infobox-description">Индикатор выполнения</span>';
+			var nameText = 'Progress/Preloader<br><span class="infobox-description white-text">Индикатор выполнения</span>';
 			var descriptionText = 'Служит для обратной связи с пользователем в случае если у вас есть контент, требующий много времени для загрузки.';
 			break;
 		case 60:
-			var nameText = 'Pushpin<br><span class="infobox-description">Плагин позиционирования</span>';
+			var nameText = 'Pushpin<br><span class="infobox-description white-text">Плагин позиционирования</span>';
 			var descriptionText = 'Используется для привязки элементов к своей странице во время определенных диапазонов прокрутки.';
 			break;
 		case 61:
-			var nameText = 'Scrollspy/Scroll<br><span class="infobox-description">Перемещение по странице</span>';
+			var nameText = 'Scrollspy/Scroll<br><span class="infobox-description white-text">Перемещение по странице</span>';
 			var descriptionText = 'Дополнительная навигация, которая отслеживает тот элемент, на котором в данный момент находится экран пользователя.';
 			break;
 		case 62:
-			var nameText = 'Scrollspy<br><span class="infobox-description">Плавное появление элементов</span>';
+			var nameText = 'Scrollspy<br><span class="infobox-description white-text">Плавное появление элементов</span>';
 			var descriptionText = 'Плавное появление элементов при пролистывании страницы';
 			break;
 		case 63:
-			var nameText = 'Search<br><span class="infobox-description">Окно поиска</span>';
+			var nameText = 'Search<br><span class="infobox-description white-text">Окно поиска</span>';
 			var descriptionText = 'Стилизованное окошко для поиска';
 			break;
 		case 64:
-			var nameText = 'Section<br><span class="infobox-description">Раздел горизонтальной компоновки</span>';
+			var nameText = 'Section<br><span class="infobox-description white-text">Раздел горизонтальной компоновки</span>';
 			var descriptionText = 'Создавайте разделы горизонтальной компоновки с разными цветами фона и стилями.';
 			break;
 		case 65:
-			var nameText = 'Sidenav/Off-canvas<br><span class="infobox-description">Боковое меню</span>';
+			var nameText = 'Sidenav/Off-canvas<br><span class="infobox-description white-text">Боковое меню</span>';
 			var descriptionText = 'Выпадающее боковое меню, в основном используется для мобильной навигации или для дополнительной информации';
 			break;
 		case 66:
-			var nameText = 'Slidenav<br><span class="infobox-description">Навигация для слайд-шоу</span>';
+			var nameText = 'Slidenav<br><span class="infobox-description white-text">Навигация для слайд-шоу</span>';
 			var descriptionText = 'Элементы навигации для слайд-шоу (стилизованные стрелки влево и вправо)';
 			break;
 		case 67:
-			var nameText = 'Sortable <br><span class="infobox-description">Сортировка</span>';
+			var nameText = 'Sortable <br><span class="infobox-description white-text">Сортировка</span>';
 			var descriptionText = 'Создайте сортируемые сетки и списки для изменения порядока элементов.';
 			break;
 		case 68:
-			var nameText = 'Spinner/Circular<br><span class="infobox-description">Значок загрузки</span>';
+			var nameText = 'Spinner/Circular<br><span class="infobox-description white-text">Значок загрузки</span>';
 			var descriptionText = 'Стилизованный анимированный значок загрузки';
 			break;
 		case 69:
-			var nameText = 'Sticky<br><span class="infobox-description">Липкий элемент</span>';
+			var nameText = 'Sticky<br><span class="infobox-description white-text">Липкий элемент</span>';
 			var descriptionText = 'Элементы остаются в верхней части окна просмотра, как липкая навигация.';
 			break;
 		case 70:
-			var nameText = 'Subnav<br><span class="infobox-description">Вспомогательная навигация</span>';
+			var nameText = 'Subnav<br><span class="infobox-description white-text">Вспомогательная навигация</span>';
 			var descriptionText = 'Стилизованный компонент для дополнительной навигации';
 			break;
 		case 71:
-			var nameText = 'SVG<br><span class="infobox-description">Векторные изображения</span>';
+			var nameText = 'SVG<br><span class="infobox-description white-text">Векторные изображения</span>';
 			var descriptionText = 'Внесите встроенные SVG-изображения в разметку страницы и стилизуйте их с помощью CSS.';
 			break;
 		case 72:
-			var nameText = 'Switcher<br><span class="infobox-description">Динамическая смена элемента</span>';
+			var nameText = 'Switcher<br><span class="infobox-description white-text">Динамическая смена элемента</span>';
 			var descriptionText = 'Динамический переход через различные панели контента.';
 			break;
 		case 73:
-			var nameText = 'Tabs<br><span class="infobox-description">Вкладки</span>';
+			var nameText = 'Tabs<br><span class="infobox-description white-text">Вкладки</span>';
 			var descriptionText = 'Вкладки служат для структурирования контента.';
 			break;
 		case 74:
-			var nameText = 'Thumbnav<br><span class="infobox-description">Навигация по картинкам</span>';
+			var nameText = 'Thumbnav<br><span class="infobox-description white-text">Навигация по картинкам</span>';
 			var descriptionText = 'В основном используется как навигация для галереи.';
 			break;
 		case 75:
-			var nameText = 'Tile<br><span class="infobox-description">Стилизованный коньейнер</span>';
+			var nameText = 'Tile<br><span class="infobox-description white-text">Стилизованный коньейнер</span>';
 			var descriptionText = 'Контейнеры с разными фонами, которые можно легко размещать рядом друг с другом.';
 			break;
 		case 76:
-			var nameText = 'Toggle<br><span class="infobox-description">Переключатель содержимого</span>';
+			var nameText = 'Toggle<br><span class="infobox-description white-text">Переключатель содержимого</span>';
 			var descriptionText = 'Скройте, переключите или измените внешний вид содержимого с помощью переключателя.';
 			break;
 		case 77:
-			var nameText = 'Tooltips<br><span class="infobox-description">Подсказки</span>';
+			var nameText = 'Tooltips<br><span class="infobox-description white-text">Подсказки</span>';
 			var descriptionText = 'Всплывающие подсказки в основном используются с кнопками.';
 			break;
 		case 78:
-			var nameText = 'Totop<br><span class="infobox-description">Прокрутка к началу страницы</span>';
+			var nameText = 'Totop<br><span class="infobox-description white-text">Прокрутка к началу страницы</span>';
 			var descriptionText = 'Кнопка с функцией плавной прокрутки к началу страницы';
 			break;
 		case 79:
-			var nameText = 'Upload<br><span class="infobox-description">Загрузка файлов</span>';
+			var nameText = 'Upload<br><span class="infobox-description white-text">Загрузка файлов</span>';
 			var descriptionText = 'Размеченное пространство для загрузки файлов.';
 			break;
 		case 80:
-			var nameText = 'Video<br><span class="infobox-description">Контейнер для видео</span>';
+			var nameText = 'Video<br><span class="infobox-description white-text">Контейнер для видео</span>';
 			var descriptionText = 'Стилизованный, адаптивный контейнер для воспроизведения видео';
 			break;
 
 		// Third block
 		case 101:
-			var nameText = 'Align<br><span class="infobox-description">Расположение контента</span>';
+			var nameText = 'Align<br><span class="infobox-description white-text">Расположение контента</span>';
 			var descriptionText = 'Простые в использовании классы, которые помогут вам выровнять ваш контент.';
 			break;
 		case 102:
-			var nameText = 'Border-radius/Circular images<br><span class="infobox-description">Закругление краёв картинки</span>';
+			var nameText = 'Border-radius/Circular images<br><span class="infobox-description white-text">Закругление краёв картинки</span>';
 			var descriptionText = 'Классы к элементу, чтобы легко закруглить его углы.';
 			break;
 		case 103:
-			var nameText = 'Borders<br><span class="infobox-description">Граница элемента</span>';
+			var nameText = 'Borders<br><span class="infobox-description white-text">Граница элемента</span>';
 			var descriptionText = 'Классы для создания границ элемента. Отлично подходит для изображений, кнопок или любого другого элемента.';
 			break;
 		case 104:
-			var nameText = 'Close<br><span class="infobox-description">Иконка для закрытия</span>';
+			var nameText = 'Close<br><span class="infobox-description white-text">Иконка для закрытия</span>';
 			var descriptionText = 'Стилизованная кнопка закрытия элемента';
 			break;
 		case 105:
-			var nameText = 'Color<br><span class="infobox-description">Цветовая палитра</span>';
+			var nameText = 'Color<br><span class="infobox-description white-text">Цветовая палитра</span>';
 			var descriptionText = 'Подобранная палитра цветов для элементов и текста';
 			break;
 		case 106:
-			var nameText = 'Column<br><span class="infobox-description">Колонка</span>';
+			var nameText = 'Column<br><span class="infobox-description white-text">Колонка</span>';
 			var descriptionText = 'Разбитие текста по столбцам в одном контейнере ';
 			break;
 		case 107:
-			var nameText = 'Container<br><span class="infobox-description">Контейнер</span>';
+			var nameText = 'Container<br><span class="infobox-description white-text">Контейнер</span>';
 			var descriptionText = 'Основной элемент компоновки, требуются при использовании сетки по умолчанию.';
 			break;
 		case 108:
-			var nameText = 'Cover<br><span class="infobox-description">Фон для контейнера</span>';
+			var nameText = 'Cover<br><span class="infobox-description white-text">Фон для контейнера</span>';
 			var descriptionText = 'Разверните изображения, видео или фреймы, чтобы покрыть весь контейнер и разместить свой собственный контент сверху.';
 			break;
 		case 109:
-			var nameText = 'Divider<br><span class="infobox-description">Разделитель</span>';
+			var nameText = 'Divider<br><span class="infobox-description white-text">Разделитель</span>';
 			var descriptionText = 'Стилизованный разделитель';
 			break;
 		case 110:
-			var nameText = 'Flex<br><span class="infobox-description">Плагин позиционирования</span>';
+			var nameText = 'Flex<br><span class="infobox-description white-text">Плагин позиционирования</span>';
 			var descriptionText = 'Быстрое управление компоновкой, выравниванием и размером столбцов сетки, навигации, компонентов и т.д.';
 			break;
 		case 111:
-			var nameText = 'Grid<br><span class="infobox-description">Адаптивная сетка</span>';
+			var nameText = 'Grid<br><span class="infobox-description white-text">Адаптивная сетка</span>';
 			var descriptionText = 'Мощная мобильная сетка для построения макетов всех форм и размеров благодаря двенадцатиколоночной системе.';
 			break;
 		case 112:
-			var nameText = 'Heading<br><span class="infobox-description">Заголовок</span>';
+			var nameText = 'Heading<br><span class="infobox-description white-text">Заголовок</span>';
 			var descriptionText = 'Различные стили для заголовка';
 			break;
 		case 113:
-			var nameText = 'Height<br><span class="infobox-description">Высота элементов</span>';
+			var nameText = 'Height<br><span class="infobox-description white-text">Высота элементов</span>';
 			var descriptionText = 'Определитель высоты элементов в зависимости от вида экрана.';
 			break;
 		case 114:
-			var nameText = 'Image replacement<br><span class="infobox-description">Замена текста картинкой</span>';
+			var nameText = 'Image replacement<br><span class="infobox-description white-text">Замена текста картинкой</span>';
 			var descriptionText = 'Класс для замены текста на изображение';
 			break;
 		case 115:
-			var nameText = 'Inverse<br><span class="infobox-description">Противоположность</span>';
+			var nameText = 'Inverse<br><span class="infobox-description white-text">Противоположность</span>';
 			var descriptionText = 'Обратный стиль любого компонента для светлого или темного фона.';
 			break;
 		case 116:
-			var nameText = 'Jumbotron<br><span class="infobox-description">Стилизация ключевого элемента</span>';
+			var nameText = 'Jumbotron<br><span class="infobox-description white-text">Стилизация ключевого элемента</span>';
 			var descriptionText = 'Дополнительное увеличение ключевого сообщения.';
 			break;
 		case 117:
-			var nameText = 'Link<br><span class="infobox-description">Ссылка</span>';
+			var nameText = 'Link<br><span class="infobox-description white-text">Ссылка</span>';
 			var descriptionText = 'Классы для стилизации ссылок';
 			break;
 		case 118:
-			var nameText = 'List<br><span class="infobox-description">Список</span>';
+			var nameText = 'List<br><span class="infobox-description white-text">Список</span>';
 			var descriptionText = 'Классы для стилизации списка';
 			break;
 		case 119:
-			var nameText = 'Margin/Padding/Spacing<br><span class="infobox-description">Промежутки</span>';
+			var nameText = 'Margin/Padding<br><span class="infobox-description white-text">Промежутки</span>';
 			var descriptionText = 'Классы для промежутков между элементами';
 			break;
 		case 120:
-			var nameText = 'Position<br><span class="infobox-description">Позиция контента</span>';
+			var nameText = 'Position<br><span class="infobox-description white-text">Позиция контента</span>';
 			var descriptionText = 'Коллекция классов для размещения содержимого';
 			break;
 		case 121:
-			var nameText = 'Print/Display<br><span class="infobox-description">Печать</span>';
+			var nameText = 'Print/Display<br><span class="infobox-description white-text">Печать</span>';
 			var descriptionText = 'Оптимизация страницы для печати.';
 			break;
 		case 122:
-			var nameText = 'Pulse<br><span class="infobox-description">Эффект пульсации</span>';
+			var nameText = 'Pulse<br><span class="infobox-description white-text">Эффект пульсации</span>';
 			var descriptionText = 'Эффект пульсации кнопок для привлечения внимания.';
 			break;
 		case 123:
-			var nameText = 'Screenreaders<br><span class="infobox-description">Чтение с экрана</span>';
+			var nameText = 'Screenreaders<br><span class="infobox-description white-text">Чтение с экрана</span>';
 			var descriptionText = 'Показать элемент только программе для чтения с экрана.';
 			break;
 		case 124:
-			var nameText = 'Shadow<br><span class="infobox-description">Тень</span>';
+			var nameText = 'Shadow<br><span class="infobox-description white-text">Тень</span>';
 			var descriptionText = 'Тени для контейнеров.';
 			break;
 		case 125:
-			var nameText = 'Tables<br><span class="infobox-description">Таблицы</span>';
+			var nameText = 'Tables<br><span class="infobox-description white-text">Таблицы</span>';
 			var descriptionText = 'Стили для таблиц';
 			break;
 		case 126:
-			var nameText = 'Text<br><span class="infobox-description">Текст</span>';
+			var nameText = 'Text<br><span class="infobox-description white-text">Текст</span>';
 			var descriptionText = 'Набор полезных текстовых классов для стилизации вашего контента.';
 			break;
 		case 127:
-			var nameText = 'Transition<br><span class="infobox-description">Плавный переход</span>';
+			var nameText = 'Transition<br><span class="infobox-description white-text">Плавный переход</span>';
 			var descriptionText = 'Создавайте плавные переходы между двумя состояниями при наведении на элемент.';
 			break;
 		case 128:
-			var nameText = 'Typography<br><span class="infobox-description">Типография</span>';
+			var nameText = 'Typography<br><span class="infobox-description white-text">Типография</span>';
 			var descriptionText = 'Базовые стили для тегов заголовков.';
 			break;
 		case 129:
-			var nameText = 'Visibility/Hidding/Showing content<br><span class="infobox-description">Отображение элемента</span>';
+			var nameText = 'Visibility/Hidding/Showing content<br><span class="infobox-description white-text">Отображение элемента</span>';
 			var descriptionText = 'Классы для контроля видимости элемента без изменения отображения.';
 			break;
 		case 130:
-			var nameText = 'Wawes<br><span class="infobox-description">Эффект волн</span>';
+			var nameText = 'Wawes<br><span class="infobox-description white-text">Эффект волн</span>';
 			var descriptionText = 'Внешняя библиотека для создания эффекта чернил, описанная в Material Design.';
 			break;
-		case 125:
-			var nameText = 'Width/Sizing<br><span class="infobox-description">Определение размера</span>';
+		case 131:
+			var nameText = 'Width/Sizing<br><span class="infobox-description white-text">Определение размера</span>';
 			var descriptionText = 'Классы для определения размеров элементов для разных экранов';
 			break;
 
 	}
 
 	// Place text
-	$("#info-name").replaceWith('<h5 id="info-name" class="center">' + nameText + '</h5>');
+	$("#info-name").replaceWith('<h5 id="info-name" class="center white-text">' + nameText + '</h5>');
 	$("#info-description").replaceWith('<p class="white-text" id="info-description">' + descriptionText + '</p>');
 }
 
@@ -1805,92 +1805,309 @@ function whichFramework() {
 		}
 	}
 
-//***************************Progress bar setup*****************************************
-// Create value in %
-
-// % for bootstrap
-var bootstrap_forms_value = Math.round(bootstrap_form_suit / form.length * 100);	//Forms
-var bootstrap_components_value = Math.round(bootstrap_component_suit / component.length * 100);	//Components
-var bootstrap_stylizations_value = Math.round(bootstrap_stylization_suit / stylization.length * 100);	//Stylizations
-//Check
-var bootstrap_check = 3;
-if(isNaN(parseFloat(bootstrap_forms_value))){bootstrap_forms_value = 0; bootstrap_check--};
-if(isNaN(parseFloat(bootstrap_components_value))){bootstrap_components_value = 0; bootstrap_check--};
-if(isNaN(parseFloat(bootstrap_stylizations_value))){bootstrap_stylizations_value = 0; bootstrap_check--};
-//Overall value
-if (bootstrap_check == 0) {bootstrap_overall_value = 0} else {var bootstrap_overall_value = Math.round((bootstrap_forms_value + bootstrap_components_value + bootstrap_stylizations_value) / bootstrap_check)}
-
-// % for materialize
-var materialize_forms_value = Math.round(materialize_form_suit / form.length * 100);	//Forms
-var materialize_components_value = Math.round(materialize_component_suit / component.length * 100);	//Components
-var materialize_stylizations_value = Math.round(materialize_stylization_suit / stylization.length * 100);	//Stylizations
-//Check
-var materialize_check = 3;
-if(isNaN(parseFloat(materialize_forms_value))){materialize_forms_value = 0; materialize_check--};
-if(isNaN(parseFloat(materialize_components_value))){materialize_components_value = 0; materialize_check--};
-if(isNaN(parseFloat(materialize_stylizations_value))){materialize_stylizations_value = 0; materialize_check--};
-//Overall value
-if (materialize_check == 0) {materialize_overall_value = 0} else {var materialize_overall_value = Math.round((materialize_forms_value + materialize_components_value + materialize_stylizations_value) / materialize_check)}
-
-// % for uikit
-var uikit_forms_value = Math.round(uikit_form_suit / form.length * 100);	//Forms
-var uikit_components_value = Math.round(uikit_component_suit / component.length * 100);	//Components
-var uikit_stylizations_value = Math.round(uikit_stylization_suit / stylization.length * 100);	//Stylizations
-// Check
-var uikit_check = 3;
-if(isNaN(parseFloat(uikit_forms_value))){uikit_forms_value = 0; uikit_check--};
-if(isNaN(parseFloat(uikit_components_value))){uikit_components_value = 0; uikit_check--};
-if(isNaN(parseFloat(uikit_stylizations_value))){uikit_stylizations_value = 0; uikit_check--};
-//Overall value
-if (uikit_check == 0) {uikit_overall_value = 0} else {var uikit_overall_value = Math.round((uikit_forms_value + uikit_components_value + uikit_stylizations_value) / uikit_check)}
-
-
-//***************** Show bootstrap % and preloader ********************
-// Forms
-document.getElementById("bootstrap-forms-value").innerHTML = bootstrap_forms_value + '%';
-document.getElementById("bootstrap-forms-progress").style.width = bootstrap_forms_value + '%';
-// Components
-document.getElementById("bootstrap-components-value").innerHTML = bootstrap_components_value + '%';
-document.getElementById("bootstrap-components-progress").style.width = bootstrap_components_value + '%';
-// Stylizations
-document.getElementById("bootstrap-stylizations-value").innerHTML = bootstrap_stylizations_value + '%';
-document.getElementById("bootstrap-stylizations-progress").style.width = bootstrap_stylizations_value + '%';
-
-//***************** Show materialize % and preloader ******************
-// Forms
-document.getElementById("materialize-forms-value").innerHTML = materialize_forms_value + '%';
-document.getElementById("materialize-forms-progress").style.width = materialize_forms_value + '%';
-// Components
-document.getElementById("materialize-components-value").innerHTML = materialize_components_value + '%';
-document.getElementById("materialize-components-progress").style.width = materialize_components_value + '%';
-// Stylizations
-document.getElementById("materialize-stylizations-value").innerHTML = materialize_stylizations_value + '%';
-document.getElementById("materialize-stylizations-progress").style.width = materialize_stylizations_value + '%';
-
-//***************** Show uikit % and preloader ************************
-// Forms
-document.getElementById("uikit-forms-value").innerHTML = uikit_forms_value + '%';
-document.getElementById("uikit-forms-progress").style.width = uikit_forms_value + '%';
-// Components
-document.getElementById("uikit-components-value").innerHTML = uikit_components_value + '%';
-document.getElementById("uikit-components-progress").style.width = uikit_components_value + '%';
-// Stylizations
-document.getElementById("uikit-stylizations-value").innerHTML = uikit_stylizations_value + '%';
-document.getElementById("uikit-stylizations-progress").style.width = uikit_stylizations_value + '%';
+	// Don't show missing components block if is nothing to show
+	// Materialize
+	if (materialize_form_not_suit_array.length < 1) {
+		document.getElementById('materialize-missing-form').style.display = 'none';
+	}
+	if (materialize_component_not_suit_array.length < 1) {
+		document.getElementById('materialize-missing-component').style.display = 'none';
+	}
+	if (materialize_stylization_not_suit_array.length < 1) {
+		document.getElementById('materialize-missing-stylization').style.display = 'none';
+	}
+	if (materialize_form_not_suit_array.length < 1 && materialize_component_not_suit_array.length < 1 && materialize_stylization_not_suit_array.length < 1) {
+		document.getElementById('materialize-missing').style.display = 'none';
+	}
+	// Bootstrap
+	if (bootstrap_form_not_suit_array.length < 1) {
+		document.getElementById('bootstrap-missing-form').style.display = 'none';
+	}
+	if (bootstrap_component_not_suit_array.length < 1) {
+		document.getElementById('bootstrap-missing-component').style.display = 'none';
+	}
+	if (bootstrap_stylization_not_suit_array.length < 1) {
+		document.getElementById('bootstrap-missing-stylization').style.display = 'none';
+	}
+	if (bootstrap_form_not_suit_array.length < 1 && bootstrap_component_not_suit_array.length < 1 && bootstrap_stylization_not_suit_array.length < 1) {
+		document.getElementById('bootstrap-missing').style.display = 'none';
+	}
+	// UIKit
+	if (uikit_form_not_suit_array.length < 1) {
+		document.getElementById('uikit-missing-form').style.display = 'none';
+	}
+	if (uikit_component_not_suit_array.length < 1) {
+		document.getElementById('uikit-missing-component').style.display = 'none';
+	}
+	if (uikit_stylization_not_suit_array.length < 1) {
+		document.getElementById('uikit-missing-stylization').style.display = 'none';
+	}
+	if (uikit_form_not_suit_array.length < 1 && uikit_component_not_suit_array.length < 1 && uikit_stylization_not_suit_array.length < 1) {
+		document.getElementById('uikit-missing').style.display = 'none';
+	}
 
 
-//***************** Show overall results ******************************
-// Bootstrap
-document.getElementById("bootstrap-overall-value").innerHTML = bootstrap_overall_value + '%';
-document.getElementById("bootstrap-overall-progress").style.width = bootstrap_overall_value + '%';
-// Materialize
-document.getElementById("materialize-overall-value").innerHTML = materialize_overall_value + '%';
-document.getElementById("materialize-overall-progress").style.width = materialize_overall_value + '%';
-// Uikit
-document.getElementById("uikit-overall-value").innerHTML = uikit_overall_value + '%';
-document.getElementById("uikit-overall-progress").style.width = uikit_overall_value + '%';
+	//***************************Progress bar setup*****************************************
+	// Create value in %
+
+	// % for bootstrap
+	var bootstrap_forms_value = Math.round(bootstrap_form_suit / form.length * 100);	//Forms
+	var bootstrap_components_value = Math.round(bootstrap_component_suit / component.length * 100);	//Components
+	var bootstrap_stylizations_value = Math.round(bootstrap_stylization_suit / stylization.length * 100);	//Stylizations
+	//Check
+	var bootstrap_check = 3;
+	if(isNaN(parseFloat(bootstrap_forms_value))){bootstrap_forms_value = 0; bootstrap_check--};
+	if(isNaN(parseFloat(bootstrap_components_value))){bootstrap_components_value = 0; bootstrap_check--};
+	if(isNaN(parseFloat(bootstrap_stylizations_value))){bootstrap_stylizations_value = 0; bootstrap_check--};
+	//Overall value
+	if (bootstrap_check == 0) {bootstrap_overall_value = 0} else {var bootstrap_overall_value = Math.round((bootstrap_forms_value + bootstrap_components_value + bootstrap_stylizations_value) / bootstrap_check)}
+
+	// % for materialize
+	var materialize_forms_value = Math.round(materialize_form_suit / form.length * 100);	//Forms
+	var materialize_components_value = Math.round(materialize_component_suit / component.length * 100);	//Components
+	var materialize_stylizations_value = Math.round(materialize_stylization_suit / stylization.length * 100);	//Stylizations
+	//Check
+	var materialize_check = 3;
+	if(isNaN(parseFloat(materialize_forms_value))){materialize_forms_value = 0; materialize_check--};
+	if(isNaN(parseFloat(materialize_components_value))){materialize_components_value = 0; materialize_check--};
+	if(isNaN(parseFloat(materialize_stylizations_value))){materialize_stylizations_value = 0; materialize_check--};
+	//Overall value
+	if (materialize_check == 0) {materialize_overall_value = 0} else {var materialize_overall_value = Math.round((materialize_forms_value + materialize_components_value + materialize_stylizations_value) / materialize_check)}
+
+	// % for uikit
+	var uikit_forms_value = Math.round(uikit_form_suit / form.length * 100);	//Forms
+	var uikit_components_value = Math.round(uikit_component_suit / component.length * 100);	//Components
+	var uikit_stylizations_value = Math.round(uikit_stylization_suit / stylization.length * 100);	//Stylizations
+	// Check
+	var uikit_check = 3;
+	if(isNaN(parseFloat(uikit_forms_value))){uikit_forms_value = 0; uikit_check--};
+	if(isNaN(parseFloat(uikit_components_value))){uikit_components_value = 0; uikit_check--};
+	if(isNaN(parseFloat(uikit_stylizations_value))){uikit_stylizations_value = 0; uikit_check--};
+	//Overall value
+	if (uikit_check == 0) {uikit_overall_value = 0} else {var uikit_overall_value = Math.round((uikit_forms_value + uikit_components_value + uikit_stylizations_value) / uikit_check)}
+
+	if (bootstrap_overall_value == 0 && materialize_overall_value == 0 && uikit_overall_value == 0) {
+		$("#modal-header").replaceWith('<h4 id="modal-header">Вы не выбрали ни одного  компонента</h4>');
+		$("#modal-text").replaceWith('<p>Пожалуйста вернитесь на предыдущую страницу и выберите необходимые компоненты.</p>');
+		$('#modal').modal('open');
+		setTimeout('history.back(-1)', 15000);
+
+	}
+
+	//***************** Show bootstrap % and preloader ********************
+	// Forms
+	document.getElementById("bootstrap-forms-value").innerHTML = bootstrap_forms_value + '%';
+	document.getElementById("bootstrap-forms-progress").style.width = bootstrap_forms_value + '%';
+	// Components
+	document.getElementById("bootstrap-components-value").innerHTML = bootstrap_components_value + '%';
+	document.getElementById("bootstrap-components-progress").style.width = bootstrap_components_value + '%';
+	// Stylizations
+	document.getElementById("bootstrap-stylizations-value").innerHTML = bootstrap_stylizations_value + '%';
+	document.getElementById("bootstrap-stylizations-progress").style.width = bootstrap_stylizations_value + '%';
+
+	//***************** Show materialize % and preloader ******************
+	// Forms
+	document.getElementById("materialize-forms-value").innerHTML = materialize_forms_value + '%';
+	document.getElementById("materialize-forms-progress").style.width = materialize_forms_value + '%';
+	// Components
+	document.getElementById("materialize-components-value").innerHTML = materialize_components_value + '%';
+	document.getElementById("materialize-components-progress").style.width = materialize_components_value + '%';
+	// Stylizations
+	document.getElementById("materialize-stylizations-value").innerHTML = materialize_stylizations_value + '%';
+	document.getElementById("materialize-stylizations-progress").style.width = materialize_stylizations_value + '%';
+
+	//***************** Show uikit % and preloader ************************
+	// Forms
+	document.getElementById("uikit-forms-value").innerHTML = uikit_forms_value + '%';
+	document.getElementById("uikit-forms-progress").style.width = uikit_forms_value + '%';
+	// Components
+	document.getElementById("uikit-components-value").innerHTML = uikit_components_value + '%';
+	document.getElementById("uikit-components-progress").style.width = uikit_components_value + '%';
+	// Stylizations
+	document.getElementById("uikit-stylizations-value").innerHTML = uikit_stylizations_value + '%';
+	document.getElementById("uikit-stylizations-progress").style.width = uikit_stylizations_value + '%';
 
 
+	//***************** Show overall results ******************************
+	// Bootstrap
+	document.getElementById("bootstrap-overall-value").innerHTML = bootstrap_overall_value + '%';
+	document.getElementById("bootstrap-overall-progress").style.width = bootstrap_overall_value + '%';
+	// Materialize
+	document.getElementById("materialize-overall-value").innerHTML = materialize_overall_value + '%';
+	document.getElementById("materialize-overall-progress").style.width = materialize_overall_value + '%';
+	// Uikit
+	document.getElementById("uikit-overall-value").innerHTML = uikit_overall_value + '%';
+	document.getElementById("uikit-overall-progress").style.width = uikit_overall_value + '%';
 
+
+	// ****************************************Chips********************************************
+
+	// Data for chips / Forms
+	var form_chips = [
+		[],
+		[1,'Autocomplete','getInfo(1)'],
+		[2,'Checkboxes','getInfo(2)'],
+		[3,'Chips','getInfo(3)'],
+		[4,'Pickers','getInfo(4)'],
+		[5,'Radio buttons','getInfo(5)'],
+		[6,'Range','getInfo(6)'],
+		[7,'Select','getInfo(7)'],
+		[8,'Switches','getInfo(8)'],
+		[9,'Text Inputs','getInfo(9)'],
+		[10,'File browser','getInfo(10)'],
+		[11,'Input group','getInfo(11)']
+	];
+	// Data for chips / Components
+	var component_chips = [
+		[],
+		[1,'Alerts','getInfo(20)'],
+		[2,'Animation','getInfo(21)'],
+		[3,'Article','getInfo(22)'],
+		[4,'Auto init','getInfo(23)'],
+		[5,'Background','getInfo(24)'],
+		[6,'Badges/Label','getInfo(25)'],
+		[7,'Breadcrumb','getInfo(26)'],
+		[8,'Button group','getInfo(27)'],
+		[9,'Buttons','getInfo(28)'],
+		[10,'Cards','getInfo(29)'],
+		[11,'Carousel/Slider','getInfo(30)'],
+		[12,'Collapse/Accordion','getInfo(31)'],
+		[13,'Comment','getInfo(32)'],
+		[14,'Countdown','getInfo(33)'],
+		[15,'Description list','getInfo(34)'],
+		[16,'Dotnav','getInfo(35)'],
+		[17,'Drop','getInfo(36)'],
+		[18,'Dropdowns','getInfo(37)'],
+		[19,'FeatureDiscovery','getInfo(38)'],
+		[20,'Filter','getInfo(39)'],
+		[21,'Floating Action Button','getInfo(40)'],
+		[22,'Footer','getInfo(41)'],
+		[23,'Iconnav','getInfo(42)'],
+		[24,'Icons','getInfo(43)'],
+		[25,'Image','getInfo(44)'],
+		[26,'Leader','getInfo(45)'],
+		[27,'Lightbox/Media','getInfo(46)'],
+		[28,'List group/Collections','getInfo(47)'],
+		[29,'Marker','getInfo(48)'],
+		[30,'Modal','getInfo(49)'],
+		[31,'Nav','getInfo(50)'],
+		[32,'Navbar','getInfo(51)'],
+		[33,'Notification/Toasts','getInfo(52)'],
+		[34,'Overlay','getInfo(53)'],
+		[35,'Pagination','getInfo(54)'],
+		[36,'Parallax','getInfo(56)'],
+		[37,'Placeholder','getInfo(57)'],
+		[38,'Popovers','getInfo(58)'],
+		[39,'Progress/Preloader','getInfo(59)'],
+		[40,'Pushpin','getInfo(60)'],
+		[41,'Scrollspy/Scroll','getInfo(61)'],
+		[42,'Search','getInfo(63)'],
+		[43,'Section','getInfo(64)'],
+		[44,'Sidenav/Off-canvas','getInfo(65)'],
+		[45,'Slidenav','getInfo(66)'],
+		[46,'Sortable','getInfo(67)'],
+		[47,'Spinner/Circular','getInfo(68)'],
+		[48,'Subnav','getInfo(70)'],
+		[49,'SVG','getInfo(71)'],
+		[50,'Switcher','getInfo(72)'],
+		[51,'Tabs','getInfo(73)'],
+		[52,'Thumbnav','getInfo(74)'],
+		[53,'Tile','getInfo(75)'],
+		[54,'Tooltips','getInfo(77)'],
+		[55,'Totop','getInfo(78)'],
+		[56,'Upload','getInfo(79)'],
+		[57,'Video/Embeds','getInfo(80)']
+	];
+	// Data for chips / Stylization
+	var stylization_chips = [
+		[],
+		[111,'Align','getInfo(101)'],
+		[111,'Border-radius','getInfo(102)'],
+		[111,'Borders','getInfo(103)'],
+		[111,'Close','getInfo(104)'],
+		[111,'Color','getInfo(105)'],
+		[111,'Column','getInfo(106)'],
+		[111,'Container','getInfo(107)'],
+		[111,'Cover','getInfo(108)'],
+		[111,'Divider','getInfo(109)'],
+		[111,'Flex','getInfo(110)'],
+		[111,'Grid','getInfo(111)'],
+		[111,'Height','getInfo(113)'],
+		[111,'Image replacement','getInfo(114)'],
+		[111,'Inverse','getInfo(115)'],
+		[111,'Jumbotron','getInfo(116)'],
+		[111,'Link','getInfo(117)'],
+		[111,'List','getInfo(118)'],
+		[111,'Margin/Padding','getInfo(119)'],
+		[111,'Position','getInfo(120)'],
+		[111,'Print/Display','getInfo(121)'],
+		[111,'Pulse','getInfo(122)'],
+		[111,'Screenreaders','getInfo(123)'],
+		[111,'Scrollspy','getInfo(62)'],
+		[111,'Shadow','getInfo()'],
+		[111,'Sticky','getInfo(69)'],
+		[111,'Tables','getInfo(125)'],
+		[111,'Text','getInfo(126)'],
+		[111,'Toggle','getInfo(76)'],
+		[111,'Transition','getInfo(127)'],
+		[111,'Typography/Heading','getInfo(128)'],
+		[111,'Visibility','getInfo(129)'],
+		[111,'Wawes','getInfo(130)'],
+		[111,'Width/Sizing','getInfo(131)']
+	];
+
+
+	//**************************************** Chips for forms *****************************************
+	// Generate chips for bootstrap - missing components from forms
+	for (var i = 0; i < bootstrap_form_not_suit_array.length; i++) {
+		var bootstrap_chips_list = "<div class='chip'>" + form_chips[bootstrap_form_not_suit_array[i]][1] + "<i onclick='" + form_chips[bootstrap_form_not_suit_array[i]][2] + "' class='chip-info material-icons'>info_outline</i></div>"
+		document.getElementById("bootstrap-form-chips").innerHTML += bootstrap_chips_list;
+	}
+	// Generate chips for materizlize - missing components from forms
+	for (var i = 0; i < materialize_form_not_suit_array.length; i++) {
+		var materialize_chips_list = "<div class='chip'>" + form_chips[materialize_form_not_suit_array[i]][1] + "<i onclick='" + form_chips[materialize_form_not_suit_array[i]][2] + "' class='chip-info material-icons'>info_outline</i></div>"
+		document.getElementById("materialize-form-chips").innerHTML += materialize_chips_list;
+	}
+	// Generate chips for uikit - missing components from forms
+	for (var i = 0; i < uikit_form_not_suit_array.length; i++) {
+		var uikit_chips_list = "<div class='chip'>" + form_chips[uikit_form_not_suit_array[i]][1] + "<i onclick='" + form_chips[uikit_form_not_suit_array[i]][2] + "' class='chip-info material-icons'>info_outline</i></div>"
+		document.getElementById("uikit-form-chips").innerHTML += uikit_chips_list;
+	}
+
+
+	//**************************************** Chips for components *****************************************
+	// Generate chips for bootstrap - missing components from components
+	for (var i = 0; i < bootstrap_component_not_suit_array.length; i++) {
+		var bootstrap_chips_list = "<div class='chip'>" + component_chips[bootstrap_component_not_suit_array[i]][1] + "<i onclick='" + component_chips[bootstrap_component_not_suit_array[i]][2] + "' class='chip-info material-icons'>info_outline</i></div>"
+		document.getElementById("bootstrap-component-chips").innerHTML += bootstrap_chips_list;
+	}
+	// Generate chips for materizlize - missing components from components
+	for (var i = 0; i < materialize_component_not_suit_array.length; i++) {
+		var materialize_chips_list = "<div class='chip'>" + component_chips[materialize_component_not_suit_array[i]][1] + "<i onclick='" + component_chips[materialize_component_not_suit_array[i]][2] + "' class='chip-info material-icons'>info_outline</i></div>"
+		document.getElementById("materialize-component-chips").innerHTML += materialize_chips_list;
+	}
+	// Generate chips for uikit - missing components from components
+	for (var i = 0; i < uikit_component_not_suit_array.length; i++) {
+		var uikit_chips_list = "<div class='chip'>" + component_chips[uikit_component_not_suit_array[i]][1] + "<i onclick='" + component_chips[uikit_component_not_suit_array[i]][2] + "' class='chip-info material-icons'>info_outline</i></div>"
+		document.getElementById("uikit-component-chips").innerHTML += uikit_chips_list;
+	}
+
+
+	//**************************************** Chips for stylization *****************************************
+	// Generate chips for bootstrap - missing components from stylization
+	for (var i = 0; i < bootstrap_stylization_not_suit_array.length; i++) {
+		var bootstrap_chips_list = "<div class='chip'>" + stylization_chips[bootstrap_stylization_not_suit_array[i]][1] + "<i onclick='" + stylization_chips[bootstrap_stylization_not_suit_array[i]][2] + "' class='chip-info material-icons'>info_outline</i></div>"
+		document.getElementById("bootstrap-stylization-chips").innerHTML += bootstrap_chips_list;
+	}
+	// Generate chips for materizlize - missing stylizations from stylization
+	for (var i = 0; i < materialize_stylization_not_suit_array.length; i++) {
+		var materialize_chips_list = "<div class='chip'>" + stylization_chips[materialize_stylization_not_suit_array[i]][1] + "<i onclick='" + stylization_chips[materialize_stylization_not_suit_array[i]][2] + "' class='chip-info material-icons'>info_outline</i></div>"
+		document.getElementById("materialize-stylization-chips").innerHTML += materialize_chips_list;
+	}
+	// Generate chips for uikit - missing stylizations from stylization
+	for (var i = 0; i < uikit_stylization_not_suit_array.length; i++) {
+		var uikit_chips_list = "<div class='chip'>" + stylization_chips[uikit_stylization_not_suit_array[i]][1] + "<i onclick='" + stylization_chips[uikit_stylization_not_suit_array[i]][2] + "' class='chip-info material-icons'>info_outline</i></div>"
+		document.getElementById("uikit-stylization-chips").innerHTML += uikit_chips_list;
+	}
 
 }

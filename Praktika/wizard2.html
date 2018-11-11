@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <link rel="shortcut icon" type="image/png" href="image/favicon.ico"/>
 
-  <title>Wizard</title>
+  <title>Выберите необходимые компоненты</title>
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
-  
+
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -49,15 +49,32 @@
   <header>
     <nav class="light-blue darken-2" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="index.html" class="brand-logo">Logo</a>
+        <a id="logo-container" href="index.html" class="brand-logo hide-on-med-and-down"><img src="image/logo.png" alt="Логотип"></a>
+        <a href="index.html" class="brand-logo hide-on-med-and-up center"><img src="image/logo.png" alt="Логотип"></a>
+        <div class="left hide-on-small-only">
+          <a href="wizard1.html" class="breadcrumb white-text">мастер</a>
+          <a href="javascript:history.back()" class="breadcrumb white-text">шаг 1</a>
+          <a class="breadcrumb slow-show white-text" id="active-link">шаг 2</a>
+        </div>
         <ul class="right hide-on-med-and-down">
-          <li><a href="wizard1.html">Wizard</a></li>
+          <li class="active"><a href="wizard1.html">Интерактивный мастер</a></li>
           <li><a href="about.html">О проекте</a></li>
         </ul>
         <!-- Navigation for mobile -->
         <ul id="nav-mobile" class="sidenav">
-          <li><a href="wizard1.html">Wizard</a></li>
-          <li><a href="about.html">О проекте</a></li>
+          <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="image/background.jpg">
+              </div>
+              <a href="index.html"><img class="circle" src="image/me.png"></a>
+              <a><span class="white-text name border-text">Валерий Замулин</span></a>
+              <a href="#mailto:valeri.zamulin@gmail.com"><span class="white-text email border-text">valeri.zamulin@gmail.com</span></a>
+              <span class="white-text name border-text">Интерактивный мастер для выбора фреймворка для сайта<br><br></span>
+            </div>
+          </li>
+          <li><a href="wizard1.html"><i class="material-icons">directions</i>Интерактивный мастер</a></li>
+          <li><a href="about.html"><i class="material-icons">info_outline</i>О проекте</a></li>
         </ul>
         <!-- Back button for mobile devices -->
         <a href="javascript:history.back()" class="left hide-on-med-and-up"><i class="material-icons">arrow_back</i></a>
@@ -66,7 +83,7 @@
       </div>
     </nav>
     <!-- Addition navigation -->
-    <nav class="z-depth-0 transparent hide-on-small-only">
+    <!-- <nav class="z-depth-0 transparent hide-on-small-only">
       <div class="nav-wrapper container slow-show">
         <div class="col s12">
           <a href="wizard1.html" class="breadcrumb ">Wizard</a>
@@ -74,7 +91,7 @@
           <a href="#!" class="breadcrumb slow-show" id="active-link">Шаг 2</a>
         </div>
       </div>
-    </nav>
+    </nav> -->
   </header>
   <main class="container slow-show">
     <div class="row">
@@ -1699,7 +1716,7 @@
                   <li class="collection-item">
                     <label>
                       <input type="checkbox" id="stylization2" class="3" onclick="Toast('Border-radius/Circular images', 'stylization2', 3)" />
-                      <span>Border-radius/Circular images</span>
+                      <span>Border-radius</span>
                     </label>
                     <!-- Info icon -->
                     <a class="waves-effect waves-light" onclick="getInfo(102)">
@@ -2145,7 +2162,7 @@
                       <span>Screenreaders</span>
                     </label>
                     <!-- Info icon -->
-                    <a class="waves-effect waves-light" onclick="getInfo(124)">
+                    <a class="waves-effect waves-light" onclick="getInfo(123)">
                       <i class="material-icons">info</i>
                     </a>
                     <!-- Frameworks icons with link -->
@@ -2342,7 +2359,7 @@
                   <li class="collection-item">
                     <label>
                       <input type="checkbox" id="stylization31" class="3" onclick="Toast('Visibility/Hidding/Showing content', 'stylization31', 3)" />
-                      <span>Visibility/Hidding/Showing content</span>
+                      <span>Visibility</span>
                     </label>
                     <!-- Info icon -->
                     <a class="waves-effect waves-light" onclick="getInfo(129)">
@@ -2389,7 +2406,7 @@
                       <span>Width/Sizing</span>
                     </label>
                     <!-- Info icon -->
-                    <a class="waves-effect waves-light" onclick="getInfo(125)">
+                    <a class="waves-effect waves-light" onclick="getInfo(131)">
                       <i class="material-icons">info</i>
                     </a>
                     <!-- Frameworks icons with link -->
@@ -2421,7 +2438,7 @@
             <li><a id="show-sidenav-3" href="#block-3">Утилиты</a></li>
           </ul>
           <a onclick="countComponents()" class="waves-effect waves-light btn-large pulse orange lighten-1" id="count-btn">
-            <i class="material-icons left">assessment</i>button
+            <i class="material-icons left">assessment</i>Вперёд
           </a>
         </div>
       </div>
@@ -2430,7 +2447,7 @@
     <!-- Button for mobile devices -->
     <div class="center hide-on-large-only" id="count-mob-btn">
       <a onclick="countComponents()" class="waves-effect waves-light btn-large pulse orange lighten-1">
-        <i class="material-icons left">assessment</i>button
+        <i class="material-icons left">assessment</i>Вперёд
       </a>
     </div>
   </main>

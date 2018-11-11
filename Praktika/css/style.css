@@ -10,14 +10,22 @@ main {
 }
 /* Breadcrump */
 .breadcrumb:before {
-	color: #546e7a;
-}
-.breadcrumb, .breadcrumb:last-child {
-	color: #546e7a;
-	font-weight: 500;
+	color: white;
 }
 #active-link {
-	font-weight: 300;
+	color: #fafafa8a !important;
+}
+/* Logo */
+#logo-container {
+	margin: 5px 0 0 -130px ;
+}
+/* mobile menu */
+.background img {
+	filter: brightness(45%);
+}
+.border-text {
+	/*text-shadow: 1px 1px 1px black;*/
+	font-size: 14px;
 }
 /******************Typography ****************/
 h1, h2, h3, h4, h5, h6 {
@@ -37,11 +45,21 @@ p {
 	font-size: 1em;
 	color: #455a64;
 }
-
+span {
+	color: #455a64;
+}
+.bold {
+	font-weight: bold;
+}
 /* Box with info */
 .infobox-description {
 	font-size: 13px;
 	font-style: italic;
+}
+/* Navigation */
+nav ul a {
+	font-size: 19px;
+	font-family: 'Roboto', sans-serif;
 }
 /* Sidenav */
 .table-of-contents a {
@@ -55,6 +73,7 @@ p {
 /* Div with framework info */
 .framework {
 	padding: 10px 5px;
+	margin-bottom: 60px;
 }
 /*Target Wrapper*/
 .fixed-action-btn {
@@ -68,13 +87,24 @@ p {
 	bottom: -327px;
 }
 .tap-target-content {
-	width: 500px !important;
+	width: 480px !important;
 	height: 400px;
 	top: 0px;
 	right: 0px;
 	left: 0px;
 	padding: 11px 30px 60px 80px !important;
 	vertical-align: bottom;
+}
+@media only screen and (max-width: 600px) {
+	.tap-target-content {
+    width: 350px !important;
+    height: 400px;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    padding: 11px 30px 60px 80px !important;
+    vertical-align: bottom;
+	}
 }
 /*Switcher in accardion to right side*/
 .collapsible-header {
@@ -181,4 +211,15 @@ iframe {
 /* Progress bar in wizard3 */
 .progress {
 	height: 15px;
+	border-radius: 7px;
+	margin: 0;
+}
+
+/* Chips */
+.chip .chip-info {
+	cursor: pointer;
+	float: right;
+	font-size: 24px;
+	line-height: 32px;
+	padding-left: 10px;
 }

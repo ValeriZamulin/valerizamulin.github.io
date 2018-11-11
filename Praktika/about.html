@@ -8,7 +8,7 @@
   <title>Wizard</title>
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
-  
+
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
@@ -16,22 +16,36 @@
 </head>
 <body class="slow-show">
   <header>
-    <div class="navbar-fixed z-depth-4">
-      <nav class="blue darken-3" role="navigation">
-        <div class="nav-wrapper container"><a id="logo-container" href="index.html" class="brand-logo">Logo</a>
-          <ul class="right hide-on-med-and-down">
-            <li><a href="wizard1.html">Wizard</a></li>
-            <li><a href="about.html">О проекте</a></li>
-          </ul>
-
-          <ul id="nav-mobile" class="sidenav">
-            <li><a href="wizard1.html">Wizard</a></li>
-            <li><a href="about.html">О проекте</a></li>
-          </ul>
-          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-        </div>
-      </nav>
-    </div>
+    <nav class="light-blue darken-2" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="index.html" class="brand-logo hide-on-med-and-down"><img src="image/logo.png" alt="Логотип"></a>
+        <a href="index.html" class="brand-logo hide-on-med-and-up center"><img src="image/logo.png" alt="Логотип"></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="wizard1.html">Интерактивный мастер</a></li>
+          <li class="active"><a href="about.html">О проекте</a></li>
+        </ul>
+        <!-- Navigation for mobile -->
+        <ul id="nav-mobile" class="sidenav">
+          <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="image/background.jpg">
+              </div>
+              <a href="index.html"><img class="circle" src="image/me.png"></a>
+              <a><span class="white-text name border-text">Валерий Замулин</span></a>
+              <a href="#mailto:valeri.zamulin@gmail.com"><span class="white-text email border-text">valeri.zamulin@gmail.com</span></a>
+              <span class="white-text name border-text">Интерактивный мастер для выбора фреймворка для сайта<br><br></span>
+            </div>
+          </li>
+          <li><a href="wizard1.html"><i class="material-icons">directions</i>Интерактивный мастер</a></li>
+          <li><a href="about.html"><i class="material-icons">info_outline</i>О проекте</a></li>
+        </ul>
+        <!-- Back button for mobile devices -->
+        <a href="javascript:history.back()" class="left hide-on-med-and-up"><i class="material-icons">arrow_back</i></a>
+        <!-- Menu (burger) button -->
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
   </header>
   <main>
     <div class="container">
@@ -49,7 +63,6 @@
                 Это популярный фреймворк, который позволяет быстро и качественно создавать ста-
                 тичные веб-сайты и веб-приложения. Это бесплатный набор инструментов, позволяющий использовать
                 Html, CSS и JavaScript, разработанный компанией Twitter.
-                Поддержка браузерами: <br>Chrome 45+<br>Firefox 38+<br>Safari 9+<br>Opera 30+<br>Edge 12+<br>IE10+
               </p>
             </div>
           </div>
@@ -59,12 +72,6 @@
               <img class="responsive-img" src="image/materialize.png"/>
               <h2 class="center">Materialize</h2>
               <p class="light left-align">Это новый фреймворк, который использует большое количество стилей, элементов, компонентов, анимации и, конечно, принципы Материального дизайна от Google. Есть две доступные версии – Standard, включающий в себя уменьшенные и не уменьшенные файлы CSS и JS, и версия SASS, предоставляющая Вам полную свободу выбора компонентов, которые Вы хотите использовать.
-              Chrome 35+
-              Firefox 31+
-              Safari 9+
-              Opera
-              Edge
-              IE 11+
               </p>
             </div>
           </div>
@@ -74,12 +81,6 @@
               <img class="responsive-img" src="image/uikit-logo-large.png"/>
               <h2 class="center">UIKit</h2>
               <p class="light left-align">представляет собой фраймворк с открытым исходным кодом, который позволяет веб сайту выглядеть хорошо. Легкий и модульный интерфейсный фреймворк подходящий для разработки быстрых и мощных веб-интерфейсов. На данной платформе есть возможность создавать свои собственные стили. UIkit дает Вам полный набор HTML, CSS, и JS компонентов, который является простым в использовании, легко настраивается и расширяемый.
-              Chrome - Latest
-              Firefox - Latest
-              Safari 9.1+
-              Opera - Latest
-              Edge - Latest
-              IE 11+
               </p>
             </div>
           </div>
@@ -92,7 +93,7 @@
 
 
 
-  <footer class="page-footer orange accent-3">
+  <footer class="page-footer blue-grey darken-1">
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
@@ -113,9 +114,9 @@
         <div class="col l3 s12">
           <h5 class="white-text">Connect</h5>
           <ul>
-            <li><a class="white-text" href="#!">Link 1</a></li>
-            <li><a class="white-text" href="#!">Link 2</a></li>
-            <li><a class="white-text" href="#!">Link 3</a></li>
+            <li><a class="white-text" href="https://getbootstrap.com/">Bootstrap</a></li>
+            <li><a class="white-text" href="https://materializecss.com/">Materialize</a></li>
+            <li><a class="white-text" href="https://getuikit.com/">UIKit</a></li>
             <li><a class="white-text" href="#!">Link 4</a></li>
           </ul>
         </div>
@@ -130,9 +131,10 @@
 
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="materialize/js/materialize.js"></script>
   <script src="js/init.js"></script>
+
 
   </body>
 </html>
