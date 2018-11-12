@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
+
 /*Sticky footer*/
 body {
 	display: flex;
@@ -17,7 +19,10 @@ main {
 }
 /* Logo */
 #logo-container {
-	margin: 5px 0 0 -130px ;
+	margin: 5px 0 0 -110px ;
+}
+.brand-logo img {
+	height: 55px;
 }
 /* mobile menu */
 .background img {
@@ -29,7 +34,7 @@ main {
 }
 /******************Typography ****************/
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Open Sans Condensed', sans-serif;
 	color: #37474f;
 }
 h1 {
@@ -51,15 +56,19 @@ span {
 .bold {
 	font-weight: bold;
 }
+.big-text {
+	font-size: 21px;
+}
 /* Box with info */
 .infobox-description {
 	font-size: 13px;
 	font-style: italic;
 }
 /* Navigation */
-nav ul a {
+nav ul.hide-on-med-and-down a, .breadcrumb {
+	font-family: 'Open Sans Condensed', sans-serif;
 	font-size: 19px;
-	font-family: 'Roboto', sans-serif;
+	/* font-family: 'Roboto', sans-serif; */
 }
 /* Sidenav */
 .table-of-contents a {
