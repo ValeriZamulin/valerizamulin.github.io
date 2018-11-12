@@ -47,6 +47,7 @@ h2 {
 	font-size: 2em;
 }
 p {
+	margin: 2px;
 	font-size: 1em;
 	color: #455a64;
 }
@@ -56,8 +57,50 @@ span {
 .bold {
 	font-weight: bold;
 }
-.big-text {
-	font-size: 21px;
+/* .big-text p::first-letter{
+font-size: 2.5em;
+padding: 2px 4px;
+margin-right: 5px;
+color: #333333;
+float: left;
+font-weight: bold;
+} */
+}
+@media only screen and (min-width:1200px) {
+	.description-text-box {
+		line-height: 27px;
+		font-size: 17px;
+	}
+}
+@media only screen and (min-width:1001px) {
+	.big-text, .description-text-box {
+		line-height: 33px;
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width:1001px) {
+	.big-text, .description-text-box {
+		line-height: 31px;
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width:992px) {
+	.big-text, .description-text-box {
+		line-height: 30px;
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width:500px) {
+	.big-text, .description-text-box {
+		line-height: 29px;
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width:300px) {
+	.big-text, .description-text-box {
+		line-height: 28px;
+		font-size: 18px;
+	}
 }
 /* Box with info */
 .infobox-description {
