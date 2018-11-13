@@ -1598,6 +1598,16 @@ function whichComponents() {
 	if(str[1].match(/\d/) != null) {
 		switch (Number(str[1])) {
 			case 1:
+			document.getElementById('component11').checked = true;	//slider
+			document.getElementById('component32').checked = true;	//search
+			document.getElementById('component24').checked = true;	//icons
+			document.getElementById('component10').checked = true; //cards
+			document.getElementById('component3').checked = true;	//article
+			document.getElementById('checkbox1').checked = true;
+			document.getElementById('checkbox1').checked = true;
+			document.getElementById('checkbox1').checked = true;
+			document.getElementById('checkbox1').checked = true;
+			document.getElementById('checkbox1').checked = true;
 				document.getElementById('checkbox1').checked = true;
 				break;
 			default:
