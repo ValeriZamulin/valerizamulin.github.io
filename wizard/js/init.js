@@ -1613,7 +1613,7 @@ function whichComponents() {
 				document.getElementById('stylization30').checked = true;	//tipography
 				break;
 				//Интернет магазин
-			case 2:
+			case 3:
 				document.getElementById('component22').checked = true;	//footer
 				document.getElementById('component32').checked = true;	//navbar
 				document.getElementById('component41').checked = true;	//scrollspy
