@@ -24,6 +24,11 @@ main {
 .brand-logo img {
 	height: 47px;
 }
+/* Logo for mobile version */
+#nav-mobile .brand-logo img {
+	position: relative;
+	top: -70px;
+}
 /* mobile menu */
 .background img {
 	filter: brightness(45%);
@@ -110,12 +115,17 @@ font-weight: bold;
 /* Navigation */
 nav ul.hide-on-med-and-down a, .breadcrumb {
 	font-family: 'Open Sans Condensed', sans-serif;
-	font-size: 19px;
+	font-size: 16px;
+	letter-spacing: .4px;
+	text-transform: uppercase;
 	/* font-family: 'Roboto', sans-serif; */
 }
 /* Sidenav */
 .table-of-contents a {
 	font-size: 17px;
+}
+.link {
+	text-decoration: underline !important;
 }
 /******************End Typography ****************/
 /*Style for slow showing effect*/
@@ -209,6 +219,13 @@ iframe {
 .toast {
     background-color: #455a64f0;
 }
+/* Toasts position */
+#toast-container {
+  top: auto !important;
+  left: auto !important;
+  bottom: 1%;
+  right:0;
+}
 /* wizard1 buttons, tabs */
 .collection a.collection-item {
 	color: #455a64;
@@ -239,7 +256,9 @@ iframe {
 }
 
 /* Botton in wizard2 */
-
+#count-btn {
+	z-index:
+}
 #count-mob-btn {
 	height: 200px;
 	padding-top: 40px;
@@ -274,4 +293,28 @@ iframe {
 	font-size: 24px;
 	line-height: 32px;
 	padding-left: 10px;
+}
+.margin-bottom {
+	margin-bottom: 80px;
+}
+/*********************** Footer *******************/
+/* Facebook like */
+#facebook {
+	border:none;
+	overflow:hidden;
+	height: 20px;
+	width: 200px;
+	margin-bottom: 0;
+}
+.footer-copyright .col {
+	height: 5px;
+}
+@media only screen and (max-width:600px) {
+	#facebook {
+		margin-top: 10px !important;
+		float: left !important;
+	}
+	.footer-copyright .col {
+		height: 20px;
+	}
 }

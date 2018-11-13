@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <link rel="shortcut icon" type="image/png" href="image/favicon.ico"/>
+
+  <meta property="og:url"           content="https://valerizamulin.github.io/Praktika/index.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Интерактивный мастер для выбора фреймворка для сайта" />
+  <meta property="og:description"   content="Здесь вы можете выбрать подходящий для себя фреймворк с помощью интерактивного мастера" />
+  <meta property="og:image"         content="file:///C:/xampp/htdocs/valerizamulin.github.io/Praktika/image/logo.png" />
+
+  <title>Подходящий для вас фреймворк</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <!-- Page loading -->
+  <div class="preloader-background"><p class="center">Идёт обработка данных<br>Пожалуйста подождите......</p>
+  	<div class="preloader-wrapper big active">
+  		<div class="spinner-layer spinner-blue-only">
+  			<div class="circle-clipper left">
+  				<div class="circle"></div>
+  			</div>
+  			<div class="gap-patch">
+  				<div class="circle"></div>
+  			</div>
+  			<div class="circle-clipper right">
+  				<div class="circle"></div>
+  			</div>
+  		</div>
+  	</div>
+  </div>
+  <!-- Loader -->
+  <script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function(){
+      $('.preloader-background').delay(3300).fadeOut('slow');
+      $('.preloader-wrapper')
+        .delay(3000)
+        .fadeOut();
+    });
+    // Sort frameworks
+    window.onload = function() {
+      setTimeout(function(){
+        whichFramework();
+      },500);
+    };
+  </script>
+  <header>
+    <nav class="light-blue darken-2" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="index.html" class="brand-logo hide-on-med-and-down"><img src="image/logo.png" alt="Логотип"></a>
+        <div class="left hide-on-small-only">
+          <!-- <a href="wizard1.html" class="breadcrumb white-text">мастер</a> -->
+          <a href="wizard1.html" class="breadcrumb white-text">шаг 1</a>
+          <a href="wizard2.html" class="breadcrumb slow-show white-text">шаг 2</a>
+          <a class="breadcrumb slow-show white-text" id="active-link">шаг 3</a>
+        </div>
+        <ul class="right hide-on-med-and-down">
+          <li class="active"><a href="wizard1.html">Интерактивный мастер</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+        <!-- Navigation for mobile -->
+        <ul id="nav-mobile" class="sidenav">
+          <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="image/background.jpg">
+              </div>
+              <a href="index.html"><img class="circle" src="image/me.png"></a>
+              <a href="index.html" class="brand-logo show-on-medium-and-down right"><img src="image/logo.png" alt="Логотип"></a>
+              <a><span class="white-text name border-text">Валерий Замулин</span></a>
+              <a href="#mailto:valeri.zamulin@gmail.com"><span class="white-text email border-text">valeri.zamulin@gmail.com</span></a>
+              <span class="white-text name border-text">Интерактивный мастер для выбора фреймворка для сайта<br><br></span>
+            </div>
+          </li>
+          <li><a href="wizard1.html"><i class="material-icons">directions</i>Интерактивный мастер</a></li>
+          <li><a href="about.html"><i class="material-icons">info_outline</i>О проекте</a></li>
+        </ul>
+        <!-- Back button for mobile devices -->
+        <a href="javascript:history.back()" class="left hide-on-med-and-up"><i class="material-icons">arrow_back</i></a>
+        <!-- Menu (burger) button -->
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <main class="container">
+    <div class="row margin-bottom">
+      <h1 class="">Результат</h1>
+      <p class="big-text margin-bottom">
+        Ознакомьтесь с подробными результатами работы интерактивного мастера. Ниже в процентах приведено соответствие вашим потребностям каждого из фреймворков. Также у каждого из фреймворков приведён список отсутствующих компонентов, если такие имеются, с возможностью просмотра их описания.
+        <br>
+      </p>
+      <div class="col s12 m12 l4">
+        <div class="framework center">
+          <img class="responsive-img" src="image/bootstrap-stack.png"/>
+          <h2 class="center">Bootstrap</h2>
+          <!-- Overall results -->
+          <span class="left">Соответствие</span>
+          <span class="right" id="bootstrap-overall-value">0%</span>
+          <div class="progress blue-grey lighten-4">
+            <div id="bootstrap-overall-progress" class="determinate light-blue darken-2"></div>
+          </div>
+          <!-- Results -->
+          <br><span>Подробнее</span><br>
+          <span class="left">Формы</span>
+          <span class="right" id="bootstrap-forms-value">0%</span>
+          <div class="progress blue-grey lighten-4">
+            <div id="bootstrap-forms-progress" class="determinate light-blue darken-2"></div>
+          </div>
+          <span class="left">Компоненты</span>
+          <span class="right" id="bootstrap-components-value">0%</span>
+          <div class="progress blue-grey lighten-4">
+            <div id="bootstrap-components-progress" class="determinate light-blue darken-2"></div>
+          </div>
+          <span class="left">Утилиты</span>
+          <span class="right" id="bootstrap-stylizations-value">0%</span>
+          <div class="progress blue-grey lighten-4">
+            <div id="bootstrap-stylizations-progress" class="determinate light-blue darken-2"></div>
+          </div>
+
+          <!-- Missing components -->
+          <br><span class="bold" id="bootstrap-missing">Недостающие компоненты:</span>
+          <div class="divider"></div>
+          <div id="bootstrap-missing-form">
+            <p>Формы</p>
+            <div id="bootstrap-form-chips" class="left-align"></div>
+            <div class="divider"></div>
+          </div>
+          <div id="bootstrap-missing-component">
+            <p>Компоненты</p>
+            <div id="bootstrap-component-chips" class="left-align"></div>
+            <div class="divider"></div>
+          </div>
+          <div id="bootstrap-missing-stylization">
+            <p>Утилиты</p>
+            <div id="bootstrap-stylization-chips" class="left-align"></div>
+          </div>
+
+          <!-- Browsers support -->
+          <div class="divider"></div>
+          <div class="left-align blue-grey-text text-darken-2">
+            <p class="bold">Поддержка браузерами:</p>
+            <ul>
+              <li>Chrome 45+</li>
+              <li>Firefox 38+</li>
+              <li>Safari 9+</li>
+              <li>Opera 30+</li>
+              <li>Edge 12+</li>
+              <li>IE 10+</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <div class="col s12 m12 l4">
+        <div class="framework center">
+          <img class="responsive-img" src="image/materialize.png"/>
+          <h2 class="center">Materialize</h2>
+          <!-- Overall results -->
+          <span class="left">Соответствие</span>
+          <span class="right" id="materialize-overall-value">0%</span>
+          <div class="progress blue-grey lighten-4">
+            <div id="materialize-overall-progress" class="determinate light-blue darken-2"></div>
+          </div>
+          <!-- Results -->
+          <br><span>Подробнее</span><br>
+          <span class="left">Формы</span>
+          <span class="right" id="materialize-forms-value">0%</span>
+          <div class="progress blue-grey lighten-4">
+            <div id="materialize-forms-progress" class="determinate light-blue darken-2"></div>
+          </div>
+          <span class="left">Компоненты</span>
+          <span class="right" id="materialize-components-value">0%</span>
+          <div class="progress blue-grey lighten-4">
+            <div id="materialize-components-progress" class="determinate light-blue darken-2"></div>
+          </div>
+          <span class="left">Утилиты</span>
+          <span class="right" id="materialize-stylizations-value">0%</span>
+          <div class="progress blue-grey lighten-4">
+            <div id="materialize-stylizations-progress" class="determinate light-blue darken-2"></div>
+          </div>
+
+          <!-- Missing components -->
+          <br><span class="bold" id="materialize-missing">Недостающие компоненты:</span>
+          <div class="divider"></div>
+          <div id="materialize-missing-form">
+            <p>Формы</p>
+            <div id="materialize-form-chips" class="left-align"></div>
+            <div class="divider"></div>
+          </div>
+          <div id="materialize-missing-component">
+            <p>Компоненты</p>
+            <div id="materialize-component-chips" class="left-align"></div>
+            <div class="divider"></div>
+          </div>
+          <div id="materialize-missing-stylization">
+            <p>Утилиты</p>
+            <div id="materialize-stylization-chips" class="left-align"></div>
+          </div>
+
+          <!-- Browsers support -->
+          <div class="divider"></div>
+          <div class="left-align blue-grey-text text-darken-2">
+            <p class="bold">Поддержка браузерами:</p>
+            <ul>
+              <li>Chrome 35+</li>
+              <li>Firefox 31+</li>
+              <li>Safari 9+</li>
+              <li>Opera</li>
+              <li>Edge</li>
+              <li>IE 11+</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="col s12 m12 l4">
+        <div class="framework center">
+          <img class="responsive-img" src="image/uikit-logo-large.png"/>
+          <h2 class="center">UIKit</h2>
+          <!-- Overall results -->
+          <span class="left">Соответствие</span>
+          <span class="right" id="uikit-overall-value">0%</span>
+          <div class="progress blue-grey lighten-4">
+            <div id="uikit-overall-progress" class="determinate light-blue darken-2"></div>
+          </div>
+          <!-- Results -->
+          <br><span>Подробнее</span><br>
+          <span class="left">Формы</span>
+          <span class="right" id="uikit-forms-value">0%</span>
+          <div class="progress blue-grey lighten-4">
+            <div id="uikit-forms-progress" class="determinate light-blue darken-2"></div>
+          </div>
+          <span class="left">Компоненты</span>
+          <span class="right" id="uikit-components-value">0%</span>
+          <div class="progress blue-grey lighten-4">
+            <div id="uikit-components-progress" class="determinate light-blue darken-2"></div>
+          </div>
+          <span class="left">Утилиты</span>
+          <span class="right" id="uikit-stylizations-value">0%</span>
+          <div class="progress blue-grey lighten-4">
+            <div id="uikit-stylizations-progress" class="determinate light-blue darken-2"></div>
+          </div>
+
+          <!-- Missing components -->
+          <br><span class="bold" id="uikit-missing">Недостающие компоненты:</span>
+          <div class="divider"></div>
+          <div id="uikit-missing-form">
+            <p>Формы</p>
+            <div id="uikit-form-chips" class="left-align"></div>
+            <div class="divider"></div>
+          </div>
+          <div id="uikit-missing-component">
+            <p>Компоненты</p>
+            <div id="uikit-component-chips" class="left-align"></div>
+            <div class="divider"></div>
+          </div>
+          <div id="uikit-missing-stylization">
+            <p>Утилиты</p>
+            <div id="uikit-stylization-chips" class="left-align"></div>
+          </div>
+
+          <!-- Browsers support -->
+          <div class="divider"></div>
+          <div class="left-align blue-grey-text text-darken-2">
+            <p class="bold">Поддержка браузерами:</p>
+            <ul>
+              <li>Chrome Latest</li>
+              <li>Firefox Latest</li>
+              <li>Safari 9.1+</li>
+              <li>Opera Latest</li>
+              <li>Edge Latest</li>
+              <li>IE 11+</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+
+
+  <footer class="page-footer blue-grey darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Интерактивный мастер для выбора фреймворка для сайта</h5>
+          <p class="grey-text text-lighten-4">
+            Практическая часть дипломной работы на тему "Создание интерактивного мастера для выбора фреймворка для сайта" ученика третьего курса Эстонского университета прикладных наук по предпринимательству Майнор, Валерия Замулина.
+          </p>
+        </div>
+        <div class="col l2 offset-l1 s12">
+          <h5 class="white-text">Навигация по сайту</h5>
+          <ul>
+            <li><a class="white-text" href="index.html">Главная</a></li>
+            <li><a class="white-text" href="wizard1.html">Интерактивный мастер</a></li>
+            <li><a class="white-text" href="about.html">О проекте</a></li>
+          </ul>
+        </div>
+        <div class="col l2 offset-l1 s12">
+          <h5 class="white-text">Ссылки на документацию</h5>
+          <ul>
+            <li><a class="white-text" href="https://getbootstrap.com/">Bootstrap</a></li>
+            <li><a class="white-text" href="https://materializecss.com/">Materialize</a></li>
+            <li><a class="white-text" href="https://getuikit.com/">UIKit</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m7 " >
+            &copy Valeri Zamulin | <i>All rights reserved</i>
+          </div>
+          <div class="col s12 m5 footer-c2" >
+            <!-- Your like button code -->
+            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fvalerizamulin.github.io%2FPraktika%2Findex.html&width=172&layout=button_count&action=like&size=small&show_faces=false&share=true&height=46&appId" id="facebook" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" class="right" style=""></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="materialize/js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+
+  <!--******************* Addition elements *********************-->
+  <!-- Information window -->
+  <div class="fixed-action-btn">
+    <a id="menu" class="btn btn-floating btn-large orange accent-3">
+      <i class="material-icons">close</i>
+    </a>
+  </div>
+
+  <div class="tap-target-wrapper">
+    <div class="tap-target light-blue darken-2" data-target="menu">
+      <div class="tap-target-content white-text">
+        <h5 id="info-name"></h5>
+        <p class="white-text" id="info-description"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal window -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h4 id="modal-header"></h4>
+      <p id="modal-text"></p>
+    </div>
+    <div class="modal-footer">
+      <a href="wizard2.html" class="modal-close waves-effect waves-blue btn-flat">Назад</a>
+    </div>
+  </div>
+
+  </body>
+</html>

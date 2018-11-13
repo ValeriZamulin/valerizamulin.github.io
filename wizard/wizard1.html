@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <link rel="shortcut icon" type="image/png" href="image/favicon.ico"/>
+
+  <meta property="og:url"           content="https://valerizamulin.github.io/Praktika/index.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Интерактивный мастер для выбора фреймворка для сайта" />
+  <meta property="og:description"   content="Здесь вы можете выбрать подходящий для себя фреймворк с помощью интерактивного мастера" />
+  <meta property="og:image"         content="file:///C:/xampp/htdocs/valerizamulin.github.io/Praktika/image/logo.png" />
+
+  <title>Выберите тип сайта</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="materialize/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <header>
+    <nav class="light-blue darken-2" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="index.html" class="brand-logo hide-on-med-and-down"><img src="image/logo.png" alt="Логотип"></a>
+        <div class="left hide-on-small-only">
+          <a href="#!" class="breadcrumb white-text">мастер</a>
+          <a class="breadcrumb white-text" id="active-link">шаг 1</a>
+        </div>
+        <ul class="right hide-on-med-and-down">
+          <li class="active"><a href="wizard1.html">Интерактивный мастер</a></li>
+          <li><a href="about.html">О проекте</a></li>
+        </ul>
+        <!-- Navigation for mobile -->
+        <ul id="nav-mobile" class="sidenav">
+          <li>
+            <div class="user-view">
+              <div class="background">
+                <img src="image/background.jpg">
+              </div>
+              <a href="index.html"><img class="circle" src="image/me.png"></a>
+              <a href="index.html" class="brand-logo show-on-medium-and-down right"><img src="image/logo.png" alt="Логотип"></a>
+              <a><span class="white-text name border-text">Валерий Замулин</span></a>
+              <a href="#mailto:valeri.zamulin@gmail.com"><span class="white-text email border-text">valeri.zamulin@gmail.com</span></a>
+              <span class="white-text name border-text">Интерактивный мастер для выбора фреймворка для сайта<br><br></span>
+            </div>
+          </li>
+          <li><a href="wizard1.html"><i class="material-icons">directions</i>Интерактивный мастер</a></li>
+          <li><a href="about.html"><i class="material-icons">info_outline</i>О проекте</a></li>
+        </ul>
+        <!-- Back button for mobile devices -->
+        <a href="javascript:history.back()" class="left hide-on-med-and-up"><i class="material-icons">arrow_back</i></a>
+        <!-- Menu (burger) button -->
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container slow-show">
+    <div class="row">
+      <h1 class="">Тип сайта</h1>
+      <p class="big-text margin-bottom">
+        Пожалуйста выберите тип сайта для которого будут подобраны основные необходимые компоненты. В случае если вы не нашли подходящий для своего проекта тип сайта, или вы не знаете какой тип сайта вам нужен, пожалуйста воспользуйтесь
+        <a class="link" href="wizard2.html">ручным режимом.</a>
+        <br>
+        <i>Вы сможете корректировать автоматически выбранные настройки самостоятельно на следующем шаге.</i>
+      </p>
+      <div class="col s12 m12 l6">
+        <div class="collection">
+          <h2 class="collection-header">Коммерческий сайт</h2>
+          <div class="divider"></div>
+          <a href="#!" onclick="openWizard2(1)" onclick="openWizard2(1)" class="collection-item">Сайт-витрина</a>
+          <a href="#!" onclick="openWizard2(2)" class="collection-item">Промо-сайт</a>
+          <a href="#!" onclick="openWizard2(3)" class="collection-item">Интернет-магазины</a>
+          <a href="#!" onclick="openWizard2(4)" class="collection-item">Сайты-визитки</a>
+          <a href="#!" onclick="openWizard2(5)" class="collection-item">Целевая страница</a>
+        </div>
+      </div>
+      <div class="col s12 m12 l6">
+        <div class="collection">
+          <h2 class="collection-header">Корпоративный сайт</h2>
+          <div class="divider"></div>
+          <a href="#!" onclick="openWizard2(6)" class="collection-item">Сайт-визитка</a>
+          <a href="#!" onclick="openWizard2(7)" class="collection-item">Корпоративный сайт</a>
+          <a href="#!" onclick="openWizard2(8)" class="collection-item">Имиджевый сайт</a>
+          <a href="#!" onclick="openWizard2(9)" class="collection-item">Корпоративный портал</a>
+          <a href="#!" onclick="openWizard2(10)" class="collection-item">Сайт-портфолио</a>
+        </div>
+      </div>
+      <div class="col s12 m12 l6">
+        <div class="collection">
+          <h2 class="collection-header">Веб-сервисы</h2>
+          <div class="divider"></div>
+          <a href="#!" onclick="openWizard2(11)" class="collection-item">Каталог</a>
+          <a href="#!" onclick="openWizard2(12)" class="collection-item">Почтовый сервис</a>
+          <a href="#!" onclick="openWizard2(13)" class="collection-item">Поисковыя система</a>
+          <a href="#!" onclick="openWizard2(14)" class="collection-item">Доска объявлений</a>
+          <a href="#!" onclick="openWizard2(15)" class="collection-item">Сайт - хостинг</a>
+        </div>
+      </div>
+      <div class="col s12 m12 l6">
+        <div class="collection">
+          <h2 class="collection-header">Социальный проект</h2>
+          <div class="divider"></div>
+          <a href="#!" onclick="openWizard2(16)" class="collection-item">Форум</a>
+          <a href="#!" onclick="openWizard2(17)" class="collection-item">Социальные сети</a>
+        </div>
+      </div>
+    </div>
+
+  <div class="row margin-bottom">
+    <div class="divider"></div>
+    <h2 class="center">Не нашли чего искали?</h2>
+    <p class="center description-text-box">Попробуйте использовать <a class="link" href="wizard2.html">ручной режим</a></p>
+  </div>
+
+  </main>
+
+  <footer class="page-footer blue-grey darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Интерактивный мастер для выбора фреймворка для сайта</h5>
+          <p class="grey-text text-lighten-4">
+            Практическая часть дипломной работы на тему "Создание интерактивного мастера для выбора фреймворка для сайта" ученика третьего курса Эстонского университета прикладных наук по предпринимательству Майнор, Валерия Замулина.
+          </p>
+        </div>
+        <div class="col l2 offset-l1 s12">
+          <h5 class="white-text">Навигация по сайту</h5>
+          <ul>
+            <li><a class="white-text" href="index.html">Главная</a></li>
+            <li><a class="white-text" href="wizard1.html">Интерактивный мастер</a></li>
+            <li><a class="white-text" href="about.html">О проекте</a></li>
+          </ul>
+        </div>
+        <div class="col l2 offset-l1 s12">
+          <h5 class="white-text">Ссылки на документацию</h5>
+          <ul>
+            <li><a class="white-text" href="https://getbootstrap.com/">Bootstrap</a></li>
+            <li><a class="white-text" href="https://materializecss.com/">Materialize</a></li>
+            <li><a class="white-text" href="https://getuikit.com/">UIKit</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m7 " >
+            &copy Valeri Zamulin | <i>All rights reserved</i>
+          </div>
+          <div class="col s12 m5 footer-c2" >
+            <!-- Your like button code -->
+            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fvalerizamulin.github.io%2FPraktika%2Findex.html&width=172&layout=button_count&action=like&size=small&show_faces=false&share=true&height=46&appId" id="facebook" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" class="right" style=""></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="materialize/js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+
+  <!--******************* Addition elements *********************-->
+  <!-- Information window -->
+  <!-- <div class="fixed-action-btn">
+    <a id="menu" class="btn btn-floating btn-large orange accent-3">
+      <i class="material-icons">close</i>
+    </a>
+  </div>
+
+  <div class="tap-target-wrapper">
+    <div class="tap-target light-blue darken-2" data-target="menu">
+      <div class="tap-target-content white-text">
+        <h5 id="info-name"></h5>
+        <p class="white-text" id="info-description"></p>
+      </div>
+    </div>
+  </div> -->
+
+  <!-- Modal window -->
+  <div id="modal" class="modal modal-fixed-footer">
+    <div class="modal-content"><i class="material-icons right modal-close">close</i>
+      <h4 id="modal-header"></h4>
+      <iframe id="modal-iframe"></iframe>
+      <a id="modal-link"></a>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-blue btn-flat">Закрыть</a>
+    </div>
+  </div>
+
+
+  </body>
+</html>

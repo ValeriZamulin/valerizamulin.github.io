@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <link rel="shortcut icon" type="image/png" href="image/favicon.ico"/>
 
+  <meta property="og:url"           content="https://valerizamulin.github.io/Praktika/index.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Интерактивный мастер для выбора фреймворка для сайта" />
+  <meta property="og:description"   content="Здесь вы можете выбрать подходящий для себя фреймворк с помощью интерактивного мастера" />
+  <meta property="og:image"         content="file:///C:/xampp/htdocs/valerizamulin.github.io/Praktika/image/logo.png" />
+  
   <title>Выберите необходимые компоненты</title>
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
@@ -51,10 +57,9 @@
     <nav class="light-blue darken-2" role="navigation">
       <div class="nav-wrapper container">
         <a id="logo-container" href="index.html" class="brand-logo hide-on-med-and-down"><img src="image/logo.png" alt="Логотип"></a>
-        <a href="index.html" class="brand-logo hide-on-med-and-up center"><img src="image/logo.png" alt="Логотип"></a>
         <div class="left hide-on-small-only">
           <a href="wizard1.html" class="breadcrumb white-text">мастер</a>
-          <a href="javascript:history.back()" class="breadcrumb white-text">шаг 1</a>
+          <a href="wizard1.html" class="breadcrumb white-text">шаг 1</a>
           <a class="breadcrumb slow-show white-text" id="active-link">шаг 2</a>
         </div>
         <ul class="right hide-on-med-and-down">
@@ -69,6 +74,7 @@
                 <img src="image/background.jpg">
               </div>
               <a href="index.html"><img class="circle" src="image/me.png"></a>
+              <a href="index.html" class="brand-logo show-on-medium-and-down right"><img src="image/logo.png" alt="Логотип"></a>
               <a><span class="white-text name border-text">Валерий Замулин</span></a>
               <a href="#mailto:valeri.zamulin@gmail.com"><span class="white-text email border-text">valeri.zamulin@gmail.com</span></a>
               <span class="white-text name border-text">Интерактивный мастер для выбора фреймворка для сайта<br><br></span>
@@ -83,24 +89,17 @@
         <a href="#" data-target="nav-mobile" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
       </div>
     </nav>
-    <!-- Addition navigation -->
-    <!-- <nav class="z-depth-0 transparent hide-on-small-only">
-      <div class="nav-wrapper container slow-show">
-        <div class="col s12">
-          <a href="wizard1.html" class="breadcrumb ">Wizard</a>
-          <a href="javascript:history.back()" class="breadcrumb ">Шаг 1</a>
-          <a href="#!" class="breadcrumb slow-show" id="active-link">Шаг 2</a>
-        </div>
-      </div>
-    </nav> -->
   </header>
-  <main class="container slow-show">
+  <main class="container slow-show margin-bottom">
     <div class="row">
+      <h1 class="">Компоненты</h1>
+      <p class="big-text margin-bottom">
+        Здесь вы можете выбрать, убрать или добавить компоненты которые хотите видеть на своём сайте. Также можете посмотреть краткое описание каждого из компонентов щёлкнув по значку "информации"<span class="hide-on-small-only"> или посмотреть документацию на каждый отдельный компонент у каждого из представленных фреймворков, щёлкнув по значку фреймворка напротив интересующего вас компонента</span>.
+        <br>
+        <i>Когда все необходимые компоненты будут выбраны, нажмите на кнопку "ВПЕРЁД"</i>
+      </p>
+
       <div class="col s12 l9">
-        <h1 class="center">Wizard</h1>
-        <p class="center"><i>Интерактивный мастер</i></p>
-        <p class="center">Пожалуйста выберите компоненты, которые желаете использовать при создании сайта</p>
-        <div class="divider"></div><br><br>
         <ul class="collapsible expandable">
           <!-- First block -->
           <li class="active">
@@ -2432,7 +2431,7 @@
       </div>
       <!-- Side navigation sector -->
       <div class="col hide-on-med-and-down l3">
-        <div class="pushpin" style="padding-top:200px">
+        <div class="pushpin">
           <ul class="section table-of-contents">
             <li><a id="show-sidenav-1" href="#block-1">Формы</a></li>
             <li><a id="show-sidenav-2" href="#block-2">Компоненты</a></li>

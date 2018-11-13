@@ -5,7 +5,7 @@ $(document).ready(function(){
 	$('.modal').modal();
 	$('.scrollspy').scrollSpy({scrollOffset: 210});
 	$('.tooltipped').tooltip({enterDelay: 310});
-	$('.pushpin').pushpin({top: 140, bottom: 5400});
+	$('.pushpin').pushpin({top: 438, bottom: 5800});
 });
 
 
@@ -63,8 +63,8 @@ function Toast(name, id, classname) {
 		var toastHTML = '<span class="white-text">' +name+ '</span><button class="btn-flat toast-action" onclick="unCheck('+func+','+func2+')">Отменить</button>';
 		M.toast({
 			html: toastHTML,
-			displayLength: 10000,
-			classes: 'ch'+classname + ' rounded ' + id,
+			displayLength: 5000,
+			classes: 'ch' + classname + ' rounded ' + id,
 		});
 	}
 

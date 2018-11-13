@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700');
+
+/*Sticky footer*/
+body {
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	font-family: 'Open Sans', sans-serif;
+}
+main {
+	flex: 1 0 auto;
+}
+/* Breadcrump */
+.breadcrumb:before {
+	color: white;
+}
+#active-link {
+	color: #fafafa8a !important;
+}
+/* Logo */
+#logo-container {
+	margin: 5px 0 0 -110px ;
+}
+.brand-logo img {
+	height: 47px;
+}
+/* Logo for mobile version */
+#nav-mobile .brand-logo img {
+	position: relative;
+	top: -70px;
+}
+/* mobile menu */
+.background img {
+	filter: brightness(45%);
+}
+.border-text {
+	/*text-shadow: 1px 1px 1px black;*/
+	font-size: 14px;
+}
+/******************Typography ****************/
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans Condensed', sans-serif;
+	color: #37474f;
+}
+h1 {
+	font-size: 3.5em;
+}
+.collection-header {
+	padding: 0 20px;
+}
+h2 {
+	font-size: 2em;
+}
+p {
+	margin: 2px;
+	font-size: 1em;
+	color: #455a64;
+}
+span {
+	color: #455a64;
+}
+.bold {
+	font-weight: bold;
+}
+/* .big-text p::first-letter{
+font-size: 2.5em;
+padding: 2px 4px;
+margin-right: 5px;
+color: #333333;
+float: left;
+font-weight: bold;
+} */
+}
+@media only screen and (min-width:1200px) {
+	.description-text-box {
+		line-height: 27px;
+		font-size: 17px;
+	}
+}
+@media only screen and (min-width:1001px) {
+	.big-text, .description-text-box {
+		line-height: 33px;
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width:1001px) {
+	.big-text, .description-text-box {
+		line-height: 31px;
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width:992px) {
+	.big-text, .description-text-box {
+		line-height: 30px;
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width:500px) {
+	.big-text, .description-text-box {
+		line-height: 29px;
+		font-size: 18px;
+	}
+}
+@media only screen and (max-width:300px) {
+	.big-text, .description-text-box {
+		line-height: 28px;
+		font-size: 18px;
+	}
+}
+/* Box with info */
+.infobox-description {
+	font-size: 13px;
+	font-style: italic;
+}
+/* Navigation */
+nav ul.hide-on-med-and-down a, .breadcrumb {
+	font-family: 'Open Sans Condensed', sans-serif;
+	font-size: 16px;
+	letter-spacing: .4px;
+	text-transform: uppercase;
+	/* font-family: 'Roboto', sans-serif; */
+}
+/* Sidenav */
+.table-of-contents a {
+	font-size: 17px;
+}
+.link {
+	text-decoration: underline !important;
+}
+/******************End Typography ****************/
+/*Style for slow showing effect*/
+.slow-show {
+	opacity: 0.0;
+}
+/* Div with framework info */
+.framework {
+	padding: 10px 5px;
+	margin-bottom: 60px;
+}
+/*Target Wrapper*/
+.fixed-action-btn {
+	bottom: 45px;
+	right: 45px;
+	visibility: hidden;
+}
+.tap-target-wrapper {
+	position: fixed;
+	right: -331px;
+	bottom: -327px;
+}
+.tap-target-content {
+	width: 480px !important;
+	height: 400px;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	padding: 11px 30px 60px 80px !important;
+	vertical-align: bottom;
+}
+@media only screen and (max-width: 600px) {
+	.tap-target-content {
+    width: 350px !important;
+    height: 400px;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    padding: 11px 30px 60px 80px !important;
+    vertical-align: bottom;
+	}
+}
+/*Switcher in accardion to right side*/
+.collapsible-header {
+	position: relative;
+	cursor: default;
+}
+.collapsible-secondary {
+	position: absolute;
+	right: 20px;
+}
+/*Switch color*/
+.switch label input[type=checkbox]:checked+.lever:after {
+    background-color: #5eb8ff !important;
+}
+.switch label input[type=checkbox]:checked+.lever {
+    background-color: #0288d1  !important;
+}
+/*Checkboxes color*/
+[type="checkbox"]:checked + span:not(.lever):before {
+	border-right: 3px solid #0288d1;
+    border-bottom: 2px solid #0288d1;
+}
+[type="checkbox"].filled-in:checked + span:not(.lever):after {
+	border: 2px solid #0288d1;
+    background-color: #0288d1;
+}
+/*Frameworks list in list of components*/
+.frameworks-list a {
+	cursor: pointer;
+}
+.frameworks-list .inactive {
+	cursor: default;
+	opacity: 0.3;
+	filter:grayscale(100%);
+}
+/*Iframe with information about each component*/
+iframe {
+	height: 75%;
+	width: 100%;
+	border: 1px solid #909090;
+	margin-bottom: 10px;
+}
+.table-of-contents a.active, .table-of-contents a.active:hover {
+	border-left: solid 3px #0288d1;
+}
+.table-of-contents a:hover {
+	border-left: solid 1px #0288d1;
+}
+/* Toast */
+.toast {
+    background-color: #455a64f0;
+}
+/* Toasts position */
+#toast-container {
+  top: auto !important;
+  left: auto !important;
+  bottom: 1%;
+  right:0;
+}
+/* wizard1 buttons, tabs */
+.collection a.collection-item {
+	color: #455a64;
+}
+/* #039be5; */
+.preloader-background p {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	z-index: 100;
+	top: -150px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.preloader-background {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #eee;
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+/* Botton in wizard2 */
+#count-btn {
+	z-index:
+}
+#count-mob-btn {
+	height: 200px;
+	padding-top: 40px;
+}
+/* // Class for when element is above threshold */
+.pin-top {
+  position: relative;
+}
+/* // Class for when element is below threshold */
+.pin-bottom {
+  position: relative;
+}
+/* // Class for when element is pinned */
+.pinned {
+  position: fixed !important;
+}
+.pushpin .btn-large {
+	margin-top: 60px;
+}
+
+/* Progress bar in wizard3 */
+.progress {
+	height: 15px;
+	border-radius: 7px;
+	margin: 0;
+}
+
+/* Chips */
+.chip .chip-info {
+	cursor: pointer;
+	float: right;
+	font-size: 24px;
+	line-height: 32px;
+	padding-left: 10px;
+}
+.margin-bottom {
+	margin-bottom: 80px;
+}
+/*********************** Footer *******************/
+/* Facebook like */
+#facebook {
+	border:none;
+	overflow:hidden;
+	height: 20px;
+	width: 200px;
+	margin-bottom: 0;
+}
+.footer-copyright .col {
+	height: 5px;
+}
+@media only screen and (max-width:600px) {
+	#facebook {
+		margin-top: 10px !important;
+		float: left !important;
+	}
+	.footer-copyright .col {
+		height: 20px;
+	}
+}
+footer p {
+	font-size: 16px;
+	line-height: 26px;
+}

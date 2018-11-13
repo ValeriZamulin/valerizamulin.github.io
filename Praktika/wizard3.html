@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
   <link rel="shortcut icon" type="image/png" href="image/favicon.ico"/>
 
+  <meta property="og:url"           content="https://valerizamulin.github.io/Praktika/index.html" />
+  <meta property="og:type"          content="website" />
+  <meta property="og:title"         content="Интерактивный мастер для выбора фреймворка для сайта" />
+  <meta property="og:description"   content="Здесь вы можете выбрать подходящий для себя фреймворк с помощью интерактивного мастера" />
+  <meta property="og:image"         content="file:///C:/xampp/htdocs/valerizamulin.github.io/Praktika/image/logo.png" />
+  
   <title>Подходящий для вас фреймворк</title>
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
@@ -50,11 +56,10 @@
     <nav class="light-blue darken-2" role="navigation">
       <div class="nav-wrapper container">
         <a id="logo-container" href="index.html" class="brand-logo hide-on-med-and-down"><img src="image/logo.png" alt="Логотип"></a>
-        <a href="index.html" class="brand-logo hide-on-med-and-up center"><img src="image/logo.png" alt="Логотип"></a>
         <div class="left hide-on-small-only">
           <!-- <a href="wizard1.html" class="breadcrumb white-text">мастер</a> -->
-          <a href="javascript:history.back()" class="breadcrumb white-text">шаг 1</a>
-          <a href="javascript:history.back()" class="breadcrumb slow-show white-text">шаг 2</a>
+          <a href="wizard1.html" class="breadcrumb white-text">шаг 1</a>
+          <a href="wizard2.html" class="breadcrumb slow-show white-text">шаг 2</a>
           <a class="breadcrumb slow-show white-text" id="active-link">шаг 3</a>
         </div>
         <ul class="right hide-on-med-and-down">
@@ -69,6 +74,7 @@
                 <img src="image/background.jpg">
               </div>
               <a href="index.html"><img class="circle" src="image/me.png"></a>
+              <a href="index.html" class="brand-logo show-on-medium-and-down right"><img src="image/logo.png" alt="Логотип"></a>
               <a><span class="white-text name border-text">Валерий Замулин</span></a>
               <a href="#mailto:valeri.zamulin@gmail.com"><span class="white-text email border-text">valeri.zamulin@gmail.com</span></a>
               <span class="white-text name border-text">Интерактивный мастер для выбора фреймворка для сайта<br><br></span>
@@ -87,13 +93,13 @@
 
 
 
-  <main class="container slow-show">
-    <h1 class="center">Wizard</h1>
-    <p class="center"><i>Интерактивный мастер</i></p>
-    <p class="center">Пожалуйста выберите тип сайта</p>
-    <div class="divider"></div><br><br>
-    <div class="row">
-
+  <main class="container">
+    <div class="row margin-bottom">
+      <h1 class="">Результат</h1>
+      <p class="big-text margin-bottom">
+        Ознакомьтесь с подробными результатами работы интерактивного мастера. Ниже в процентах приведено соответствие вашим потребностям каждого из фреймворков. Также у каждого из фреймворков приведён список отсутствующих компонентов, если такие имеются, с возможностью просмотра их описания.
+        <br>
+      </p>
       <div class="col s12 m12 l4">
         <div class="framework center">
           <img class="responsive-img" src="image/bootstrap-stack.png"/>
@@ -143,7 +149,7 @@
           <!-- Browsers support -->
           <div class="divider"></div>
           <div class="left-align blue-grey-text text-darken-2">
-            <p>Поддержка браузерами:</p>
+            <p class="bold">Поддержка браузерами:</p>
             <ul>
               <li>Chrome 45+</li>
               <li>Firefox 38+</li>
@@ -208,7 +214,7 @@
           <!-- Browsers support -->
           <div class="divider"></div>
           <div class="left-align blue-grey-text text-darken-2">
-            <p>Поддержка браузерами:</p>
+            <p class="bold">Поддержка браузерами:</p>
             <ul>
               <li>Chrome 35+</li>
               <li>Firefox 31+</li>
@@ -272,7 +278,7 @@
           <!-- Browsers support -->
           <div class="divider"></div>
           <div class="left-align blue-grey-text text-darken-2">
-            <p>Поддержка браузерами:</p>
+            <p class="bold">Поддержка браузерами:</p>
             <ul>
               <li>Chrome Latest</li>
               <li>Firefox Latest</li>
