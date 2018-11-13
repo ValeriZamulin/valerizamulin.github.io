@@ -1597,18 +1597,41 @@ function whichComponents() {
 	//берем из него второй элемент и проверяем число это или нет, Если не null показываем.
 	if(str[1].match(/\d/) != null) {
 		switch (Number(str[1])) {
+			// сайт витрина
 			case 1:
-			document.getElementById('component11').checked = true;	//slider
-			document.getElementById('component32').checked = true;	//search
-			document.getElementById('component24').checked = true;	//icons
-			document.getElementById('component10').checked = true; //cards
-			document.getElementById('component3').checked = true;	//article
-			document.getElementById('checkbox1').checked = true;
-			document.getElementById('checkbox1').checked = true;
-			document.getElementById('checkbox1').checked = true;
-			document.getElementById('checkbox1').checked = true;
-			document.getElementById('checkbox1').checked = true;
-				document.getElementById('checkbox1').checked = true;
+				document.getElementById('component11').checked = true;	//slider
+				document.getElementById('component32').checked = true;	//search
+				document.getElementById('component24').checked = true;	//icons
+				document.getElementById('component10').checked = true; //cards
+				document.getElementById('component3').checked = true;	//article
+				document.getElementById('checkbox9').checked = true; //text inputs - forms
+				break;
+				// Промо сайт
+			case 2:
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('component14').checked = true;	//countdown
+				document.getElementById('stylization30').checked = true;	//tipography
+				break;
+				//Интернет магазин
+			case 2:
+				document.getElementById('component22').checked = true;	//footer
+				document.getElementById('component32').checked = true;	//navbar
+				document.getElementById('component41').checked = true;	//scrollspy
+				document.getElementById('checkbox9').checked = true;	//text input
+				document.getElementById('checkbox6').checked = true;	//range
+				document.getElementById('component18').checked = true;	//dropdowns
+				document.getElementById('component10').checked = true;	//cards
+				document.getElementById('component11').checked = true;	//carousel
+				document.getElementById('component24').checked = true;	//icons
+				document.getElementById('component7').checked = true;	//breadcrumbs
+				document.getElementById('component35').checked = true;	//pagination
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('component42').checked = true;	//search
+				document.getElementById('component6').checked = true;	//badges
+				document.getElementById('component51').checked = true;	//tabs
+				document.getElementById('component1').checked = true;	//alerts
+				document.getElementById('component1').checked = true;	//alerts
+
 				break;
 			default:
 
