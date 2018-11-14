@@ -292,8 +292,8 @@ function getInfo(id) {
 			var descriptionText = 'Чаще всего используется в меню ресторана, между блюдами и ценами, а также для оглавлений, между названиями и номерами страниц.';
 			break;
 		case 46:
-			var nameText = 'Lightbox<br><span class="infobox-description white-text">Отзывчивая галерея</span>';
-			var descriptionText = 'Отзывчивая стилизованная галерея для изображений и видео';
+			var nameText = 'Lightbox/Media<br><span class="infobox-description white-text">Отзывчивая галерея</span>';
+			var descriptionText = 'Адаптивные стили для изображений и видео';
 			break;
 		case 47:
 			var nameText = 'List group/Collections<br><span class="infobox-description white-text">Группированный список</span>';
@@ -950,6 +950,11 @@ function openModal(id) {
 			var iframe = '<iframe id="modal-iframe" src="https://getuikit.com/docs/leader"></iframe>';
 			break;
 			// Lightbox/Media
+		case 'documentation-box-830':
+			var header = "Images";
+			var link = '<a target="_blank" id="modal-link" href="https://getbootstrap.com/docs/4.1/content/images/">Ссылка на документацию</a>';
+			var iframe = '<iframe id="modal-iframe" src="https://getbootstrap.com/docs/4.1/content/images/"></iframe>';
+			break;
 		case 'documentation-box-83':
 			var header = "Media";
 			var link = '<a target="_blank" id="modal-link" href="https://materializecss.com/media-css.html">Ссылка на документацию</a>';
@@ -1597,22 +1602,40 @@ function whichComponents() {
 	//берем из него второй элемент и проверяем число это или нет, Если не null показываем.
 	if(str[1].match(/\d/) != null) {
 		switch (Number(str[1])) {
-			// сайт витрина
+			//***********Коммерческие сайты
+			// Сайт витрина
 			case 1:
 				document.getElementById('component11').checked = true;	//slider
 				document.getElementById('component32').checked = true;	//search
 				document.getElementById('component24').checked = true;	//icons
 				document.getElementById('component10').checked = true; //cards
+				document.getElementById('component11').checked = true;	//carousel
 				document.getElementById('component3').checked = true;	//article
 				document.getElementById('checkbox9').checked = true; //text inputs - forms
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('component27').checked = true;	//media / Lightbox
 				break;
 				// Промо сайт
 			case 2:
 				document.getElementById('component9').checked = true;	//buttons
 				document.getElementById('component14').checked = true;	//countdown
 				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('component27').checked = true;	//media / Lightbox
+				// js for not in use block
+				document.getElementById('switcher1').checked = false; //uncheck forms box
+				instance.close(0); //close forms box
+				$("#show-sidenav-1").attr("href", "#switcher1");	//change #link for disabled block
+				$("#show-sidenav-1").removeClass("active");	//disable link for this block in sidenav
 				break;
-				//Интернет магазин
+				// Интернет магазин
 			case 3:
 				document.getElementById('component22').checked = true;	//footer
 				document.getElementById('component32').checked = true;	//navbar
@@ -1630,11 +1653,246 @@ function whichComponents() {
 				document.getElementById('component6').checked = true;	//badges
 				document.getElementById('component51').checked = true;	//tabs
 				document.getElementById('component1').checked = true;	//alerts
-				document.getElementById('component1').checked = true;	//alerts
-
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('component27').checked = true;	//media / Lightbox
+				document.getElementById('component30').checked = true;	//modal
 				break;
-			default:
-
+				// Сайт визитка - коммерческий
+			case 4:
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('component32').checked = true;	//navbar
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('checkbox9').checked = true;	//text input
+				document.getElementById('component27').checked = true;	//media / Lightbox
+				break;
+				// Целевая страница - Лендинг
+			case 5:
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('component11').checked = true;	//carousel
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('checkbox9').checked = true;	//text input
+				document.getElementById('component27').checked = true;	//media / Lightbox
+				break;
+				//**************Корпоративные сайты******************
+				// Сайт-визитка
+			case 6:
+				document.getElementById('component24').checked = true;	//icons
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('component32').checked = true;	//navbar
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('checkbox9').checked = true;	//text input
+				document.getElementById('component27').checked = true;	//media / Lightbox
+				break;
+				// Корпоративный сайт
+			case 7:
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('component32').checked = true;	//navbar
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('checkbox9').checked = true;	//text input
+				document.getElementById('component27').checked = true;	//media / Lightbox
+				document.getElementById('component22').checked = true;	//footer
+				document.getElementById('component11').checked = true;	//slider
+				document.getElementById('component10').checked = true;	//cards
+				break;
+				// Имиджевый
+			case 8:
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('component11').checked = true;	//carousel
+				document.getElementById('component32').checked = true;	//navbar
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('checkbox9').checked = true;	//text input
+				document.getElementById('component27').checked = true;	//media / Lightbox
+				document.getElementById('component42').checked = true;	//search
+				document.getElementById('component6').checked = true;	//badges
+				document.getElementById('component10').checked = true;	//cards
+				document.getElementById('component7').checked = true;	//breadcrumb
+				break;
+				// Корпоративный Портал
+			case 9:
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('component18').checked = true;	//dropdown
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('component32').checked = true;	//navbar
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('checkbox9').checked = true;	//text input
+				document.getElementById('component27').checked = true;	//media / Lightbox
+				document.getElementById('component42').checked = true;	//search
+				document.getElementById('component6').checked = true;	//badges
+				document.getElementById('component10').checked = true;	//cards
+				document.getElementById('component7').checked = true;	//breadcrumb
+				document.getElementById('component30').checked = true;	//modal
+				document.getElementById('component3').checked = true;	//article
+				document.getElementById('component1').checked = true;	//alerts
+				document.getElementById('component11').checked = true;	//carousel
+				document.getElementById('component22').checked = true;	//footer
+				break;
+				// Сайт-портфолио
+			case 10:
+				document.getElementById('component27').checked = true;	//media / Lightbox
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('component32').checked = true;	//navbar
+				document.getElementById('component11').checked = true;	//carousel
+				document.getElementById('component10').checked = true;	//cards
+				document.getElementById('component2').checked = true;	//animation
+				document.getElementById('checkbox9').checked = true;	//text input
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('component24').checked = true;	//icons
+				// js for not in use block
+				document.getElementById('switcher1').checked = false; //uncheck forms box
+				instance.close(0); //close forms box
+				$("#show-sidenav-1").attr("href", "#switcher1");	//change #link for disabled block
+				$("#show-sidenav-1").removeClass("active");	//disable link for this block in sidenav
+				break;
+				//*******************Различные веб-сервисы*********************
+				//Каталоги
+			case 11:
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('component18').checked = true;	//dropdown
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('component11').checked = true;	//carousel
+				document.getElementById('component32').checked = true;	//navbar
+				document.getElementById('component10').checked = true;	//cards
+				document.getElementById('component42').checked = true;	//search
+				document.getElementById('component22').checked = true;	//footer
+				// js for not in use block
+				document.getElementById('switcher1').checked = false; //uncheck forms box
+				instance.close(0); //close forms box
+				$("#show-sidenav-1").attr("href", "#switcher1");	//change #link for disabled block
+				$("#show-sidenav-1").removeClass("active");	//disable link for this block in sidenav
+				break;
+				//Почтовые сервисы
+			case 12:
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('component18').checked = true;	//dropdown
+				document.getElementById('component32').checked = true;	//navbar
+				document.getElementById('component42').checked = true;	//search
+				document.getElementById('component24').checked = true;	//icons
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('checkbox9').checked = true;	//text input
+				document.getElementById('component41').checked = true;	//scrollspy
+				document.getElementById('component22').checked = true;	//footer
+				break;
+				//Поисковые системы= forms, cards, search
+			case 13:
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('component42').checked = true;	//search
+				document.getElementById('component10').checked = true;	//cards
+				// js for not in use block
+				document.getElementById('switcher1').checked = false; //uncheck forms box
+				instance.close(0); //close forms box
+				$("#show-sidenav-1").attr("href", "#switcher1");	//change #link for disabled block
+				$("#show-sidenav-1").removeClass("active");	//disable link for this block in sidenav
+				break;
+				//Доски объявлений
+			case 14:
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('component32').checked = true;	//navbar
+				document.getElementById('component41').checked = true;	//scrollspy
+				document.getElementById('component18').checked = true;	//dropdown
+				document.getElementById('component11').checked = true;	//carousel
+				document.getElementById('component42').checked = true;	//search
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('checkbox9').checked = true;	//text input
+				document.getElementById('component10').checked = true;	//cards
+				document.getElementById('component7').checked = true;	//breadcrumb
+				document.getElementById('component22').checked = true;	//footer
+				break;
+				//Сайт хостинг
+			case 15:
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('component32').checked = true;	//navbar
+				document.getElementById('component42').checked = true;	//search
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('checkbox9').checked = true;	//text input
+				document.getElementById('component18').checked = true;	//dropdown
+				document.getElementById('component10').checked = true;	//cards
+				document.getElementById('component7').checked = true;	//breadcrumb
+				document.getElementById('component27').checked = true;	//media / Lightbox
+				break;
+				//********************Социальные проекты***********************
+				// Форум
+			case 16:
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('component32').checked = true;	//navbar
+				document.getElementById('component42').checked = true;	//search
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('checkbox9').checked = true;	//text input
+				document.getElementById('component10').checked = true;	//cards
+				document.getElementById('component7').checked = true;	//breadcrumb
+				document.getElementById('component24').checked = true;	//icons
+				break;
+				//Социальные сети
+			case 17:
+				document.getElementById('stylization1').checked = true;	//align
+				document.getElementById('stylization30').checked = true;	//tipography
+				document.getElementById('stylization11').checked = true;	//grid
+				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization5').checked = true;	//color
+				document.getElementById('component32').checked = true;	//navbar
+				document.getElementById('component42').checked = true;	//search
+				document.getElementById('component9').checked = true;	//buttons
+				document.getElementById('checkbox9').checked = true;	//text input
+				document.getElementById('component10').checked = true;	//cards
+				document.getElementById('component24').checked = true;	//icons
+				document.getElementById('component18').checked = true;	//dropdown
+				document.getElementById('component27').checked = true;	//media / Lightbox
+				document.getElementById('component41').checked = true;	//scrollspy
+				document.getElementById('component11').checked = true;	//carousel
+				break;
+				default:
 		}
 	}
 }
