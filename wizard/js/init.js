@@ -1893,6 +1893,19 @@ function whichComponents() {
 				document.getElementById('component11').checked = true;	//carousel
 				break;
 				default:
+				// js for not in use block
+				document.getElementById('switcher1').checked = false; //uncheck forms box
+				document.getElementById('switcher2').checked = false; //uncheck forms box
+				document.getElementById('switcher3').checked = false; //uncheck forms box
+				instance.close(0); //close forms box
+				instance.close(1); //close forms box
+				instance.close(2); //close forms box
+				$("#show-sidenav-1").attr("href", "#switcher1");	//change #link for disabled block
+				$("#show-sidenav-2").attr("href", "#switcher2");	//change #link for disabled block
+				$("#show-sidenav-3").attr("href", "#switcher3");	//change #link for disabled block
+				$("#show-sidenav-1").removeClass("active");	//disable link for this block in sidenav
+				$("#show-sidenav-2").removeClass("active");	//disable link for this block in sidenav
+				$("#show-sidenav-3").removeClass("active");	//disable link for this block in sidenav
 		}
 	}
 }
