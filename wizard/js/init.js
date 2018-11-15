@@ -168,7 +168,7 @@ function getInfo(id) {
 			break;
 		case 7:
 			var nameText = 'Select<br><span class="infobox-description white-text">Выбор из выпадающего списока</span>';
-			var descriptionText = 'Позволяет делать выбор пользователю через указанные параметры';
+			var descriptionText = 'Выпадающий список';
 			break;
 		case 8:
 			var nameText = 'Switches<br><span class="infobox-description white-text">Переключатель (Выкл/Вкл)</span>';
@@ -1909,7 +1909,6 @@ function whichComponents() {
 		}
 	}
 }
-// *************************************************************************************************8Dodelat top
 
 function countComponents() {
 	var url1 = 'checkbox=';
