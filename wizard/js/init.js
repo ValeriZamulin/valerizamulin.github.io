@@ -1613,7 +1613,7 @@ function whichComponents() {
 				document.getElementById('component3').checked = true;	//article
 				document.getElementById('checkbox9').checked = true; //text inputs - forms
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('stylization30').checked = true;	//tipography
@@ -1625,7 +1625,7 @@ function whichComponents() {
 				document.getElementById('component14').checked = true;	//countdown
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('component27').checked = true;	//media / Lightbox
@@ -1654,7 +1654,7 @@ function whichComponents() {
 				document.getElementById('component51').checked = true;	//tabs
 				document.getElementById('component1').checked = true;	//alerts
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('component27').checked = true;	//media / Lightbox
@@ -1664,7 +1664,7 @@ function whichComponents() {
 			case 4:
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('component32').checked = true;	//navbar
 				document.getElementById('stylization1').checked = true;	//align
@@ -1676,7 +1676,7 @@ function whichComponents() {
 			case 5:
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('component11').checked = true;	//carousel
@@ -1690,7 +1690,7 @@ function whichComponents() {
 				document.getElementById('component24').checked = true;	//icons
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('component32').checked = true;	//navbar
 				document.getElementById('stylization1').checked = true;	//align
@@ -1703,7 +1703,7 @@ function whichComponents() {
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('component32').checked = true;	//navbar
 				document.getElementById('component9').checked = true;	//buttons
@@ -1718,7 +1718,7 @@ function whichComponents() {
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('component11').checked = true;	//carousel
 				document.getElementById('component32').checked = true;	//navbar
@@ -1735,7 +1735,7 @@ function whichComponents() {
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('component18').checked = true;	//dropdown
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('component32').checked = true;	//navbar
@@ -1758,7 +1758,7 @@ function whichComponents() {
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('component32').checked = true;	//navbar
 				document.getElementById('component11').checked = true;	//carousel
@@ -1779,7 +1779,7 @@ function whichComponents() {
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('component18').checked = true;	//dropdown
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('component11').checked = true;	//carousel
@@ -1798,7 +1798,7 @@ function whichComponents() {
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('component18').checked = true;	//dropdown
 				document.getElementById('component32').checked = true;	//navbar
@@ -1814,7 +1814,7 @@ function whichComponents() {
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('component42').checked = true;	//search
 				document.getElementById('component10').checked = true;	//cards
@@ -1829,7 +1829,7 @@ function whichComponents() {
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('component32').checked = true;	//navbar
 				document.getElementById('component41').checked = true;	//scrollspy
@@ -1847,7 +1847,7 @@ function whichComponents() {
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('component32').checked = true;	//navbar
 				document.getElementById('component42').checked = true;	//search
@@ -1864,7 +1864,7 @@ function whichComponents() {
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('component32').checked = true;	//navbar
 				document.getElementById('component42').checked = true;	//search
@@ -1879,7 +1879,7 @@ function whichComponents() {
 				document.getElementById('stylization1').checked = true;	//align
 				document.getElementById('stylization30').checked = true;	//tipography
 				document.getElementById('stylization11').checked = true;	//grid
-				document.getElementById('stylization11').checked = true;	//container
+				document.getElementById('stylization7').checked = true;	//container
 				document.getElementById('stylization5').checked = true;	//color
 				document.getElementById('component32').checked = true;	//navbar
 				document.getElementById('component42').checked = true;	//search
