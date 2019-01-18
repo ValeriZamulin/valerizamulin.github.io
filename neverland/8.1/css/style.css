@@ -1,0 +1,140 @@
+
+h3, h4, nav ul a, nav .brand-logo {
+	/*font-family: 'Spectral SC', serif;*/
+	/*font-family: 'Alegreya SC', serif;*/
+	/*font-family: 'Cormorant Unicase', serif;*/
+
+	font-family: 'Gabriela', serif;
+
+}
+nav .brand-logo {
+	font-size: 39px;
+}
+/*menu*/
+nav ul a {
+	font-size: 20px;
+}
+nav ul li a.active {
+	background-color: rgba(0, 0, 0, 0.1);
+}
+.staff p {
+	font-size: 19px;
+}
+/*Slider*/
+.caption h3, .caption h5 {
+	text-shadow: -1px 1px 1px black;
+	line-height: 38px;
+}
+/*Comments*/
+.collection .collection-item.avatar {
+	padding: 25px 15px 10px 74px;
+}
+/*End Comments*/
+
+/*About*/
+.about {
+	font-size: 18px;
+	line-height: 27px;
+}
+.title b, .price h5 {
+	font-size: 19px;
+	font-weight: bold;
+}
+.avatar p, .price {
+	font-size: 18px;
+	line-height: 26px;
+}
+html,body { 
+	height: 100%; 
+	margin: 0px; 
+	padding: 0px; 
+	/*font-family: 'Montserrat', sans-serif;*/
+	/*font-family: 'Open Sans', sans-serif;*/
+	font-family: 'Comfortaa', cursive;
+}
+.divider {
+	margin-bottom: 40px;
+}
+.margin-bottom {
+	margin-bottom: 40px;
+}
+
+/*Feedbacks*/
+.star-active {
+	color: yellow;
+}
+.star {
+	color: #f0f4c3;
+}
+.starr {
+	color: #9e9e9e;
+}
+.star-active, .star {
+	font-size: 29pt;
+}
+.collection .collection-item.avatar .secondary-content {
+	bottom: 15px;
+	top: auto;
+}
+.secondary-content {
+	color: #fdd835;
+}
+/*End Feedbacks*/
+
+/*Gallery*/
+.carousel .carousel-item {
+	width:500px !important;
+	height: 500px;
+}
+@media(max-width: 600px) {
+	.carousel .carousel-item {
+		width: 300px !important;
+		height: 300px;
+	}
+}
+/*End Gallery*/
+
+/*Social media icons*/
+.fa {
+  padding: 8px;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+  color: #9e9e9e;
+}
+.fa:hover {
+    opacity: 0.7;
+    background: #9e9e9e;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+.fa-google {
+  background: #dd4b39;
+  color: white;
+}
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
+}
+/*End social media icons*/
+
+/*Footer*/
+footer a, footer p {
+	font-size: 18px;
+}
+footer
+/*End Footer*/

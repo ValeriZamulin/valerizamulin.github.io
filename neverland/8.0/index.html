@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!-- Social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Spectral+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Alegreya+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gabriela" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+
+<div class="navbar-fixed">
+  <nav>
+    <div class="container">
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">Neverland</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Галерея</a></li>
+          <li><a href="#">Бронирование</a></li>
+          <li><a href="#">Цены</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>  
+</div>
+<ul class="sidenav" id="mobile-demo">
+  <li><a href="#">О нас</a></li>
+  <li><a href="#">Галерея</a></li>
+  <li><a href="#">Бронирование</a></li>
+  <li><a href="#">Цены</a></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+<div style="height: 100%;" class="center-align">
+  <a class="waves-effect waves-light btn-large" style="z-index: 9; bottom: 15%; position: absolute; margin-left: -120px;">Забронировать время</a>
+  <div class="slider fullscreen">
+    <ul class="slides">
+      <li>
+        <img src="images/head1.jpg">
+        <div class="caption center-align">
+          <h3>
+            Мир Фантазий
+          </h3>
+          <h5 class="light grey-text text-lighten-3">
+            Незабываемые приключения для вас и<br>для вашего ребёнка 
+          </h5>
+          <br>
+        </div>
+      </li>
+      <li>
+        <img src="images/head2.jpg">
+        <div class="caption left-align">
+          <h3>Мир Фантазий</h3>
+          <h5 class="light grey-text text-lighten-3">
+            Незабываемые приключения для вас и<br>для вашего ребёнка 
+          </h5>
+          <br>
+        </div>
+      </li>
+      <li>
+        <img src="images/head3.jpg">
+        <div class="caption right-align">
+          <h3>Мир Фантазий</h3>
+          <h5 class="light grey-text text-lighten-3">
+            Незабываемые приключения для вас и<br>для вашего ребёнка 
+          </h5>
+          <br>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col s12 m12 l12 xl7 margin-bottom">
+      <h3 class="center">Бронирование</h3>
+        <div class="divider"></div>
+        <form action="#">
+          <div class="input-field col s12 m4">
+            <i class="material-icons prefix">date_range</i>
+            <input type="text" class="datepicker" id="date">
+            <label for="date">Дата</label>
+          </div>
+          <div class="input-field col s6 m4">
+            <i class="material-icons prefix">access_time</i>
+            <input type="text" class="timepicker" id="time">
+            <label for="time">Время</label>
+          </div>
+          <div class="input-field col s6 m4">
+            <select>
+              <option value="1" selected="">1 час</option>
+              <option value="2">2 часа</option>
+              <option value="3">3 часа</option>
+            </select>
+            <label>Длительность</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <i class="material-icons prefix">perm_identity</i>
+            <input id="first_name" type="text" class="validate">
+            <label for="first_name" class="">Ваше имя</label>
+          </div>
+          <div class="input-field col s12 m6">
+            <i class="material-icons prefix">email</i>
+            <input id="email" type="email" class="validate">
+            <label for="email" class="">Э-майл</label>
+          </div>
+          <div class="input-field col s12">
+            <i class="material-icons prefix">comment</i>
+            <textarea id="textarea" class="materialize-textarea"></textarea>
+            <label for="textarea" class="">Коментарий</label>
+          </div>
+          <div class="input-field col s12 center-align">
+            <button class="btn waves-effect waves-light btn-large" type="submit" name="action">
+              Подтвердить
+              <i class="material-icons right">send</i>
+            </button>
+          </div>
+        </form>
+    </div>
+    <div class="col s12 m12 l12 xl4 offset-xl1 price margin-bottom">
+      <h3 class="center">Цены</h3>
+      <ul class="collection with-header hoverable">
+        <li class="collection-header"><h5>Понедельник - пятница</h5></li>
+        <li class="collection-item">10:00 до 13:00 <span class="right">75€</span></li>
+        <li class="collection-item">14:00 до 17:00 <span class="right">95€</span></li>
+        <li class="collection-item">18:00 до 21:00 <span class="right">85€</span></li></li>
+      </ul>
+      <ul class="collection with-header hoverable">
+        <li class="collection-header"><h5>Cуббота - воскресенье, праздничные дни</h5></li>
+        <li class="collection-item">10:00 до 13:00 <span class="right">95€</span></li>
+        <li class="collection-item">14:00 до 17:00 <span class="right">105€</span></li>
+        <li class="collection-item">18:00 до 21:00 <span class="right">100€</span></li></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="divider"></div>
+    <div class="col s12 m12 l12 xl7 margin-bottom">
+      <h3 class="center">О нас</h3>
+
+      <p class="margin-bottom about">
+        Наши детские комнаты оборудованы по последнему слову безопасности и отвечает всем нормам и стандартам Европейского союза.
+        В нашей комнате найдёт для себя развлечение как годовалый малыш, так и взрослый.
+        Мы стремительно развивающееся компания, которая была основана в 2018 году. В нашей фирме работают высококвалифицированные специалисты с надлежащим образованием.
+      </p>
+      <div class="center-align col s12 m4 staff">
+        <img src="images/team1.jpg" class="circle responsive-img">
+        <b><p>SEO</p></b>
+        <p>Viktor Suhorukov</p>
+      </div>
+      <div class="center-align col s12 m4 staff">
+        <img src="images/team2.jpg" class="circle responsive-img">
+        <b><p>Designer</p></b>
+        <p>Maria Lopez</p>
+      </div>
+      <div class="center-align col s12 m4 staff">
+        <img src="images/team3.jpg" class="circle responsive-img">
+        <b><p>Manager</p></b>
+        <p>Janifer Li</p>
+      </div>
+    </div>
+    <div class="col s12 m12 l12 xl4 offset-xl1">
+      <h3 class="center">Отзывы</h3>
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img src="images/user.jpg" alt="username" class="circle">
+          <span class="title"><b>Никита Горохов</b></span><br><br>
+          <p>
+             Комната очень понравилась, ребёнок остался доволен. Обязательно прийду ещё раз. Всем советую!
+          </p>
+          <br>
+          <p class="right">Оценка:</p>
+          <br><br><br>
+          <a class="secondary-content">
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons starr">grade</i>
+          </a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="images/user.jpg" alt="username" class="circle">
+          <span class="title"><b>Никита Горохов</b></span><br><br>
+          <p>
+             Комната очень понравилась, ребёнок остался доволен. Обязательно прийду ещё раз. Всем советую!
+          </p>
+          <br>
+          <p class="right">Оценка:</p>
+          <br><br><br>
+          <a class="secondary-content">
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons starr">grade</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col s12 margin-bottom">
+      <h3 class="center">Галерея</h3>
+      <div class="divider"></div>
+
+
+
+
+      <div class="carousel">
+        <a class="carousel-item" href="#one!"><img alt="" src="images/gallery/1.jpg"></a>
+        <a class="carousel-item" href="#two!"><img alt="" src="images/gallery/2.jpg"></a>
+        <a class="carousel-item" href="#three!"><img alt="" src="images/gallery/3.jpg"></a>
+        <a class="carousel-item" href="#four!"><img alt="" src="images/gallery/4.jpg"></a>
+        <a class="carousel-item" href="#five!"><img alt="" src="images/gallery/5.jpg"></a>
+        <a class="carousel-item" href="#six!"><img alt="" src="images/gallery/6.jpg"></a>
+        <a class="carousel-item" href="#seven!"><img alt="" src="images/gallery/7.jpg"></a>
+        <a class="carousel-item" href="#eight!"><img alt="" src="images/gallery/8.jpg"></a>
+        <a class="carousel-item" href="#nine!"><img alt="" src="images/gallery/9.jpg"></a>
+        <a class="carousel-item" href="#ten!"><img alt="" src="images/gallery/10.jpg"></a>
+      </div>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Footer -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m6 l3">
+        <h4 class="white-text">Neverland</h4>
+        <p class="grey-text text-lighten-4">Neverland OÜ<br>
+        Pärnu mnt. 110 13094 Tallinn<br>
+        E - P 10:00 - 21:00<br>
+        info@neverland.ee<br>
+        +372 56835863</p>
+      </div>
+      <div class="col s12 m6 l3 offset-l2">
+        <h4 class="white-text">Карта сайта</h4>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#!">Галерея</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">О нас</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Бронирование</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Цены</a></li>
+        </ul>
+      </div>
+      <div class="col s12 m12 l3 offset-l1">
+        <h4 class="white-text">Мы в интернете</h4>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container center">
+      Neverland © 2018 All Rights Reserved
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--JavaScript at end of body for optimized loading-->
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+  </body>
+</html>

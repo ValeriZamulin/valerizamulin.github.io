@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Neverland</title>
+  <meta charset="utf-8">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="css/mystyles.css"  media="screen,projection"/>
+
+  <!-- fotorama.css & fotorama.js. -->
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+  <link  href="fotorama/fotorama.css" rel="stylesheet"> <!-- 3 KB -->
+  <script src="fotorama/fotorama.js"></script> <!-- 16 KB -->
+
+  <!-- Social media icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+
+<body>
+<!-- Navigation -->
+<nav id="nav">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo">Neverland</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Галерея</a></li>
+        <li><a href="#">Бронирование</a></li>
+        <li><a href="#">Цены</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li>
+          <div class="user-view">
+            <div class="background">
+              <img src="images/head1.jpg">
+            </div>
+            <!-- <a href="#!user"><img class="circle" src=""></a> -->
+            <a href="#!name"><span class="white-text name">Neverland</span></a>
+            <a href="#!email"><span class="white-text email">info@neverland.ee</span></a>
+          </div>
+        </li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Галерея</a></li>
+        <li><a href="#">Бронирование</a></li>
+        <li><a href="#">Цены</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- End Navigation -->
+
+<!-- Slider -->
+<div style="height: 100%">
+  <div class="slider fullscreen">
+    <ul class="slides">
+      <li>
+        <img src="images/head1.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <a class="waves-effect waves-light btn-large" href="#">Забронировать время</a>
+        </div>
+      </li>
+      <li>
+        <img src="images/head2.jpg"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <a class="waves-effect waves-light btn-large" href="#">Забронировать время</a>
+        </div>
+      </li>
+      <li>
+        <img src="images/head3.jpg"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <a class="waves-effect waves-light btn-large" href="#">Забронировать время</a>
+        </div>
+      </li>
+      <li>
+        <img src="images/head1.jpg"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+          <a class="waves-effect waves-light btn-large" href="#">Забронировать время</a>
+        </div>
+      </li>
+    </ul>
+  </div> 
+</div>
+<!-- End Slider -->
+
+<div class="container">
+  <div class="row">
+    <h3 class="center margin">Бронирование</h3>
+    <div class="divider margin"></div>
+    <div class="col s12 l8">
+    <div class="col s12 l12 xl6">
+      <h4 class="center">Выберите дату</h4>
+      <table id="calendar2">
+        <thead>
+          <tr><td><i class="material-icons">chevron_left</i><td colspan="5"><td><i class="material-icons">chevron_right</i>
+          <tr><td>Пн<td>Вт<td>Ср<td>Чт<td>Пт<td>Сб<td>Вс
+        <tbody>
+      </table>
+    </div>
+    <div class="col s12 m12 l12 xl6">
+      <h4 class="center">Выберите подходящее для вас время</h4>
+      <div class="divider"></div>
+      
+      <form action="#">
+        <p>
+          <input type="checkbox" class="filled-in" id="first_chk" disabled="disabled" />
+          <label for="first_chk">10:00 - 13:00 &nbsp&nbsp&nbsp&nbsp&nbsp - Забронированно</label>
+        </p>
+        <p>
+          <input type="checkbox" class="filled-in" id="second_chk" />
+          <label for="second_chk">14:00 - 17:00</label>
+        </p>
+        <p>
+          <input type="checkbox" class="filled-in" id="third_chk" />
+          <label for="third_chk">18:00 - 21:00</label>
+        </p>
+      </form>
+      
+      <div class="divider"></div>
+      <form action="#">
+        <p>
+          <input type="checkbox" id="chksend" />
+          <label for="chksend">Отправить пригласительные друзьям</label>
+        </p>
+        <script type="text/javascript">
+          $(function () {
+              $("#chksend").click(function () {
+                  if ($(this).is(":checked")) {
+                      $("#showfr").show();
+                  } else {
+                      $("#showfr").hide();
+                  }
+              });
+          });
+        </script>
+        <div id="showfr" style="display: none">
+          <div class="input-field inline col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email" data-error="wrong" data-success="right">Э-майл адреса ваших друзей</label>
+          </div>
+          <div class="input-field col s12">
+            <textarea id="textarea1" class="materialize-textarea" style="min-height: 130px">
+              "На пиратской палубе гулянка! Вы приглашены! Йо-хо-хо! Приходите, если посмеете! Нам нужны товарищи, чтобы драить палубу, танцевать на трапе и искать пиратские сокровища! Наш корабль отплывет (дата и время). Встретимся на острове _____ (адрес)"
+            </textarea>
+            <label for="textarea1">Текст пригласительной</label>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="col s12 margin">
+      <form class="col s12">
+        <h4>Пожалуйста оставьте свои контакты для подтверждения бронирования</h4>
+        
+          <div class="input-field col s6">
+            <input id="first_name" type="text" class="validate">
+            <label for="first_name">Ваше имя</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="last_name" type="text" class="validate">
+            <label for="last_name">Ваша фамилия</label>
+          </div>
+        
+        
+       
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Э-майл</label>
+          </div>
+        
+        <div class="input-field col s12">
+          <textarea id="textarea2" class="materialize-textarea"></textarea>
+          <label for="textarea2">Коментарий</label>
+        </div>
+        <div class="center">
+          <input type="submit" class="waves-effect waves-light btn-large center-align" value="Забронировать">
+        </div>
+      </form>
+    </div>
+    <div class="col s12">
+      <div class="divider margin"></div>
+      <h4 class="center">Галерея</h4>
+      <div class="fotorama" data-keyboard="true" data-nav="thumbs" data-width="100%" data-ratio="800/600" data-allowfullscreen="native">
+        <img alt="" src="images/gallery/1.jpg">
+        <img alt="" src="images/gallery/2.jpg">
+        <img alt="" src="images/gallery/3.jpg">
+        <img alt="" src="images/gallery/4.jpg">
+        <img alt="" src="images/gallery/5.jpg">
+        <img alt="" src="images/gallery/6.jpg">
+        <img alt="" src="images/gallery/7.jpg">
+        <img alt="" src="images/gallery/8.jpg">
+        <img alt="" src="images/gallery/9.jpg">
+        <img alt="" src="images/gallery/10.jpg">
+      </div>
+    </div>
+    <div class="col s12 center">
+      <div class="divider margin"></div>
+      <a class="waves-effect waves-light btn-large">Перейти к бронированию</a>
+    </div>
+  </div>
+
+
+    <div class="col s12 l4">
+      <h4 class="center">Цены</h4>
+      <ul class="collection with-header hoverable">
+        <li class="collection-header"><h5>Понедельник - пятница</h5></li>
+        <li class="collection-item">10:00 до 13:00 <span class="right">75€</span></li>
+        <li class="collection-item">14:00 до 17:00 <span class="right">95€</span></li>
+        <li class="collection-item">18:00 до 21:00 <span class="right">85€</span></li></li>
+      </ul>
+      <ul class="collection with-header hoverable">
+        <li class="collection-header"><h5>Cуббота - воскресенье, праздничные дни</h5></li>
+        <li class="collection-item">10:00 до 13:00 <span class="right">95€</span></li>
+        <li class="collection-item">14:00 до 17:00 <span class="right">105€</span></li>
+        <li class="collection-item">18:00 до 21:00 <span class="right">100€</span></li></li>
+      </ul>
+    </div>
+    
+
+    <!-- Feedback -->
+    <div class="col s12 l4">
+    <h4 class="center">Отзывы</h4>
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img src="images/user.jpg" alt="username" class="circle">
+          <span class="title"><b>Никита Горохов</b></span>
+          <p>
+             Комната очень понравилась, ребёнок остался доволен. Обязательно прийду ещё раз. Всем советую!
+          </p>
+          <br>
+          <p class="right">Оценка:</p>
+          <br><br>
+          <a class="secondary-content">
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons starr">grade</i>
+          </a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="images/user.jpg" alt="username" class="circle">
+          <span class="title"><b>Никита Горохов</b></span>
+          <p>
+             Комната очень понравилась, ребёнок остался доволен. Обязательно прийду ещё раз. Всем советую!
+          </p>
+          <br>
+          <p class="right">Оценка:</p>
+          <br><br>
+          <a class="secondary-content">
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+          </a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="images/user.jpg" alt="username" class="circle">
+          <span class="title"><b>Никита Горохов</b></span>
+          <p>
+             Комната очень понравилась, ребёнок остался доволен. Обязательно прийду ещё раз. Всем советую!
+          </p>
+          <br>
+          <p class="right">Оценка:</p>
+          <br><br>
+          <a class="secondary-content">
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+          </a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="images/user.jpg" alt="username" class="circle">
+          <span class="title"><b>Никита Горохов</b></span>
+          <p>
+             Комната очень понравилась, ребёнок остался доволен. Обязательно прийду ещё раз. Всем советую!
+          </p>
+          <br>
+          <p class="right">Оценка:</p>
+          <br><br>
+          <a class="secondary-content">
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+          </a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="images/user.jpg" alt="username" class="circle">
+          <span class="title"><b>Никита Горохов</b></span>
+          <p>
+             Комната очень понравилась, ребёнок остался доволен. Обязательно прийду ещё раз. Всем советую!
+          </p>
+          <br>
+          <p class="right">Оценка:</p>
+          <br><br>
+          <a class="secondary-content">
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+          </a>
+        </li>
+        <li class="collection-item avatar">
+          <img src="images/user.jpg" alt="username" class="circle">
+          <span class="title"><b>Никита Горохов</b></span>
+          <p>
+             Комната очень понравилась, ребёнок остался доволен. Обязательно прийду ещё раз. Всем советую!
+          </p>
+          <br>
+          <p class="right">Оценка:</p>
+          <br><br>
+          <a class="secondary-content">
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+            <i class="material-icons">grade</i>
+          </a>
+        </li>
+      </ul>
+    
+    
+
+
+      <div class="center-align more">
+        <a href="#">Читать ещё</a><br><br><br>
+        
+      </div>
+
+<!-- End Feedback -->
+    </div>
+
+
+    
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- Footer -->
+<footer class="page-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col s12 m4 l3">
+        <h5 class="white-text">Neverland</h5>
+        <p class="grey-text text-lighten-4">Neverland OÜ</p>
+        <p>Pärnu mnt. 110 13094 Tallinn</p>
+        <p>info@neverland.ee</p>
+      </div>
+      <div class="col s12 m4 l2 offset-l2">
+        <h5 class="white-text">Карта сайта</h5>
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#!">Галерея</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">О нас</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Бронирование</a></li>
+          <li><a class="grey-text text-lighten-3" href="#!">Цены</a></li>
+        </ul>
+      </div>
+      <div class="col s12 m4 l3 offset-l2">
+        <h5 class="white-text">Мы в интернете</h5>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-twitter"></a>
+        <a href="#" class="fa fa-google"></a>
+        <a href="#" class="fa fa-linkedin"></a>
+        <a href="#" class="fa fa-youtube"></a>
+        <a href="#" class="fa fa-instagram"></a>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container center">
+      Neverland © 2018 All Rights Reserved
+    </div>
+  </div>
+</footer>
+<!-- End Footer -->
+
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script type="text/javascript" src="js/myscripts.js"></script>
+<script type="text/javascript" src="js/calendar.js"></script>
+</body>
+</html>
