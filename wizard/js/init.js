@@ -60,7 +60,7 @@ function Toast(name, id, classname) {
 	if (checkbox.checked == true) {
 		var func = "'"+id+"'";
 		var func2 = "'"+classname+"'";
-		var toastHTML = '<button class="btn-flat toast-action"><i class="material-icons">close</i></button><span class="white-text">&nbsp&nbsp&nbsp&nbsp&nbsp' +name+ '</span><button class="btn-flat toast-action" onclick="unCheck('+func+','+func2+')">Отменить</button>';
+		var toastHTML = '<span class="white-text">' +name+ '</span><button class="btn-flat toast-action" onclick="unCheck('+func+','+func2+')">Отменить</button>';
 		M.toast({
 			html: toastHTML,
 			displayLength: 5000,
